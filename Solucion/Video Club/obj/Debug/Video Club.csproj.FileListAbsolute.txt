@@ -1,0 +1,42 @@
+G:\programacion\video club\Solucion\Video Club\bin\Debug\Video Club.exe.config
+G:\programacion\video club\Solucion\Video Club\bin\Debug\Video Club.exe
+G:\programacion\video club\Solucion\Video Club\bin\Debug\Video Club.pdb
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video Club.csproj.AssemblyReference.cache
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.Form1.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.Properties.Resources.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video Club.csproj.GenerateResource.cache
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video Club.csproj.CoreCompileInputs.cache
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video Club.exe
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video Club.pdb
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.clientes.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.compras.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.inicio.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.socios.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.ventas.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.RepAlquiler.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.RepPagos.resources
+G:\programacion\video club\Solucion\Video Club\obj\Debug\Video_Club.RepVentas.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\bin\Debug\Video Club.exe.config
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\bin\Debug\Video Club.exe
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\bin\Debug\Video Club.pdb
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.csproj.AssemblyReference.cache
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.csproj.SuggestedBindingRedirects.cache
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.clientes.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.compras.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.Form1.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.inicio.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.Properties.Resources.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.RepAlquiler.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.RepPagos.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.RepVentas.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.socios.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video_Club.ventas.resources
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.csproj.GenerateResource.cache
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.csproj.CoreCompileInputs.cache
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.exe
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.pdb
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\bin\Debug\Entidades.dll
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\bin\Debug\Entidades.pdb
+C:\Users\ferre\Source\Repos\Video-Club\Solucion\Video Club\obj\Debug\Video Club.csproj.CopyComplete
+C:\Users\ferre\source\repos\Video-Club\Solucion\Video Club\bin\Debug\CapaDatos.dll
+C:\Users\ferre\source\repos\Video-Club\Solucion\Video Club\bin\Debug\CapaDatos.pdb

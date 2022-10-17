@@ -1,0 +1,6 @@
+C:\Users\ferre\source\repos\Video-Club\Solucion\Entidades\bin\Debug\Entidades.dll
+C:\Users\ferre\source\repos\Video-Club\Solucion\Entidades\bin\Debug\Entidades.pdb
+C:\Users\ferre\source\repos\Video-Club\Solucion\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\ferre\source\repos\Video-Club\Solucion\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ferre\source\repos\Video-Club\Solucion\Entidades\obj\Debug\Entidades.dll
+C:\Users\ferre\source\repos\Video-Club\Solucion\Entidades\obj\Debug\Entidades.pdb
