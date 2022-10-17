@@ -1,0 +1,6 @@
+D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.pdb

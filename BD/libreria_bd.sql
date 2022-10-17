@@ -96,37 +96,7 @@ CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Libros` (
   `notas` VARCHAR(45) NULL,
   `stock` INT NULL,
   `condicionLibro` INT NULL,
-  PRIMARY KEY (`idLibros`),
-  INDEX `editorial_idx` (`editor` ASC) VISIBLE,
-  INDEX `idioma_idx` (`idioma` ASC) VISIBLE,
-  INDEX `categoria_idx` (`categoria` ASC) VISIBLE,
-  INDEX `estado_idx` (`estado` ASC) VISIBLE,
-  INDEX `autor_idx` (`autor` ASC) VISIBLE,
-  CONSTRAINT `editorial`
-    FOREIGN KEY (`editor`)
-    REFERENCES `Libreria_bd`.`Editorial` (`idEditorial`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `idioma`
-    FOREIGN KEY (`idioma`)
-    REFERENCES `Libreria_bd`.`Idioma` (`idIdioma`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `categoria`
-    FOREIGN KEY (`categoria`)
-    REFERENCES `Libreria_bd`.`Categoria` (`idCategoria`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `estado`
-    FOREIGN KEY (`estado`)
-    REFERENCES `Libreria_bd`.`Estado` (`idEstado`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `autor`
-    FOREIGN KEY (`autor`)
-    REFERENCES `Libreria_bd`.`Autor` (`idAutor`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`idLibros`))
 ENGINE = InnoDB;
 
 
@@ -137,31 +107,13 @@ CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Prestamo` (
   `idPrestamo` INT NOT NULL AUTO_INCREMENT,
   `idUsuario` INT NULL,
   `idLibro` INT NULL,
+  `idEstadoLibro` INT NULL,
   `fechaSalida` DATE NULL,
   `fechaEntrega` DATE NULL,
   `fechaDevolucion` DATE NULL,
-  `idEstadoLibro` INT NULL,
   `mora` FLOAT NULL,
   `condicion` TINYINT NULL,
-  PRIMARY KEY (`idPrestamo`),
-  INDEX `estado_idx` (`idEstadoLibro` ASC) VISIBLE,
-  INDEX `usuario_idx` (`idUsuario` ASC) VISIBLE,
-  INDEX `libro_idx` (`idLibro` ASC) VISIBLE,
-  CONSTRAINT `estado`
-    FOREIGN KEY (`idEstadoLibro`)
-    REFERENCES `Libreria_bd`.`Estado` (`idEstado`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `usuario`
-    FOREIGN KEY (`idUsuario`)
-    REFERENCES `Libreria_bd`.`Usuario` (`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `libro`
-    FOREIGN KEY (`idLibro`)
-    REFERENCES `Libreria_bd`.`Libros` (`idLibros`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`idPrestamo`))
 ENGINE = InnoDB;
 
 
@@ -184,25 +136,7 @@ CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Reserva` (
   `idLibro` INT NULL,
   `fechaReserva` DATE NULL,
   `estadoReserva` INT NULL,
-  PRIMARY KEY (`idReserva`),
-  INDEX `usuario_idx` (`idUsuario` ASC) VISIBLE,
-  INDEX `libro_idx` (`idLibro` ASC) VISIBLE,
-  INDEX `estadoReserva_idx` (`estadoReserva` ASC) VISIBLE,
-  CONSTRAINT `usuario`
-    FOREIGN KEY (`idUsuario`)
-    REFERENCES `Libreria_bd`.`Usuario` (`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `libro`
-    FOREIGN KEY (`idLibro`)
-    REFERENCES `Libreria_bd`.`Libros` (`idLibros`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `estadoReserva`
-    FOREIGN KEY (`estadoReserva`)
-    REFERENCES `Libreria_bd`.`EstadoReserva` (`idEstadoReserva`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`idReserva`))
 ENGINE = InnoDB;
 
 
