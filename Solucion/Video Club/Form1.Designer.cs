@@ -31,11 +31,10 @@ namespace Video_Club
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.btnConexion = new System.Windows.Forms.Button();
+            this.PicRestaurar = new System.Windows.Forms.PictureBox();
             this.PicMin = new System.Windows.Forms.PictureBox();
             this.PicMax = new System.Windows.Forms.PictureBox();
             this.PicSalir = new System.Windows.Forms.PictureBox();
-            this.PicRestaurar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.Panel_SubMenu = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -57,10 +56,10 @@ namespace Video_Club
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelSalir = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicRestaurar)).BeginInit();
             this.MenuVertical.SuspendLayout();
             this.Panel_SubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +69,6 @@ namespace Video_Club
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.BarraTitulo.Controls.Add(this.PicRestaurar);
-            this.BarraTitulo.Controls.Add(this.btnConexion);
             this.BarraTitulo.Controls.Add(this.PicMin);
             this.BarraTitulo.Controls.Add(this.PicMax);
             this.BarraTitulo.Controls.Add(this.PicSalir);
@@ -82,15 +80,19 @@ namespace Video_Club
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
-            // btnConexion
+            // PicRestaurar
             // 
-            this.btnConexion.Location = new System.Drawing.Point(32, 7);
-            this.btnConexion.Name = "btnConexion";
-            this.btnConexion.Size = new System.Drawing.Size(75, 23);
-            this.btnConexion.TabIndex = 1;
-            this.btnConexion.Text = "CONEXION";
-            this.btnConexion.UseVisualStyleBackColor = true;
-            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
+            this.PicRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PicRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PicRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("PicRestaurar.Image")));
+            this.PicRestaurar.Location = new System.Drawing.Point(1232, 7);
+            this.PicRestaurar.Name = "PicRestaurar";
+            this.PicRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.PicRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicRestaurar.TabIndex = 0;
+            this.PicRestaurar.TabStop = false;
+            this.PicRestaurar.Visible = false;
+            this.PicRestaurar.Click += new System.EventHandler(this.PicRestaurar_Click);
             // 
             // PicMin
             // 
@@ -131,20 +133,6 @@ namespace Video_Club
             this.PicSalir.TabStop = false;
             this.PicSalir.Click += new System.EventHandler(this.PicSalir_Click);
             // 
-            // PicRestaurar
-            // 
-            this.PicRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PicRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("PicRestaurar.Image")));
-            this.PicRestaurar.Location = new System.Drawing.Point(1232, 7);
-            this.PicRestaurar.Name = "PicRestaurar";
-            this.PicRestaurar.Size = new System.Drawing.Size(25, 25);
-            this.PicRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicRestaurar.TabIndex = 0;
-            this.PicRestaurar.TabStop = false;
-            this.PicRestaurar.Visible = false;
-            this.PicRestaurar.Click += new System.EventHandler(this.PicRestaurar_Click);
-            // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
@@ -163,7 +151,7 @@ namespace Video_Club
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 35);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(220, 615);
+            this.MenuVertical.Size = new System.Drawing.Size(221, 615);
             this.MenuVertical.TabIndex = 2;
             // 
             // Panel_SubMenu
@@ -208,7 +196,7 @@ namespace Video_Club
             this.btn_RepPagos.Name = "btn_RepPagos";
             this.btn_RepPagos.Size = new System.Drawing.Size(162, 32);
             this.btn_RepPagos.TabIndex = 6;
-            this.btn_RepPagos.Text = "Rep. Pagos";
+            this.btn_RepPagos.Text = "Conexion";
             this.btn_RepPagos.UseVisualStyleBackColor = false;
             this.btn_RepPagos.Click += new System.EventHandler(this.btn_RepPagos_Click);
             // 
@@ -232,7 +220,7 @@ namespace Video_Club
             this.btn_RepALquiler.Name = "btn_RepALquiler";
             this.btn_RepALquiler.Size = new System.Drawing.Size(162, 32);
             this.btn_RepALquiler.TabIndex = 6;
-            this.btn_RepALquiler.Text = "Rep. Alquiler";
+            this.btn_RepALquiler.Text = "Rep. ";
             this.btn_RepALquiler.UseVisualStyleBackColor = false;
             this.btn_RepALquiler.Click += new System.EventHandler(this.btn_RepALquiler_Click);
             // 
@@ -249,7 +237,7 @@ namespace Video_Club
             this.btn_RepVentas.Name = "btn_RepVentas";
             this.btn_RepVentas.Size = new System.Drawing.Size(162, 32);
             this.btn_RepVentas.TabIndex = 4;
-            this.btn_RepVentas.Text = "Rep. Ventas";
+            this.btn_RepVentas.Text = "Rep.";
             this.btn_RepVentas.UseVisualStyleBackColor = false;
             this.btn_RepVentas.Click += new System.EventHandler(this.btn_RepVentas_Click);
             // 
@@ -352,7 +340,7 @@ namespace Video_Club
             this.btn_Clientes.Name = "btn_Clientes";
             this.btn_Clientes.Size = new System.Drawing.Size(188, 32);
             this.btn_Clientes.TabIndex = 3;
-            this.btn_Clientes.Text = "Clientes";
+            this.btn_Clientes.Text = "Usuario";
             this.btn_Clientes.UseVisualStyleBackColor = false;
             this.btn_Clientes.Click += new System.EventHandler(this.btn_Clientes_Click);
             // 
@@ -378,7 +366,7 @@ namespace Video_Club
             this.btn_ventas.Name = "btn_ventas";
             this.btn_ventas.Size = new System.Drawing.Size(188, 32);
             this.btn_ventas.TabIndex = 1;
-            this.btn_ventas.Text = "Consultas";
+            this.btn_ventas.Text = "Libro";
             this.btn_ventas.UseVisualStyleBackColor = false;
             this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
             // 
@@ -397,9 +385,9 @@ namespace Video_Club
             // PanelSalir
             // 
             this.PanelSalir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelSalir.Location = new System.Drawing.Point(220, 35);
+            this.PanelSalir.Location = new System.Drawing.Point(221, 35);
             this.PanelSalir.Name = "PanelSalir";
-            this.PanelSalir.Size = new System.Drawing.Size(1080, 615);
+            this.PanelSalir.Size = new System.Drawing.Size(1079, 615);
             this.PanelSalir.TabIndex = 3;
             // 
             // Form1
@@ -416,10 +404,10 @@ namespace Video_Club
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicRestaurar)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.Panel_SubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -454,7 +442,6 @@ namespace Video_Club
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btn_RepALquiler;
         private System.Windows.Forms.Button btn_RepVentas;
-        private System.Windows.Forms.Button btnConexion;
     }
 }
 

@@ -51,6 +51,15 @@ namespace Video_Club
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textApellidoM = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textFecha = new System.Windows.Forms.TextBox();
+            this.textMoney = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textSanctions = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimeFecha = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -68,7 +77,16 @@ namespace Video_Club
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.panel2.Controls.Add(this.dateTimeFecha);
+            this.panel2.Controls.Add(this.textSanctions);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.textMoney);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.textFecha);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textTelefono);
+            this.panel2.Controls.Add(this.textApellidoM);
             this.panel2.Controls.Add(this.textEmail);
             this.panel2.Controls.Add(this.textDireccion);
             this.panel2.Controls.Add(this.label7);
@@ -89,23 +107,23 @@ namespace Video_Club
             // 
             // textTelefono
             // 
-            this.textTelefono.Location = new System.Drawing.Point(99, 72);
+            this.textTelefono.Location = new System.Drawing.Point(114, 100);
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(224, 20);
             this.textTelefono.TabIndex = 21;
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(451, 40);
+            this.textEmail.Location = new System.Drawing.Point(462, 43);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(415, 20);
+            this.textEmail.Size = new System.Drawing.Size(404, 20);
             this.textEmail.TabIndex = 17;
             // 
             // textDireccion
             // 
-            this.textDireccion.Location = new System.Drawing.Point(451, 11);
+            this.textDireccion.Location = new System.Drawing.Point(462, 11);
             this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(415, 20);
+            this.textDireccion.Size = new System.Drawing.Size(404, 20);
             this.textDireccion.TabIndex = 20;
             // 
             // label7
@@ -113,7 +131,7 @@ namespace Video_Club
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(366, 40);
+            this.label7.Location = new System.Drawing.Point(366, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 15);
             this.label7.TabIndex = 15;
@@ -121,14 +139,14 @@ namespace Video_Club
             // 
             // textApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(99, 40);
+            this.textApellido.Location = new System.Drawing.Point(114, 40);
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(224, 20);
             this.textApellido.TabIndex = 19;
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(99, 11);
+            this.textNombre.Location = new System.Drawing.Point(114, 11);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(224, 20);
             this.textNombre.TabIndex = 18;
@@ -140,9 +158,9 @@ namespace Video_Club
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(23, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
+            this.label8.Size = new System.Drawing.Size(87, 15);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Tel / Cel:";
+            this.label8.Text = "Apellido M:";
             // 
             // label3
             // 
@@ -162,9 +180,9 @@ namespace Video_Club
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(23, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 15);
+            this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Apellido:";
+            this.label2.Text = "Apellido P:";
             // 
             // label1
             // 
@@ -181,9 +199,9 @@ namespace Video_Club
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 143);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(843, 263);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -204,6 +222,7 @@ namespace Video_Club
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 418);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -309,6 +328,87 @@ namespace Video_Club
             this.panel5.Size = new System.Drawing.Size(10, 32);
             this.panel5.TabIndex = 22;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(366, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 15);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Facha:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // textApellidoM
+            // 
+            this.textApellidoM.Location = new System.Drawing.Point(114, 69);
+            this.textApellidoM.Name = "textApellidoM";
+            this.textApellidoM.Size = new System.Drawing.Size(222, 20);
+            this.textApellidoM.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(23, 102);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 15);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Telefono:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // textFecha
+            // 
+            this.textFecha.Location = new System.Drawing.Point(462, 74);
+            this.textFecha.Name = "textFecha";
+            this.textFecha.Size = new System.Drawing.Size(130, 20);
+            this.textFecha.TabIndex = 23;
+            // 
+            // textMoney
+            // 
+            this.textMoney.Location = new System.Drawing.Point(462, 104);
+            this.textMoney.Name = "textMoney";
+            this.textMoney.Size = new System.Drawing.Size(90, 20);
+            this.textMoney.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(366, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 15);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Sac_money:";
+            // 
+            // textSanctions
+            // 
+            this.textSanctions.Location = new System.Drawing.Point(657, 104);
+            this.textSanctions.Name = "textSanctions";
+            this.textSanctions.Size = new System.Drawing.Size(90, 20);
+            this.textSanctions.TabIndex = 27;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(572, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 15);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Sanctions:";
+            // 
+            // dateTimeFecha
+            // 
+            this.dateTimeFecha.Location = new System.Drawing.Point(632, 74);
+            this.dateTimeFecha.Name = "dateTimeFecha";
+            this.dateTimeFecha.Size = new System.Drawing.Size(200, 20);
+            this.dateTimeFecha.TabIndex = 28;
+            // 
             // clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,5 +453,14 @@ namespace Video_Club
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textApellidoM;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.TextBox textSanctions;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textMoney;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimeFecha;
     }
 }

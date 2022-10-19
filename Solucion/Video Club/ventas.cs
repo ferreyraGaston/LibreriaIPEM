@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+using MySql.Data.MySqlClient;
 namespace Video_Club
 {
     public partial class ventas : Form
@@ -20,6 +20,7 @@ namespace Video_Club
         public ventas()
         {
             InitializeComponent();
+            CargarTablaLibro();
             btn_eliminar.Enabled = false;
             btn_modificar.Enabled = false;
             btn_agregar.Enabled = true;
@@ -37,6 +38,19 @@ namespace Video_Club
             textDescripcion.Text = "";
             textStock.Text = "";
             textPrecio.Text = "";
+        }
+
+        void CargarTablaLibro()
+        {
+            string cadena = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from usuarios";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dgv_detalle.DataSource = dt;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -135,24 +149,17 @@ namespace Video_Club
 
         private void ventas_Load(object sender, EventArgs e)
         {
-            //string cadena = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\\BD Toldito\\Prueba\\BD\\toldito_pba.mdb;User Id=admin;Password=;";
-            //OleDbConnection con = new OleDbConnection(cadena);
-            //con.Open();
-            //string sql = "select * from Factura";
-            //OleDbDataAdapter da = new OleDbDataAdapter(sql, cadena);
-            //DataTable dt = new DataTable();
-            //con.Close();
-            //da.Fill(dt);
-            //dgv_detalle.DataSource = dt;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\BD Toldito\\Prueba\\BD\\Toldito_pba.mdb";
-            OleDbConnection con = new OleDbConnection(cadena);
+ 
+            string cadena = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from Factura";
-            OleDbDataAdapter da = new OleDbDataAdapter(sql, cadena);
+            string sql = "select * from usuarios";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);

@@ -24,3 +24,14 @@ D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.C
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CopyComplete
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video Club.exe
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video Club.pdb
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\MySql.Data.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\Google.Protobuf.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\ZstdNet.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\BouncyCastle.Crypto.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\Ubiety.Dns.Core.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\System.Buffers.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\K4os.Compression.LZ4.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\K4os.Hash.xxHash.dll
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\MySql.Data.xml
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video Club.exe.config

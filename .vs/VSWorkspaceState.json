@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Solucion",
+    "\\Solucion\\CapaDatos",
     "\\Solucion\\Video Club"
   ],
-  "SelectedNode": "\\Solucion\\Video Club\\Form1.cs",
+  "SelectedNode": "\\Solucion\\CapaDatos\\Conexion.cs",
   "PreviewInSolutionExplorer": false
 }
