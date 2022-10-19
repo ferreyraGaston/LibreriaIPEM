@@ -17,6 +17,7 @@ namespace Video_Club
     {
        // int i = 1;
         int posicion = 0;
+        string Id = "";
         public Usuario()
         {
             InitializeComponent();
@@ -74,21 +75,25 @@ namespace Video_Club
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            string nombre, apellido, direccion, telefono, email;
+            string nombre = textNombre.Text;
+            string apellido = textApellido.Text;
+            string direcc = textDireccion.Text;
+            string telefono = textTelefono.Text;
+            string email = textEmail.Text;
+            int dni = Convert.ToInt32(textDni.Text);
+            int tipoUsuario = Convert.ToInt32(textTipoUsuario.Text);
 
-            nombre = textNombre.Text;
-            apellido = textApellido.Text;
-            direccion = textDireccion.Text;
-            telefono = textTelefono.Text;
-            email = textEmail.Text;
-
-            dataGridView1[1, posicion].Value = nombre;
-            dataGridView1[2, posicion].Value = apellido;
-            dataGridView1[3, posicion].Value = direccion;
-            dataGridView1[4, posicion].Value = telefono;
-            dataGridView1[5, posicion].Value = email;
-
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string sql = "update usuario set NombreUsuario='" + nombre + "',ApellidoUsuario='" + apellido + "',DniUsuario='" + dni + "',TipoUsuario='" + tipoUsuario + "' ,email='" + email + "',direccion='" + direcc + "',telefono='" + telefono + "' where id_usuario='" + this.Id + "';";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand(sql, con);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Los datos se ingresaron exitosamente");
+            con.Close();
             limpiar();
+            CargarTablaUsuario();
+
             btn_eliminar.Enabled = false;
             btn_modificar.Enabled = false;
             btn_agregar.Enabled = true;
@@ -135,7 +140,7 @@ namespace Video_Club
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             posicion = dataGridView1.CurrentRow.Index;
-
+            this.Id = dataGridView1[0, posicion].Value.ToString();
             textNombre.Text = dataGridView1[1, posicion].Value.ToString();
             textApellido.Text = dataGridView1[2, posicion].Value.ToString();
             textDni.Text = dataGridView1[3, posicion].Value.ToString();
