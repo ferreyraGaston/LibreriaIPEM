@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using CapaDatos;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
 
 namespace Video_Club
 {
@@ -89,7 +91,7 @@ namespace Video_Club
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);
             comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se ingresaron exitosamente");
+            MessageBox.Show("Los datos se actualizaron exitosamente");
             con.Close();
             limpiar();
             CargarTablaUsuario();
@@ -108,8 +110,20 @@ namespace Video_Club
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.RemoveAt(posicion);
+            if (MessageBox.Show("Que deseas Eliminar la fila?", "Estas Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "delete from usuario where id_usuario='" + this.Id + "';";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se elimino exitosamente");
+                con.Close();
+            }
+            
             limpiar();
+            CargarTablaUsuario();
             btn_eliminar.Enabled = false;
             btn_modificar.Enabled = false;
             btn_agregar.Enabled = true;
