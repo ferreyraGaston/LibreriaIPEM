@@ -46,7 +46,7 @@ namespace Video_Club
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_Reportes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Compras = new System.Windows.Forms.Button();
+            this.btn_Prestamo = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Socios = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -140,7 +140,7 @@ namespace Video_Club
             this.MenuVertical.Controls.Add(this.panel5);
             this.MenuVertical.Controls.Add(this.btn_Reportes);
             this.MenuVertical.Controls.Add(this.panel4);
-            this.MenuVertical.Controls.Add(this.btn_Compras);
+            this.MenuVertical.Controls.Add(this.btn_Prestamo);
             this.MenuVertical.Controls.Add(this.panel3);
             this.MenuVertical.Controls.Add(this.btn_Socios);
             this.MenuVertical.Controls.Add(this.panel2);
@@ -274,23 +274,23 @@ namespace Video_Club
             this.panel4.Size = new System.Drawing.Size(10, 32);
             this.panel4.TabIndex = 8;
             // 
-            // btn_Compras
+            // btn_Prestamo
             // 
-            this.btn_Compras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.btn_Compras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Compras.FlatAppearance.BorderSize = 0;
-            this.btn_Compras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.btn_Compras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Compras.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Compras.Image = ((System.Drawing.Image)(resources.GetObject("btn_Compras.Image")));
-            this.btn_Compras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Compras.Location = new System.Drawing.Point(32, 340);
-            this.btn_Compras.Name = "btn_Compras";
-            this.btn_Compras.Size = new System.Drawing.Size(188, 32);
-            this.btn_Compras.TabIndex = 7;
-            this.btn_Compras.Text = "Prestamo";
-            this.btn_Compras.UseVisualStyleBackColor = false;
-            this.btn_Compras.Click += new System.EventHandler(this.btn_Compras_Click);
+            this.btn_Prestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_Prestamo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Prestamo.FlatAppearance.BorderSize = 0;
+            this.btn_Prestamo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btn_Prestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Prestamo.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Prestamo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Prestamo.Image")));
+            this.btn_Prestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Prestamo.Location = new System.Drawing.Point(32, 340);
+            this.btn_Prestamo.Name = "btn_Prestamo";
+            this.btn_Prestamo.Size = new System.Drawing.Size(188, 32);
+            this.btn_Prestamo.TabIndex = 7;
+            this.btn_Prestamo.Text = "Prestamo";
+            this.btn_Prestamo.UseVisualStyleBackColor = false;
+            this.btn_Prestamo.Click += new System.EventHandler(this.btn_Prestamo_Click_1);
             // 
             // panel3
             // 
@@ -430,7 +430,7 @@ namespace Video_Club
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_Reportes;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_Compras;
+        private System.Windows.Forms.Button btn_Prestamo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Socios;
         private System.Windows.Forms.Panel panel2;

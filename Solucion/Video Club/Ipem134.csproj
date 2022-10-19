@@ -47,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clientes.cs">
+    <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="clientes.Designer.cs">
-      <DependentUpon>clientes.cs</DependentUpon>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="compras.cs">
+    <Compile Include="Prestamo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="compras.Designer.cs">
-      <DependentUpon>compras.cs</DependentUpon>
+    <Compile Include="Prestamo.Designer.cs">
+      <DependentUpon>Prestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -97,17 +97,17 @@
     <Compile Include="socios.Designer.cs">
       <DependentUpon>socios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ventas.cs">
+    <Compile Include="Libros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventas.Designer.cs">
-      <DependentUpon>ventas.cs</DependentUpon>
+    <Compile Include="Libros.Designer.cs">
+      <DependentUpon>Libros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="clientes.resx">
-      <DependentUpon>clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="compras.resx">
-      <DependentUpon>compras.cs</DependentUpon>
+    <EmbeddedResource Include="Prestamo.resx">
+      <DependentUpon>Prestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="socios.resx">
       <DependentUpon>socios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventas.resx">
-      <DependentUpon>ventas.cs</DependentUpon>
+    <EmbeddedResource Include="Libros.resx">
+      <DependentUpon>Libros.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

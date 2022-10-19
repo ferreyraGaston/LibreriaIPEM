@@ -21,7 +21,7 @@ namespace Video_Club
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
+            con.ConnectionString = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
 
             try
             {

@@ -24,6 +24,8 @@ CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Usuario` (
   `DniUsuario` INT NULL,
   `TipoUsuario` INT NULL,
   `email` VARCHAR(45) NULL,
+  `direccion` VARCHAR(45) NULL,
+  `telefono` VARCHAR(45) NULL,
   PRIMARY KEY (`id_usuario`))
 ENGINE = InnoDB;
 

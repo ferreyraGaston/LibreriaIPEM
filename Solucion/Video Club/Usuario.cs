@@ -13,11 +13,11 @@ using MySql.Data.MySqlClient;
 
 namespace Video_Club
 {
-    public partial class clientes : Form
+    public partial class Usuario : Form
     {
        // int i = 1;
         int posicion = 0;
-        public clientes()
+        public Usuario()
         {
             InitializeComponent();
             CargarTablaUsuario();
@@ -53,18 +53,15 @@ namespace Video_Club
         {
 
             string nombre = textNombre.Text;
-            string apellidoP = textApellido.Text;
-            string domicilio = textDireccion.Text;
+            string apellido = textApellido.Text;
+            string direcc = textDireccion.Text;
             string telefono = textTelefono.Text;
             string email = textEmail.Text;          
-            string apellidoM= textApellidoM.Text;
+            int dni = Convert.ToInt32(textDni.Text);
+            int tipoUsuario = Convert.ToInt32(textTipoUsuario.Text);
 
-            
-            string Money= textMoney.Text;
-            string Sanctions= textSanctions.Text;
-
-            string cadena = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
-            string sql = "INSERT INTO usuarios(domicilio,email,last_name_m,last_name_p,name,sac_money,sanctions,tel) VALUES('" + domicilio + "','" + email + "','" + apellidoM + "','" + apellidoP + "','" + nombre + "'," + Money + ",'" + Sanctions + "','" + telefono + "')";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono) VALUES('" + nombre + "','" + apellido + "','" + dni + "','" + tipoUsuario + "','" + email + "','" + direcc + "','" + telefono + "')";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);
@@ -139,16 +136,14 @@ namespace Video_Club
         {
             posicion = dataGridView1.CurrentRow.Index;
 
-            textNombre.Text = dataGridView1[6, posicion].Value.ToString();
-            textApellido.Text = dataGridView1[5, posicion].Value.ToString();
-            textDireccion.Text = dataGridView1[1, posicion].Value.ToString();
-            textTelefono.Text = dataGridView1[9, posicion].Value.ToString();
-            textEmail.Text = dataGridView1[2, posicion].Value.ToString();
-            textApellidoM.Text = dataGridView1[4, posicion].Value.ToString();
-            textFecha.Text = dataGridView1[3, posicion].Value.ToString();
-            textMoney.Text = dataGridView1[7, posicion].Value.ToString();
-            textSanctions.Text = dataGridView1[8, posicion].Value.ToString();
-            
+            textNombre.Text = dataGridView1[1, posicion].Value.ToString();
+            textApellido.Text = dataGridView1[2, posicion].Value.ToString();
+            textDni.Text = dataGridView1[3, posicion].Value.ToString();
+            textTipoUsuario.Text = dataGridView1[4, posicion].Value.ToString();
+            textEmail.Text = dataGridView1[5, posicion].Value.ToString();
+            textDireccion.Text = dataGridView1[6, posicion].Value.ToString();
+            textTelefono.Text = dataGridView1[7, posicion].Value.ToString();
+         
             btn_eliminar.Enabled = true;
             btn_modificar.Enabled = true;
             btn_agregar.Enabled = false;
@@ -171,10 +166,10 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-            string cadena = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from usuarios";
+            string sql = "select * from usuario";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();

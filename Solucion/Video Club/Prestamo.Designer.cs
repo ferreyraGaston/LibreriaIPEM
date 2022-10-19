@@ -1,7 +1,7 @@
 ﻿
 namespace Video_Club
 {
-    partial class compras
+    partial class Prestamo
     {
         /// <summary>
         /// Required designer variable.

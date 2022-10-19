@@ -9,8 +9,6 @@ D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\CapaNegocio.pdb
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\Entidades.pdb
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.AssemblyReference.cache
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.SuggestedBindingRedirects.cache
-D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.clientes.resources
-D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.compras.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Form1.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.inicio.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Properties.Resources.resources
@@ -18,7 +16,6 @@ D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.RepAl
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.RepPagos.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.RepVentas.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.socios.resources
-D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.ventas.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.GenerateResource.cache
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CoreCompileInputs.cache
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CopyComplete
@@ -35,3 +32,6 @@ D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\K4os.Compression
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\K4os.Hash.xxHash.dll
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\bin\Debug\MySql.Data.xml
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video Club.exe.config
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Usuario.resources
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Prestamo.resources
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Libros.resources

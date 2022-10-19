@@ -12,12 +12,12 @@ using Entidades;
 using MySql.Data.MySqlClient;
 namespace Video_Club
 {
-    public partial class ventas : Form
+    public partial class Libros : Form
     {
 
         int i = 1;
         int posicion = 0;
-        public ventas()
+        public Libros()
         {
             InitializeComponent();
             CargarTablaLibro();
@@ -42,15 +42,16 @@ namespace Video_Club
 
         void CargarTablaLibro()
         {
-            string cadena = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from usuarios";
+            string sql = "select * from libros";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
             dgv_detalle.DataSource = dt;
+            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -155,10 +156,10 @@ namespace Video_Club
         private void button1_Click(object sender, EventArgs e)
         {
  
-            string cadena = "Server=localhost;Database=libreriaispc;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from usuarios";
+            string sql = "select * from libros";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();

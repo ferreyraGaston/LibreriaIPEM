@@ -100,14 +100,14 @@ namespace Video_Club
 
         private void btn_ventas_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new ventas());
+            AbrirFormEnPanel(new Libros());
 
 
         }
 
         private void btn_Clientes_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new clientes());
+            AbrirFormEnPanel(new Usuario());
 
            
 
@@ -116,11 +116,6 @@ namespace Video_Club
         private void btn_Socios_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new socios());
-        }
-
-        private void btn_Compras_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new compras());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -150,6 +145,11 @@ namespace Video_Club
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_Prestamo_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Prestamo());
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Video_Club
 {
-    partial class ventas
+    partial class Libros
     {
         /// <summary>
         /// Required designer variable.
