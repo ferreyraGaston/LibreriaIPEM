@@ -110,7 +110,7 @@ namespace Video_Club
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Que deseas Eliminar la fila?", "Estas Seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("el Id: "+this.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
                 string sql = "delete from usuario where id_usuario='" + this.Id + "';";
