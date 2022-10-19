@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textPrecio = new System.Windows.Forms.TextBox();
-            this.textCantidad = new System.Windows.Forms.TextBox();
-            this.textStock = new System.Windows.Forms.TextBox();
+            this.textEditor = new System.Windows.Forms.TextBox();
+            this.textEdicion = new System.Windows.Forms.TextBox();
+            this.textAutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textDescripcion = new System.Windows.Forms.TextBox();
-            this.textCodigo = new System.Windows.Forms.TextBox();
+            this.textFecha = new System.Windows.Forms.TextBox();
+            this.textTitulo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,12 +55,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.panel2.Controls.Add(this.textPrecio);
-            this.panel2.Controls.Add(this.textCantidad);
-            this.panel2.Controls.Add(this.textStock);
+            this.panel2.Controls.Add(this.textEditor);
+            this.panel2.Controls.Add(this.textEdicion);
+            this.panel2.Controls.Add(this.textAutor);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textDescripcion);
-            this.panel2.Controls.Add(this.textCodigo);
+            this.panel2.Controls.Add(this.textFecha);
+            this.panel2.Controls.Add(this.textTitulo);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -71,85 +71,85 @@
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
             // 
-            // textPrecio
+            // textEditor
             // 
-            this.textPrecio.Location = new System.Drawing.Point(114, 113);
-            this.textPrecio.Name = "textPrecio";
-            this.textPrecio.Size = new System.Drawing.Size(100, 20);
-            this.textPrecio.TabIndex = 11;
+            this.textEditor.Location = new System.Drawing.Point(114, 113);
+            this.textEditor.Name = "textEditor";
+            this.textEditor.Size = new System.Drawing.Size(100, 20);
+            this.textEditor.TabIndex = 11;
             // 
-            // textCantidad
+            // textEdicion
             // 
-            this.textCantidad.Location = new System.Drawing.Point(358, 81);
-            this.textCantidad.Name = "textCantidad";
-            this.textCantidad.Size = new System.Drawing.Size(100, 20);
-            this.textCantidad.TabIndex = 8;
+            this.textEdicion.Location = new System.Drawing.Point(358, 81);
+            this.textEdicion.Name = "textEdicion";
+            this.textEdicion.Size = new System.Drawing.Size(100, 20);
+            this.textEdicion.TabIndex = 8;
             // 
-            // textStock
+            // textAutor
             // 
-            this.textStock.Location = new System.Drawing.Point(114, 81);
-            this.textStock.Name = "textStock";
-            this.textStock.Size = new System.Drawing.Size(100, 20);
-            this.textStock.TabIndex = 10;
+            this.textAutor.Location = new System.Drawing.Point(114, 81);
+            this.textAutor.Name = "textAutor";
+            this.textAutor.Size = new System.Drawing.Size(100, 20);
+            this.textAutor.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(259, 81);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 7;
-            this.label7.Text = "MAXI";
+            this.label7.Text = "Edicion";
             // 
-            // textDescripcion
+            // textFecha
             // 
-            this.textDescripcion.Location = new System.Drawing.Point(358, 52);
-            this.textDescripcion.Name = "textDescripcion";
-            this.textDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.textDescripcion.TabIndex = 9;
+            this.textFecha.Location = new System.Drawing.Point(358, 52);
+            this.textFecha.Name = "textFecha";
+            this.textFecha.Size = new System.Drawing.Size(100, 20);
+            this.textFecha.TabIndex = 9;
             // 
-            // textCodigo
+            // textTitulo
             // 
-            this.textCodigo.Location = new System.Drawing.Point(114, 52);
-            this.textCodigo.Name = "textCodigo";
-            this.textCodigo.Size = new System.Drawing.Size(100, 20);
-            this.textCodigo.TabIndex = 8;
+            this.textTitulo.Location = new System.Drawing.Point(114, 52);
+            this.textTitulo.Name = "textTitulo";
+            this.textTitulo.Size = new System.Drawing.Size(100, 20);
+            this.textTitulo.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(9, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "PRECIO";
+            this.label8.Text = "Editocion";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "STOCK";
+            this.label3.Text = "Autor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(253, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "DESCRIPCIÓN";
+            this.label2.Text = "Fecha de Public:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "CÓDIGO";
+            this.label1.Text = "Titulo";
             // 
             // panel4
             // 
@@ -285,12 +285,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textPrecio;
-        private System.Windows.Forms.TextBox textCantidad;
-        private System.Windows.Forms.TextBox textStock;
+        private System.Windows.Forms.TextBox textEditor;
+        private System.Windows.Forms.TextBox textEdicion;
+        private System.Windows.Forms.TextBox textAutor;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textDescripcion;
-        private System.Windows.Forms.TextBox textCodigo;
+        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.TextBox textTitulo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

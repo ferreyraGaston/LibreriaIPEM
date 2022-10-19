@@ -14,8 +14,7 @@ namespace Video_Club
 {
     public partial class Libros : Form
     {
-        int posicion = 0;
-        string Id = "";
+
         public Libros()
         {
             InitializeComponent();
