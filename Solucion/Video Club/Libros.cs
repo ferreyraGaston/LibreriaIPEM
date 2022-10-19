@@ -14,9 +14,8 @@ namespace Video_Club
 {
     public partial class Libros : Form
     {
-
-        int i = 1;
         int posicion = 0;
+        string Id = "";
         public Libros()
         {
             InitializeComponent();
@@ -29,17 +28,8 @@ namespace Video_Club
             btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
             btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
             btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textCodigo.Focus();
+           
         }
-
-       void limpiar()
-        {
-            textCodigo.Text="";
-            textDescripcion.Text = "";
-            textStock.Text = "";
-            textPrecio.Text = "";
-        }
-
         void CargarTablaLibro()
         {
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
@@ -53,106 +43,27 @@ namespace Video_Club
             dgv_detalle.DataSource = dt;
             dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
+        private void AbrirFormEnPanel(object formhija)
+        {
+            if (this.panel2.Controls.Count > 0)  // pregunta si hay algun control en el interior del panel
+                this.panel2.Controls.RemoveAt(0); // si hay algun control lo elimina o remueve
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;  // hace que se acople el formulario al contenedor
+            this.panel2.Controls.Add(fh);  // agregamos el formulario al panel
+            this.panel2.Tag = fh;  // establecemo la instancia como contenedor de dato al panel
+            fh.Show();  // mostramos el formulario.
 
+        }
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-           
-            string v_codigo, v_descripcion, v_stock, v_precio;
-
-            v_codigo = textCodigo.Text;
-            v_descripcion = textDescripcion.Text;
-            v_stock = textStock.Text;
-            v_precio = textPrecio.Text;
-
-            dgv_detalle.Rows.Add(i + "", v_codigo, v_descripcion, v_stock, v_precio);
-            i = i + 1;
-            limpiar();
-            textCodigo.Focus();
+            AbrirFormEnPanel(new LibroCrud());
         }
 
         private void dgv_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            posicion = dgv_detalle.CurrentRow.Index;
-
-            textCodigo.Text = dgv_detalle[1,posicion].Value.ToString();
-            textDescripcion.Text = dgv_detalle[2, posicion].Value.ToString();
-            textStock.Text = dgv_detalle[3, posicion].Value.ToString();
-            textPrecio.Text = dgv_detalle[4, posicion].Value.ToString();
-            btn_eliminar.Enabled = true;
-            btn_modificar.Enabled = true;
-            btn_agregar.Enabled = false;
-            btn_nuevo.Enabled = true;
-
-            btn_eliminar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textCodigo.Focus();
+            AbrirFormEnPanel(new LibroCrud());
         }
-
-        private void btn_modificar_Click(object sender, EventArgs e)
-        {
-            string codigo, descripcion, stock, precio;
-
-            codigo = textCodigo.Text;
-            descripcion = textDescripcion.Text;
-            stock = textStock.Text;
-            precio = textPrecio.Text;
-
-            dgv_detalle[1, posicion].Value = textCodigo.Text;
-            dgv_detalle[2, posicion].Value = textDescripcion.Text;
-            dgv_detalle[3, posicion].Value = textStock.Text;
-            dgv_detalle[4, posicion].Value = textPrecio.Text;
-
-            limpiar();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textCodigo.Focus();
-        }
-
-        private void btn_eliminar_Click(object sender, EventArgs e)
-        {
-            dgv_detalle.Rows.RemoveAt(posicion);
-            limpiar();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textCodigo.Focus();
-        }
-
-        private void btn_nuevo_Click(object sender, EventArgs e)
-        {
-            limpiar();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textCodigo.Focus();
-        }
-
-        private void ventas_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
  
@@ -168,6 +79,11 @@ namespace Video_Club
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
         {
 
         }

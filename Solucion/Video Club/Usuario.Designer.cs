@@ -31,6 +31,10 @@ namespace Video_Club
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textTipoUsuario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textDni = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textTelefono = new System.Windows.Forms.TextBox();
             this.textEmail = new System.Windows.Forms.TextBox();
@@ -51,10 +55,8 @@ namespace Video_Club
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textTipoUsuario = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textDni = new System.Windows.Forms.TextBox();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -63,6 +65,7 @@ namespace Video_Club
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.lbl_titulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -93,7 +96,42 @@ namespace Video_Club
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1084, 418);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // textTipoUsuario
+            // 
+            this.textTipoUsuario.Location = new System.Drawing.Point(744, 77);
+            this.textTipoUsuario.Name = "textTipoUsuario";
+            this.textTipoUsuario.Size = new System.Drawing.Size(122, 20);
+            this.textTipoUsuario.TabIndex = 27;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(616, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 15);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Tipo de Usuario:";
+            // 
+            // textDni
+            // 
+            this.textDni.Location = new System.Drawing.Point(463, 76);
+            this.textDni.Name = "textDni";
+            this.textDni.Size = new System.Drawing.Size(133, 20);
+            this.textDni.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(385, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 15);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Dni:";
             // 
             // label5
             // 
@@ -105,7 +143,6 @@ namespace Video_Club
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 22;
             this.label5.Text = "Telefono:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textTelefono
             // 
@@ -213,7 +250,6 @@ namespace Video_Club
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 418);
             this.panel3.TabIndex = 0;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -319,41 +355,16 @@ namespace Video_Club
             this.panel5.Size = new System.Drawing.Size(10, 32);
             this.panel5.TabIndex = 22;
             // 
-            // textTipoUsuario
+            // lbl_titulo
             // 
-            this.textTipoUsuario.Location = new System.Drawing.Point(744, 77);
-            this.textTipoUsuario.Name = "textTipoUsuario";
-            this.textTipoUsuario.Size = new System.Drawing.Size(122, 20);
-            this.textTipoUsuario.TabIndex = 27;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(616, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 15);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Tipo de Usuario:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(385, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 15);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Dni:";
-            // 
-            // textDni
-            // 
-            this.textDni.Location = new System.Drawing.Point(463, 76);
-            this.textDni.Name = "textDni";
-            this.textDni.Size = new System.Drawing.Size(133, 20);
-            this.textDni.TabIndex = 25;
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(401, 4);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(307, 24);
+            this.lbl_titulo.TabIndex = 1;
+            this.lbl_titulo.Text = "Consulta y Registro de Usuarios";
             // 
             // Usuario
             // 
@@ -367,6 +378,8 @@ namespace Video_Club
             this.Name = "Usuario";
             this.Text = "clientes";
             this.Load += new System.EventHandler(this.clientes_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -403,5 +416,6 @@ namespace Video_Club
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textDni;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_titulo;
     }
 }

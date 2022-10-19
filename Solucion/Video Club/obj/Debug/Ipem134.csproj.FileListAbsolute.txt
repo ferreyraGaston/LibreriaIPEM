@@ -35,3 +35,4 @@ D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video Club.exe.c
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Usuario.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Prestamo.resources
 D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.Libros.resources
+D:\Desarollo C#\Libreria IPEM 134\Solucion\Video Club\obj\Debug\Video_Club.LibroCrud.resources
