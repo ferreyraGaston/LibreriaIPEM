@@ -1,7 +1,7 @@
 ﻿
 namespace Video_Club
 {
-    partial class socios
+    partial class Consultas
     {
         /// <summary>
         /// Required designer variable.

@@ -115,7 +115,7 @@ namespace Video_Club
 
         private void btn_Socios_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new socios());
+            AbrirFormEnPanel(new Consultas());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

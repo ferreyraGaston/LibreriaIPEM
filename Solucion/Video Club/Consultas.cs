@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Video_Club
 {
-    public partial class socios : Form
+    public partial class Consultas : Form
     {
-        public socios()
+        public Consultas()
         {
             InitializeComponent();
         }
