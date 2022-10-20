@@ -30,6 +30,7 @@ namespace Video_Club
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textTipoUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@ namespace Video_Club
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,6 +71,17 @@ namespace Video_Club
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 32);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(401, 4);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(307, 24);
+            this.lbl_titulo.TabIndex = 1;
+            this.lbl_titulo.Text = "Consulta y Registro de Usuarios";
             // 
             // panel2
             // 
@@ -96,6 +107,7 @@ namespace Video_Club
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1084, 418);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textTipoUsuario
             // 
@@ -354,17 +366,6 @@ namespace Video_Club
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 32);
             this.panel5.TabIndex = 22;
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(401, 4);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(307, 24);
-            this.lbl_titulo.TabIndex = 1;
-            this.lbl_titulo.Text = "Consulta y Registro de Usuarios";
             // 
             // Usuario
             // 

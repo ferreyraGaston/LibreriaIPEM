@@ -197,5 +197,9 @@ namespace Video_Club
             dataGridView1.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
