@@ -9,19 +9,21 @@ namespace Entidades
     //internal class Usuario
     public class UsuarioClass
     {
-   
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public int Dni { get; set; }
-        public int TipoUsuario { get; set; }
-        public string Email { get; set; }
-        public string Direccion { get; set; }
-        public string Telefono { get; set; }
-
-        public UsuarioClass()
-        {
-        }
-
+        private string Nombre;
+        private int Id;
+        private string Apellido;
+        private int Dni;
+        private int TipoUsuario;
+        private string Email;
+        private string Direccion;
+        private string Telefono;
+        public string Nombre1 { get => Nombre; set => Nombre = value; }
+        public int Id1 { get => Id; set => Id = value; }
+        public string Apellido1 { get => Apellido; set => Apellido = value; }
+        public int Dni1 { get => Dni; set => Dni = value; }
+        public int TipoUsuario1 { get => TipoUsuario; set => TipoUsuario = value; }
+        public string Email1 { get => Email; set => Email = value; }
+        public string Direccion1 { get => Direccion; set => Direccion = value; }
+        public string Telefono1 { get => Telefono; set => Telefono = value; }
     }
 }

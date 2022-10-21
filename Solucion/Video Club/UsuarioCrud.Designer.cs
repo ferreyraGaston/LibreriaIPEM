@@ -54,11 +54,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnl_opciones.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_opciones
@@ -204,9 +202,11 @@
             // 
             // textTipoUsuario
             // 
-            this.textTipoUsuario.Location = new System.Drawing.Point(400, 207);
+            this.textTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.textTipoUsuario.Location = new System.Drawing.Point(400, 199);
             this.textTipoUsuario.Name = "textTipoUsuario";
-            this.textTipoUsuario.Size = new System.Drawing.Size(122, 20);
+            this.textTipoUsuario.Size = new System.Drawing.Size(99, 20);
             this.textTipoUsuario.TabIndex = 41;
             // 
             // label9
@@ -214,7 +214,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(272, 209);
+            this.label9.Location = new System.Drawing.Point(397, 171);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 15);
             this.label9.TabIndex = 40;
@@ -222,9 +222,11 @@
             // 
             // textDni
             // 
-            this.textDni.Location = new System.Drawing.Point(119, 206);
+            this.textDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textDni.ForeColor = System.Drawing.Color.White;
+            this.textDni.Location = new System.Drawing.Point(275, 122);
             this.textDni.Name = "textDni";
-            this.textDni.Size = new System.Drawing.Size(133, 20);
+            this.textDni.Size = new System.Drawing.Size(224, 20);
             this.textDni.TabIndex = 39;
             // 
             // label6
@@ -232,7 +234,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(41, 207);
+            this.label6.Location = new System.Drawing.Point(272, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 38;
@@ -243,7 +245,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(17, 103);
+            this.label5.Location = new System.Drawing.Point(22, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 37;
@@ -251,23 +253,29 @@
             // 
             // textTelefono
             // 
-            this.textTelefono.Location = new System.Drawing.Point(108, 103);
+            this.textTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textTelefono.ForeColor = System.Drawing.Color.White;
+            this.textTelefono.Location = new System.Drawing.Point(25, 122);
             this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(224, 20);
+            this.textTelefono.Size = new System.Drawing.Size(219, 20);
             this.textTelefono.TabIndex = 36;
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(118, 173);
+            this.textEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textEmail.ForeColor = System.Drawing.Color.White;
+            this.textEmail.Location = new System.Drawing.Point(25, 279);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(404, 20);
+            this.textEmail.Size = new System.Drawing.Size(474, 20);
             this.textEmail.TabIndex = 32;
             // 
             // textDireccion
             // 
-            this.textDireccion.Location = new System.Drawing.Point(118, 141);
+            this.textDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textDireccion.ForeColor = System.Drawing.Color.White;
+            this.textDireccion.Location = new System.Drawing.Point(25, 199);
             this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(404, 20);
+            this.textDireccion.Size = new System.Drawing.Size(351, 20);
             this.textDireccion.TabIndex = 35;
             // 
             // label4
@@ -275,7 +283,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 175);
+            this.label4.Location = new System.Drawing.Point(22, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 31;
@@ -283,14 +291,18 @@
             // 
             // textApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(108, 69);
+            this.textApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textApellido.ForeColor = System.Drawing.Color.White;
+            this.textApellido.Location = new System.Drawing.Point(275, 49);
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(224, 20);
             this.textApellido.TabIndex = 34;
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(108, 40);
+            this.textNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.textNombre.ForeColor = System.Drawing.Color.White;
+            this.textNombre.Location = new System.Drawing.Point(20, 49);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(224, 20);
             this.textNombre.TabIndex = 33;
@@ -300,7 +312,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(40, 143);
+            this.label10.Location = new System.Drawing.Point(22, 171);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 15);
             this.label10.TabIndex = 30;
@@ -311,7 +323,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(17, 69);
+            this.label11.Location = new System.Drawing.Point(272, 31);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 15);
             this.label11.TabIndex = 29;
@@ -322,7 +334,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(17, 40);
+            this.label12.Location = new System.Drawing.Point(17, 31);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 15);
             this.label12.TabIndex = 28;
@@ -331,10 +343,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
             // 
             // UsuarioCrud
             // 
@@ -350,7 +358,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,6 +389,5 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

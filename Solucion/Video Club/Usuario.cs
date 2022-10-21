@@ -25,14 +25,9 @@ namespace Video_Club
         {
             InitializeComponent();
             CargarTablaUsuario();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_nuevo.Enabled = false;
+
             btn_registrar.Enabled = true;
-        
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
+
             btn_registrar.BackColor = Color.FromArgb(169, 16, 121);
             
    
@@ -53,31 +48,30 @@ namespace Video_Club
             this.panel2.Controls.Add(fh);  // agregamos el formulario al panel
             this.panel2.Tag = fh;  // establecemo la instancia como contenedor de dato al panel
             fh.Show();  // mostramos el formulario.
-
         }
+
+ 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             UsuarioClass usuarioObj = new UsuarioClass();
             posicion = dataGridView1.CurrentRow.Index;
-            usuarioObj.Id = int.Parse(dataGridView1[0, posicion].Value.ToString());
-            usuarioObj.Nombre = dataGridView1[1, posicion].Value.ToString();
-            usuarioObj.Apellido = dataGridView1[2, posicion].Value.ToString();
-            usuarioObj.Dni = int.Parse(dataGridView1[3, posicion].Value.ToString());
-            usuarioObj.TipoUsuario = int.Parse(dataGridView1[4, posicion].Value.ToString());
-            usuarioObj.Email = dataGridView1[5, posicion].Value.ToString();
-            usuarioObj.Direccion = dataGridView1[6, posicion].Value.ToString();
-            usuarioObj.Telefono = dataGridView1[7, posicion].Value.ToString();
-            MessageBox.Show("nombre "+ usuarioObj.Nombre);
+            usuarioObj.Id1 = int.Parse(dataGridView1[0, posicion].Value.ToString());
+            usuarioObj.Nombre1 = dataGridView1[1, posicion].Value.ToString();
+            usuarioObj.Apellido1 = dataGridView1[2, posicion].Value.ToString();
+            usuarioObj.Dni1 = int.Parse(dataGridView1[3, posicion].Value.ToString());
+            usuarioObj.TipoUsuario1 = int.Parse(dataGridView1[4, posicion].Value.ToString());
+            usuarioObj.Email1 = dataGridView1[5, posicion].Value.ToString();
+            usuarioObj.Direccion1 = dataGridView1[6, posicion].Value.ToString();
+            usuarioObj.Telefono1 = dataGridView1[7, posicion].Value.ToString();
+            MessageBox.Show("nombre "+ usuarioObj.Nombre1);
             
-            btn_eliminar.Enabled = true;
-            btn_modificar.Enabled = true;
-            btn_registrar.Enabled = false;
-            btn_nuevo.Enabled = true;
 
-            btn_eliminar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
+            btn_registrar.Enabled = false;
+    
+
+
             btn_registrar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+         
             AbrirFormEnPanel(new UsuarioCrud());
         }
    
@@ -98,6 +92,13 @@ namespace Video_Club
         private void btn_registrar_Click_1(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new UsuarioCrud());
+            btn_registrar.Visible=false;
+            panel6.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

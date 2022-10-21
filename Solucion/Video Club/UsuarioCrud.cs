@@ -32,14 +32,14 @@ namespace Video_Club
         void CargarTextbox()
         {
             UsuarioClass usuarioObj2 = new UsuarioClass();
-            MessageBox.Show("nombre " + usuarioObj2.Nombre);
-            textNombre.Text = usuarioObj2.Nombre;
-            textApellido.Text = usuarioObj2.Apellido;
-            textDireccion.Text = usuarioObj2.Direccion;
-            textTelefono.Text = usuarioObj2.Telefono;
-            textEmail.Text = usuarioObj2.Email;
-            textDni.Text = Convert.ToString(usuarioObj2.Dni);
-            textTipoUsuario.Text = Convert.ToString(usuarioObj2.TipoUsuario);
+            MessageBox.Show("nombre " + usuarioObj2.Nombre1);
+            textNombre.Text = usuarioObj2.Nombre1;
+            textApellido.Text = usuarioObj2.Apellido1;
+            textDireccion.Text = usuarioObj2.Direccion1;
+            textTelefono.Text = usuarioObj2.Telefono1;
+            textEmail.Text = usuarioObj2.Email1;
+            textDni.Text = Convert.ToString(usuarioObj2.Dni1);
+            textTipoUsuario.Text = Convert.ToString(usuarioObj2.TipoUsuario1);
         }
         void limpiar()
         {
@@ -55,16 +55,16 @@ namespace Video_Club
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             UsuarioClass usuarioObj = new UsuarioClass();
-            usuarioObj.Nombre = textNombre.Text;
-            usuarioObj.Apellido = textApellido.Text;
-            usuarioObj.Direccion = textDireccion.Text;
-            usuarioObj.Telefono = textTelefono.Text;
-            usuarioObj.Email = textEmail.Text;
-            usuarioObj.Dni = Convert.ToInt32(textDni.Text);
-            usuarioObj.TipoUsuario = Convert.ToInt32(textTipoUsuario.Text);
+            usuarioObj.Nombre1 = textNombre.Text;
+            usuarioObj.Apellido1 = textApellido.Text;
+            usuarioObj.Direccion1 = textDireccion.Text;
+            usuarioObj.Telefono1 = textTelefono.Text;
+            usuarioObj.Email1 = textEmail.Text;
+            usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
+            usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
 
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono) VALUES('" + usuarioObj.Nombre + "','" + usuarioObj.Apellido + "','" + usuarioObj.Dni + "','" + usuarioObj.TipoUsuario + "','" + usuarioObj.Email + "','" + usuarioObj.Direccion + "','" + usuarioObj.Telefono + "')";
+            string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono) VALUES('" + usuarioObj.Nombre1 + "','" + usuarioObj.Apellido1 + "','" + usuarioObj.Dni1 + "','" + usuarioObj.TipoUsuario1 + "','" + usuarioObj.Email1 + "','" + usuarioObj.Direccion1 + "','" + usuarioObj.Telefono1 + "')";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);
@@ -78,16 +78,16 @@ namespace Video_Club
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             UsuarioClass usuarioObj = new UsuarioClass();
-            usuarioObj.Nombre = textNombre.Text;
-            usuarioObj.Apellido = textApellido.Text;
-            usuarioObj.Direccion = textDireccion.Text;
-            usuarioObj.Telefono = textTelefono.Text;
-            usuarioObj.Email = textEmail.Text;
-            usuarioObj.Dni = Convert.ToInt32(textDni.Text);
-            usuarioObj.TipoUsuario = Convert.ToInt32(textTipoUsuario.Text);
+            usuarioObj.Nombre1 = textNombre.Text;
+            usuarioObj.Apellido1 = textApellido.Text;
+            usuarioObj.Direccion1 = textDireccion.Text;
+            usuarioObj.Telefono1 = textTelefono.Text;
+            usuarioObj.Email1 = textEmail.Text;
+            usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
+            usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
 
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "update usuario set NombreUsuario='" + usuarioObj.Nombre + "',ApellidoUsuario='" + usuarioObj.Apellido + "',DniUsuario='" + usuarioObj.Dni + "',TipoUsuario='" + usuarioObj.TipoUsuario + "' ,email='" + usuarioObj.Email + "',direccion='" + usuarioObj.Direccion + "',telefono='" + usuarioObj.Telefono + "' where id_usuario='" + usuarioObj.Id + "';";
+            string sql = "update usuario set NombreUsuario='" + usuarioObj.Nombre1 + "',ApellidoUsuario='" + usuarioObj.Apellido1 + "',DniUsuario='" + usuarioObj.Dni1 + "',TipoUsuario='" + usuarioObj.TipoUsuario1 + "' ,email='" + usuarioObj.Email1 + "',direccion='" + usuarioObj.Direccion1 + "',telefono='" + usuarioObj.Telefono1 + "' where id_usuario='" + usuarioObj.Id1 + "';";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);
@@ -112,10 +112,10 @@ namespace Video_Club
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             UsuarioClass usuarioObj = new UsuarioClass();
-            if (MessageBox.Show("el Id: " + usuarioObj.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("el Id: " + usuarioObj.Id1, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "delete from usuario where id_usuario='" + usuarioObj.Id + "';";
+                string sql = "delete from usuario where id_usuario='" + usuarioObj.Id1 + "';";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
