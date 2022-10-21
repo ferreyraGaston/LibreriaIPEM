@@ -1,5 +1,4 @@
-﻿
-namespace Video_Club
+﻿namespace Video_Club
 {
     partial class Consultas
     {
@@ -31,15 +30,14 @@ namespace Video_Club
         {
             this.SuspendLayout();
             // 
-            // socios
+            // Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Yellow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1024, 543);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "socios";
-            this.Text = "socios";
+            this.Name = "Consultas";
+            this.Text = "Consultas";
             this.ResumeLayout(false);
 
         }

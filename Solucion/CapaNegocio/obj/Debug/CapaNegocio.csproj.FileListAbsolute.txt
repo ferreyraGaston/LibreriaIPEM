@@ -4,3 +4,9 @@ D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.csp
 D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
 D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.dll
 D:\Desarollo C#\Libreria IPEM 134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.pdb
+D:\Desarollo C#\Ipem-134\Solucion\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Desarollo C#\Ipem-134\Solucion\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Desarollo C#\Ipem-134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\Desarollo C#\Ipem-134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Desarollo C#\Ipem-134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Desarollo C#\Ipem-134\Solucion\CapaNegocio\obj\Debug\CapaNegocio.pdb

@@ -62,6 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas.Designer.cs">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioCrud.Designer.cs">
+      <DependentUpon>UsuarioCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibroCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,18 +124,15 @@
     <Compile Include="RepVentas.Designer.cs">
       <DependentUpon>RepVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="socios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="socios.Designer.cs">
-      <DependentUpon>socios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Libros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Libros.Designer.cs">
       <DependentUpon>Libros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas.resx">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LibroCrud.resx">
       <DependentUpon>LibroCrud.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,11 +166,11 @@
     <EmbeddedResource Include="RepVentas.resx">
       <DependentUpon>RepVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="socios.resx">
-      <DependentUpon>socios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Libros.resx">
       <DependentUpon>Libros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioCrud.resx">
+      <DependentUpon>UsuarioCrud.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

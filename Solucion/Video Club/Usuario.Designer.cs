@@ -32,24 +32,10 @@ namespace Video_Club
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textTipoUsuario = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textDni = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textTelefono = new System.Windows.Forms.TextBox();
-            this.textEmail = new System.Windows.Forms.TextBox();
-            this.textDireccion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textApellido = new System.Windows.Forms.TextBox();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_registrar = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
@@ -86,20 +72,6 @@ namespace Video_Club
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.panel2.Controls.Add(this.textTipoUsuario);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textDni);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textTelefono);
-            this.panel2.Controls.Add(this.textEmail);
-            this.panel2.Controls.Add(this.textDireccion);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textApellido);
-            this.panel2.Controls.Add(this.textNombre);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -107,141 +79,15 @@ namespace Video_Club
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1084, 418);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // textTipoUsuario
-            // 
-            this.textTipoUsuario.Location = new System.Drawing.Point(744, 77);
-            this.textTipoUsuario.Name = "textTipoUsuario";
-            this.textTipoUsuario.Size = new System.Drawing.Size(122, 20);
-            this.textTipoUsuario.TabIndex = 27;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(616, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 15);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Tipo de Usuario:";
-            // 
-            // textDni
-            // 
-            this.textDni.Location = new System.Drawing.Point(463, 76);
-            this.textDni.Name = "textDni";
-            this.textDni.Size = new System.Drawing.Size(133, 20);
-            this.textDni.TabIndex = 25;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(385, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 15);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Dni:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(23, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 15);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Telefono:";
-            // 
-            // textTelefono
-            // 
-            this.textTelefono.Location = new System.Drawing.Point(114, 74);
-            this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(224, 20);
-            this.textTelefono.TabIndex = 21;
-            // 
-            // textEmail
-            // 
-            this.textEmail.Location = new System.Drawing.Point(462, 43);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(404, 20);
-            this.textEmail.TabIndex = 17;
-            // 
-            // textDireccion
-            // 
-            this.textDireccion.Location = new System.Drawing.Point(462, 11);
-            this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(404, 20);
-            this.textDireccion.TabIndex = 20;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(384, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 15);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Email:";
-            // 
-            // textApellido
-            // 
-            this.textApellido.Location = new System.Drawing.Point(114, 40);
-            this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(224, 20);
-            this.textApellido.TabIndex = 19;
-            // 
-            // textNombre
-            // 
-            this.textNombre.Location = new System.Drawing.Point(114, 11);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(224, 20);
-            this.textNombre.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(384, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 15);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Dirección:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Apellido P:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Broadway", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Nombre:";
+
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 21);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(843, 385);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -250,7 +96,7 @@ namespace Video_Club
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.btn_agregar);
+            this.panel3.Controls.Add(this.btn_registrar);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.btn_nuevo);
             this.panel3.Controls.Add(this.btn_eliminar);
@@ -262,6 +108,7 @@ namespace Video_Club
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 418);
             this.panel3.TabIndex = 0;
+
             // 
             // panel4
             // 
@@ -271,23 +118,23 @@ namespace Video_Club
             this.panel4.Size = new System.Drawing.Size(10, 32);
             this.panel4.TabIndex = 24;
             // 
-            // btn_agregar
+            // btn_registrar
             // 
-            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar.FlatAppearance.BorderSize = 0;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(12, 92);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(185, 32);
-            this.btn_agregar.TabIndex = 17;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrar.FlatAppearance.BorderSize = 0;
+            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar.ForeColor = System.Drawing.Color.White;
+            this.btn_registrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registrar.Location = new System.Drawing.Point(12, 92);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Size = new System.Drawing.Size(185, 32);
+            this.btn_registrar.TabIndex = 17;
+            this.btn_registrar.Text = "Registrar";
+            this.btn_registrar.UseVisualStyleBackColor = false;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click_1);
             // 
             // panel7
             // 
@@ -313,7 +160,6 @@ namespace Video_Club
             this.btn_nuevo.TabIndex = 23;
             this.btn_nuevo.Text = "Nuevo";
             this.btn_nuevo.UseVisualStyleBackColor = false;
-            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_eliminar
             // 
@@ -331,7 +177,6 @@ namespace Video_Club
             this.btn_eliminar.TabIndex = 21;
             this.btn_eliminar.Text = "ELiminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // panel6
             // 
@@ -357,7 +202,6 @@ namespace Video_Club
             this.btn_modificar.TabIndex = 19;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // panel5
             // 
@@ -395,7 +239,7 @@ namespace Video_Club
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.Button btn_registrar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.Button btn_eliminar;
@@ -403,20 +247,6 @@ namespace Video_Club
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textTelefono;
-        private System.Windows.Forms.TextBox textEmail;
-        private System.Windows.Forms.TextBox textDireccion;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textApellido;
-        private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textTipoUsuario;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textDni;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_titulo;
     }
 }
