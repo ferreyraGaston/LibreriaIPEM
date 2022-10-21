@@ -67,7 +67,8 @@ namespace Video_Club
             usuarioObj.Email = dataGridView1[5, posicion].Value.ToString();
             usuarioObj.Direccion = dataGridView1[6, posicion].Value.ToString();
             usuarioObj.Telefono = dataGridView1[7, posicion].Value.ToString();
-         
+            MessageBox.Show("nombre "+ usuarioObj.Nombre);
+            
             btn_eliminar.Enabled = true;
             btn_modificar.Enabled = true;
             btn_registrar.Enabled = false;

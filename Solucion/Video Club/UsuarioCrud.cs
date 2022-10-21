@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Video_Club
 {
     public partial class UsuarioCrud : Form
@@ -30,14 +31,15 @@ namespace Video_Club
         }
         void CargarTextbox()
         {
-            UsuarioClass usuarioObj = new UsuarioClass();
-            textNombre.Text = usuarioObj.Nombre;
-            textApellido.Text = usuarioObj.Apellido;
-            textDireccion.Text = usuarioObj.Direccion;
-            textTelefono.Text = usuarioObj.Telefono;
-            textEmail.Text = usuarioObj.Email;
-            textDni.Text = Convert.ToString(usuarioObj.Dni);
-            textTipoUsuario.Text = Convert.ToString(usuarioObj.TipoUsuario);
+            UsuarioClass usuarioObj2 = new UsuarioClass();
+            MessageBox.Show("nombre " + usuarioObj2.Nombre);
+            textNombre.Text = usuarioObj2.Nombre;
+            textApellido.Text = usuarioObj2.Apellido;
+            textDireccion.Text = usuarioObj2.Direccion;
+            textTelefono.Text = usuarioObj2.Telefono;
+            textEmail.Text = usuarioObj2.Email;
+            textDni.Text = Convert.ToString(usuarioObj2.Dni);
+            textTipoUsuario.Text = Convert.ToString(usuarioObj2.TipoUsuario);
         }
         void limpiar()
         {

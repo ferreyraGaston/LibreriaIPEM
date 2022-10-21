@@ -9,7 +9,7 @@ namespace Entidades
     //internal class Usuario
     public class UsuarioClass
     {
-
+   
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -22,7 +22,6 @@ namespace Entidades
         public UsuarioClass()
         {
         }
-
 
     }
 }
