@@ -17,6 +17,9 @@ namespace Entidades
         static private string Email;
         static private string Direccion;
         static private string Telefono;
+        static private bool estado;
+
+        public bool Estado { get => estado; set => estado = value; }
         public string Nombre1 { get => Nombre; set => Nombre = value; }
         public int Id1 { get => Id; set => Id = value; }
         public string Apellido1 { get => Apellido; set => Apellido = value; }

@@ -19,21 +19,13 @@ namespace Video_Club
         public UsuarioCrud()
         {
             InitializeComponent();
-            CargarTextbox();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textNombre.Focus();
+            CargarTextbox();;
+            estadoUsuario();
         }
         void CargarTextbox()
         {
             UsuarioClass usuarioObj2 = new UsuarioClass();
-            MessageBox.Show("nombre " + usuarioObj2.Nombre1);
+            //MessageBox.Show("nombre " + usuarioObj2.Nombre1);
             textNombre.Text = usuarioObj2.Nombre1;
             textApellido.Text = usuarioObj2.Apellido1;
             textDireccion.Text = usuarioObj2.Direccion1;
@@ -42,6 +34,39 @@ namespace Video_Club
             textDni.Text = Convert.ToString(usuarioObj2.Dni1);
             textTipoUsuario.Text = Convert.ToString(usuarioObj2.TipoUsuario1);
         }
+        void estadoUsuario()
+        {
+            UsuarioClass usuarioObj = new UsuarioClass();
+
+            if (usuarioObj.Estado == true)
+            {
+                
+                btn_eliminar.Enabled = true;
+                btn_modificar.Enabled = true;
+                btn_agregar.Enabled = false;
+                btn_nuevo.Enabled = false;
+                btn_eliminar.BackColor = Color.FromArgb(169, 16, 121);
+                btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
+                btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
+                textNombre.Focus();
+            }
+            else
+            {
+                btn_eliminar.Enabled = false;
+                btn_modificar.Enabled = false;
+                btn_agregar.Enabled = true;
+                btn_nuevo.Enabled = true;
+                btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
+                btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+                textNombre.Focus();
+            }
+            
+
+        }
+
         void limpiar()
         {
             textNombre.Text = "";

@@ -27,15 +27,7 @@ namespace Video_Club
             CargarTablaUsuario();
 
             btn_registrar.Enabled = true;
-
             btn_registrar.BackColor = Color.FromArgb(169, 16, 121);
-            
-   
-        }
-
-        private void clientes_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void AbrirFormEnPanel(object formhija)
@@ -49,8 +41,6 @@ namespace Video_Club
             this.panel2.Tag = fh;  // establecemo la instancia como contenedor de dato al panel
             fh.Show();  // mostramos el formulario.
         }
-
- 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             UsuarioClass usuarioObj = new UsuarioClass();
@@ -63,15 +53,11 @@ namespace Video_Club
             usuarioObj.Email1 = dataGridView1[5, posicion].Value.ToString();
             usuarioObj.Direccion1 = dataGridView1[6, posicion].Value.ToString();
             usuarioObj.Telefono1 = dataGridView1[7, posicion].Value.ToString();
-            MessageBox.Show("nombre "+ usuarioObj.Nombre1);
-            
-
-            btn_registrar.Enabled = false;
-    
-
-
-            btn_registrar.BackColor = Color.FromArgb(87, 10, 87);
-         
+            usuarioObj.Estado = true;
+            //MessageBox.Show("nombre "+ usuarioObj.Nombre1);
+            btn_registrar.Visible = false;
+            panel6.Visible = false;
+      
             AbrirFormEnPanel(new UsuarioCrud());
         }
    
@@ -91,16 +77,20 @@ namespace Video_Club
 
         private void btn_registrar_Click_1(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new UsuarioCrud());
+            
             btn_registrar.Visible=false;
             panel6.Visible = false;
             UsuarioClass usuarioObj = new UsuarioClass();
-            MessageBox.Show("nombre " + usuarioObj.Nombre1);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            usuarioObj.Id1 = 0;
+            usuarioObj.Nombre1 = "";
+            usuarioObj.Apellido1 = "";
+            usuarioObj.Dni1 = 0;
+            usuarioObj.TipoUsuario1 = 0;
+            usuarioObj.Email1 = "";
+            usuarioObj.Direccion1 = "";
+            usuarioObj.Telefono1 = "";
+            usuarioObj.Estado = false;
+            AbrirFormEnPanel(new UsuarioCrud());
         }
     }
 }

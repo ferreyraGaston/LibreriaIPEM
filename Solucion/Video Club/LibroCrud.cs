@@ -33,5 +33,9 @@ namespace Video_Club
             AbrirFormEnPanel(new Libros());
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
