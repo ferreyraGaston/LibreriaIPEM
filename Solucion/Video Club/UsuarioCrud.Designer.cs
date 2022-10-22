@@ -75,6 +75,7 @@
             this.pnl_opciones.Name = "pnl_opciones";
             this.pnl_opciones.Size = new System.Drawing.Size(200, 450);
             this.pnl_opciones.TabIndex = 12;
+            this.pnl_opciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_opciones_Paint);
             // 
             // panel4
             // 

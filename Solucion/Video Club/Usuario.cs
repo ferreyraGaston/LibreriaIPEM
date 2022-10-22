@@ -25,11 +25,22 @@ namespace Video_Club
         {
             InitializeComponent();
             CargarTablaUsuario();
-
             btn_registrar.Enabled = true;
             btn_registrar.BackColor = Color.FromArgb(169, 16, 121);
         }
-
+        void CargarTablaUsuario()
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from usuario";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
         private void AbrirFormEnPanel(object formhija)
         {
             if (this.panel2.Controls.Count > 0)  // pregunta si hay algun control en el interior del panel
@@ -60,21 +71,6 @@ namespace Video_Club
       
             AbrirFormEnPanel(new UsuarioCrud());
         }
-   
-        void CargarTablaUsuario()
-        {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from usuario";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.AllCells;
-        }
-
         private void btn_registrar_Click_1(object sender, EventArgs e)
         {
             
@@ -91,6 +87,11 @@ namespace Video_Club
             usuarioObj.Telefono1 = "";
             usuarioObj.Estado = false;
             AbrirFormEnPanel(new UsuarioCrud());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

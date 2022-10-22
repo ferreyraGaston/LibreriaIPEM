@@ -183,5 +183,10 @@ namespace Video_Club
         {
 
         }
+
+        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

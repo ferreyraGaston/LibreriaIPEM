@@ -14,33 +14,27 @@ namespace Video_Club
 {
     public partial class Libros : Form
     {
-
+        int posicion = 0;
         public Libros()
         {
             InitializeComponent();
             CargarTablaLibro();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-            btn_eliminar.BackColor= Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-           
+            btnRegistrar.Enabled = true;
+            btnRegistrar.BackColor = Color.FromArgb(169, 16, 121);
         }
         void CargarTablaLibro()
         {
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from libros";
+            string sql = "select idLibros,titulo,Categoria from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
             dgv_detalle.DataSource = dt;
             dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
         }
         private void AbrirFormEnPanel(object formhija)
         {
@@ -54,35 +48,54 @@ namespace Video_Club
             fh.Show();  // mostramos el formulario.
 
         }
-        private void btn_agregar_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new LibroCrud());
-        }
-
         private void dgv_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             AbrirFormEnPanel(new LibroCrud());
+            LibroClass libroObj = new LibroClass();
+
+            posicion = dgv_detalle.CurrentRow.Index;
+            libroObj.Id = int.Parse(dgv_detalle[0, posicion].Value.ToString());
+            libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
+            //libroObj.Autor = int.Parse(dgv_detalle[2, posicion].Value.ToString());
+            //libroObj.Editor = int.Parse(dgv_detalle[3, posicion].Value.ToString());
+            //libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
+            //libroObj.Edicion = dgv_detalle[5, posicion].Value.ToString();
+            //libroObj.Categoria = int.Parse(dgv_detalle[6, posicion].Value.ToString());
+            //libroObj.Idioma = int.Parse(dgv_detalle[7, posicion].Value.ToString());
+            //libroObj.Pagina = int.Parse(dgv_detalle[8, posicion].Value.ToString());
+            //libroObj.Estado = int.Parse(dgv_detalle[9, posicion].Value.ToString());
+            //libroObj.Notas = dgv_detalle[10, posicion].Value.ToString();
+            //libroObj.Stock = int.Parse(dgv_detalle[11, posicion].Value.ToString());
+            //libroObj.CondicionLib = int.Parse(dgv_detalle[12, posicion].Value.ToString());
+
+            libroObj.EstadoLibro = true;
+            dgv_detalle.Visible = false;
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
- 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from libros";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
+
+            btnRegistrar.Visible = false;
+            panel7.Visible = false;
+            dgv_detalle.Visible = false;
+            LibroClass libroObj = new LibroClass();
+            libroObj.Titulo = "";
+            libroObj.Autor = 0;
+            libroObj.Editor = 0;
+            libroObj.Edicion = "";
+            libroObj.Categoria = 0;
+            libroObj.Idioma = 0;
+            libroObj.Pagina = 0;
+            libroObj.Estado = 0;
+            libroObj.Notas = "";
+            libroObj.Stock = 0;
+            libroObj.CondicionLib = 0;
+            libroObj.EstadoLibro = false;
+         
+            AbrirFormEnPanel(new LibroCrud());
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
         {
 
         }
