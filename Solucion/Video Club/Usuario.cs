@@ -94,6 +94,8 @@ namespace Video_Club
             AbrirFormEnPanel(new UsuarioCrud());
             btn_registrar.Visible=false;
             panel6.Visible = false;
+            UsuarioClass usuarioObj = new UsuarioClass();
+            MessageBox.Show("nombre " + usuarioObj.Nombre1);
         }
 
         private void button1_Click(object sender, EventArgs e)

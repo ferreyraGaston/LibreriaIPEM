@@ -15,6 +15,7 @@ namespace Video_Club
 {
     public partial class UsuarioCrud : Form
     {
+
         public UsuarioCrud()
         {
             InitializeComponent();
