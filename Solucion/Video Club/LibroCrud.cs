@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace Video_Club
         public LibroCrud()
         {
             InitializeComponent();
+            listarCategoria();
+            listarAutor();
+            listarIdioma();
+            listarEditorial();
         }
         private void AbrirFormEnPanel(object formhija)
         {
@@ -33,9 +38,65 @@ namespace Video_Club
             AbrirFormEnPanel(new Libros());
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+  
 
+       private void listarCategoria()
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from categoria order by Categoria asc";
+            MySqlCommand da = new MySqlCommand(sql, con);
+            MySqlDataReader dr =da.ExecuteReader();
+            while(dr.Read())
+            {
+                cboCategoria.Items.Add(dr[1].ToString());
+            }
+            con.Close();           
         }
+        private void listarAutor()
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from autor order by apellidoAutor asc";
+            MySqlCommand da = new MySqlCommand(sql, con);
+            MySqlDataReader dr = da.ExecuteReader();
+            while (dr.Read())
+            {
+                cboAutor.Items.Add(dr[1].ToString()+" "+ dr[2].ToString());
+            }
+            con.Close();
+        }
+
+        private void listarIdioma()
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from idioma order by Idioma asc";
+            MySqlCommand da = new MySqlCommand(sql, con);
+            MySqlDataReader dr = da.ExecuteReader();
+            while (dr.Read())
+            {
+                cboIdioma.Items.Add(dr[1].ToString());
+            }
+            con.Close();
+        }
+        private void listarEditorial()
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from editorial order by Editorial asc";
+            MySqlCommand da = new MySqlCommand(sql, con);
+            MySqlDataReader dr = da.ExecuteReader();
+            while (dr.Read())
+            {
+                cboEditor.Items.Add(dr[1].ToString());
+            }
+            con.Close();
+        }
+
     }
 }

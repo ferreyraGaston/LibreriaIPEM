@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textEditor = new System.Windows.Forms.TextBox();
-            this.textEdicion = new System.Windows.Forms.TextBox();
-            this.textAutor = new System.Windows.Forms.TextBox();
+            this.txtEditor = new System.Windows.Forms.TextBox();
+            this.txtEdicion = new System.Windows.Forms.TextBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textFecha = new System.Windows.Forms.TextBox();
-            this.textTitulo = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +48,25 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnl_opciones = new System.Windows.Forms.Panel();
+            this.txtPagina = new System.Windows.Forms.TextBox();
+            this.txtNotas = new System.Windows.Forms.TextBox();
+            this.txtIdioma = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCondicion = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cboAutor = new System.Windows.Forms.ComboBox();
+            this.cboEditor = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.cboIdioma = new System.Windows.Forms.ComboBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.pnl_opciones.SuspendLayout();
             this.SuspendLayout();
@@ -55,12 +74,31 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.panel2.Controls.Add(this.textEditor);
-            this.panel2.Controls.Add(this.textEdicion);
-            this.panel2.Controls.Add(this.textAutor);
+            this.panel2.Controls.Add(this.cboEstado);
+            this.panel2.Controls.Add(this.cboIdioma);
+            this.panel2.Controls.Add(this.cboCategoria);
+            this.panel2.Controls.Add(this.cboEditor);
+            this.panel2.Controls.Add(this.cboAutor);
+            this.panel2.Controls.Add(this.txtCondicion);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.txtStock);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.txtPagina);
+            this.panel2.Controls.Add(this.txtNotas);
+            this.panel2.Controls.Add(this.txtIdioma);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtEstado);
+            this.panel2.Controls.Add(this.txtCategoria);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.txtEditor);
+            this.panel2.Controls.Add(this.txtEdicion);
+            this.panel2.Controls.Add(this.txtAutor);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textFecha);
-            this.panel2.Controls.Add(this.textTitulo);
+            this.panel2.Controls.Add(this.txtFecha);
+            this.panel2.Controls.Add(this.txtTitulo);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -70,53 +108,52 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+           
+            // txtEditor
             // 
-            // textEditor
+            this.txtEditor.Location = new System.Drawing.Point(158, 113);
+            this.txtEditor.Name = "txtEditor";
+            this.txtEditor.Size = new System.Drawing.Size(100, 20);
+            this.txtEditor.TabIndex = 11;
             // 
-            this.textEditor.Location = new System.Drawing.Point(114, 113);
-            this.textEditor.Name = "textEditor";
-            this.textEditor.Size = new System.Drawing.Size(100, 20);
-            this.textEditor.TabIndex = 11;
+            // txtEdicion
             // 
-            // textEdicion
+            this.txtEdicion.Location = new System.Drawing.Point(158, 177);
+            this.txtEdicion.Name = "txtEdicion";
+            this.txtEdicion.Size = new System.Drawing.Size(100, 20);
+            this.txtEdicion.TabIndex = 8;
             // 
-            this.textEdicion.Location = new System.Drawing.Point(399, 81);
-            this.textEdicion.Name = "textEdicion";
-            this.textEdicion.Size = new System.Drawing.Size(100, 20);
-            this.textEdicion.TabIndex = 8;
+            // txtAutor
             // 
-            // textAutor
-            // 
-            this.textAutor.Location = new System.Drawing.Point(114, 81);
-            this.textAutor.Name = "textAutor";
-            this.textAutor.Size = new System.Drawing.Size(100, 20);
-            this.textAutor.TabIndex = 10;
+            this.txtAutor.Location = new System.Drawing.Point(158, 81);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(100, 20);
+            this.txtAutor.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Broadway", 9.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(259, 81);
+            this.label7.Location = new System.Drawing.Point(18, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 15);
             this.label7.TabIndex = 7;
             this.label7.Text = "Edicion";
             // 
-            // textFecha
+            // txtFecha
             // 
-            this.textFecha.Location = new System.Drawing.Point(399, 55);
-            this.textFecha.Name = "textFecha";
-            this.textFecha.Size = new System.Drawing.Size(100, 20);
-            this.textFecha.TabIndex = 9;
+            this.txtFecha.Location = new System.Drawing.Point(158, 151);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(100, 20);
+            this.txtFecha.TabIndex = 9;
             // 
-            // textTitulo
+            // txtTitulo
             // 
-            this.textTitulo.Location = new System.Drawing.Point(114, 52);
-            this.textTitulo.Name = "textTitulo";
-            this.textTitulo.Size = new System.Drawing.Size(100, 20);
-            this.textTitulo.TabIndex = 8;
+            this.txtTitulo.Location = new System.Drawing.Point(158, 52);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(100, 20);
+            this.txtTitulo.TabIndex = 8;
             // 
             // label8
             // 
@@ -125,9 +162,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(9, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 15);
+            this.label8.Size = new System.Drawing.Size(71, 15);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Editocion";
+            this.label8.Text = "Editorial";
             // 
             // label3
             // 
@@ -145,7 +182,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Broadway", 9.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(253, 52);
+            this.label2.Location = new System.Drawing.Point(12, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 15);
             this.label2.TabIndex = 4;
@@ -276,6 +313,173 @@
             this.pnl_opciones.Size = new System.Drawing.Size(200, 567);
             this.pnl_opciones.TabIndex = 10;
             // 
+            // txtPagina
+            // 
+            this.txtPagina.Location = new System.Drawing.Point(158, 274);
+            this.txtPagina.Name = "txtPagina";
+            this.txtPagina.Size = new System.Drawing.Size(100, 20);
+            this.txtPagina.TabIndex = 21;
+            // 
+            // txtNotas
+            // 
+            this.txtNotas.Location = new System.Drawing.Point(158, 338);
+            this.txtNotas.Name = "txtNotas";
+            this.txtNotas.Size = new System.Drawing.Size(100, 20);
+            this.txtNotas.TabIndex = 17;
+            // 
+            // txtIdioma
+            // 
+            this.txtIdioma.Location = new System.Drawing.Point(158, 242);
+            this.txtIdioma.Name = "txtIdioma";
+            this.txtIdioma.Size = new System.Drawing.Size(100, 20);
+            this.txtIdioma.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(18, 338);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Notas";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(158, 312);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtEstado.TabIndex = 19;
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(158, 213);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(9, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Pagina";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 242);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 15);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Idioma";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(12, 309);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 15);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Estado";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 213);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 15);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Categoría";
+            // 
+            // txtCondicion
+            // 
+            this.txtCondicion.Location = new System.Drawing.Point(158, 399);
+            this.txtCondicion.Name = "txtCondicion";
+            this.txtCondicion.Size = new System.Drawing.Size(100, 20);
+            this.txtCondicion.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(18, 399);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 15);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Condición";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(158, 373);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Broadway", 9.75F);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(12, 370);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 15);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Stock";
+            // 
+            // cboAutor
+            // 
+            this.cboAutor.FormattingEnabled = true;
+            this.cboAutor.Location = new System.Drawing.Point(295, 90);
+            this.cboAutor.Name = "cboAutor";
+            this.cboAutor.Size = new System.Drawing.Size(121, 21);
+            this.cboAutor.TabIndex = 26;
+            // 
+            // cboEditor
+            // 
+            this.cboEditor.FormattingEnabled = true;
+            this.cboEditor.Location = new System.Drawing.Point(295, 122);
+            this.cboEditor.Name = "cboEditor";
+            this.cboEditor.Size = new System.Drawing.Size(121, 21);
+            this.cboEditor.TabIndex = 27;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(295, 211);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cboCategoria.TabIndex = 28;
+
+            // 
+            // cboIdioma
+            // 
+            this.cboIdioma.FormattingEnabled = true;
+            this.cboIdioma.Location = new System.Drawing.Point(295, 240);
+            this.cboIdioma.Name = "cboIdioma";
+            this.cboIdioma.Size = new System.Drawing.Size(121, 21);
+            this.cboIdioma.TabIndex = 29;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(295, 312);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(121, 21);
+            this.cboEstado.TabIndex = 30;
+            // 
             // LibroCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,12 +500,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textEditor;
-        private System.Windows.Forms.TextBox textEdicion;
-        private System.Windows.Forms.TextBox textAutor;
+        private System.Windows.Forms.TextBox txtEditor;
+        private System.Windows.Forms.TextBox txtEdicion;
+        private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textFecha;
-        private System.Windows.Forms.TextBox textTitulo;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -315,5 +519,24 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel pnl_opciones;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.ComboBox cboIdioma;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.ComboBox cboEditor;
+        private System.Windows.Forms.ComboBox cboAutor;
+        private System.Windows.Forms.TextBox txtCondicion;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtPagina;
+        private System.Windows.Forms.TextBox txtNotas;
+        private System.Windows.Forms.TextBox txtIdioma;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
