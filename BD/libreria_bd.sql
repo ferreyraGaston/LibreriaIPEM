@@ -23,9 +23,10 @@ CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Usuario` (
   `ApellidoUsuario` VARCHAR(45) NULL,
   `DniUsuario` INT NULL,
   `TipoUsuario` INT NULL,
-  `email` VARCHAR(45) NULL,
-  `direccion` VARCHAR(45) NULL,
+  `email` VARCHAR(200) NULL,
+  `direccion` VARCHAR(200) NULL,
   `telefono` VARCHAR(45) NULL,
+  `estadoUsuario` TINYINT NULL,
   PRIMARY KEY (`id_usuario`))
 ENGINE = InnoDB;
 
@@ -86,16 +87,16 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Libros` (
   `idLibros` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(45) NULL,
-  `autor` INT NULL,
-  `editor` INT NULL,
+  `titulo` VARCHAR(70) NULL,
+  `id_autor` INT NULL,
+  `id_editor` INT NULL,
   `fechaPublic` DATE NULL,
   `edicion` VARCHAR(45) NULL,
-  `categoria` INT NULL,
-  `idioma` INT NULL,
+  `id_categoria` INT NULL,
+  `id_idioma` INT NULL,
   `pagina` INT NULL,
-  `estado` INT NULL,
-  `notas` VARCHAR(45) NULL,
+  `id_estado` INT NULL,
+  `notas` VARCHAR(200) NULL,
   `stock` INT NULL,
   `condicionLibro` INT NULL,
   PRIMARY KEY (`idLibros`))
@@ -109,10 +110,10 @@ CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Prestamo` (
   `idPrestamo` INT NOT NULL AUTO_INCREMENT,
   `idUsuario` INT NULL,
   `idLibro` INT NULL,
-  `idEstadoLibro` INT NULL,
   `fechaSalida` DATE NULL,
   `fechaEntrega` DATE NULL,
   `fechaDevolucion` DATE NULL,
+  `idEstadoLibro` INT NULL,
   `mora` FLOAT NULL,
   `condicion` TINYINT NULL,
   PRIMARY KEY (`idPrestamo`))
