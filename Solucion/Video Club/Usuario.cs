@@ -93,5 +93,24 @@ namespace Video_Club
         {
 
         }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "estadoUsuario")
+            {
+                if(Convert.ToInt32(e.Value)==1)
+                {
+                    e.CellStyle.ForeColor = Color.Black;
+                    e.CellStyle.BackColor = Color.Red;
+              
+                }
+                if (Convert.ToInt32(e.Value) == 0)
+                {
+                    e.CellStyle.ForeColor = Color.Black;
+                    e.CellStyle.BackColor = Color.Green;
+                
+                }
+            }
+        }
     }
 }
