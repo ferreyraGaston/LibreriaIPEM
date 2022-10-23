@@ -62,6 +62,11 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnl_opciones = new System.Windows.Forms.Panel();
+            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.txtEditor = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtIdioma = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.pnl_opciones.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +74,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.panel2.Controls.Add(this.txtEstado);
+            this.panel2.Controls.Add(this.txtIdioma);
+            this.panel2.Controls.Add(this.txtCategoria);
+            this.panel2.Controls.Add(this.txtEditor);
+            this.panel2.Controls.Add(this.txtAutor);
             this.panel2.Controls.Add(this.dtFecha);
             this.panel2.Controls.Add(this.cboEstado);
             this.panel2.Controls.Add(this.cboIdioma);
@@ -98,7 +108,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
-      
             // 
             // dtFecha
             // 
@@ -110,7 +119,7 @@
             // cboEstado
             // 
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(158, 307);
+            this.cboEstado.Location = new System.Drawing.Point(324, 307);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 30;
@@ -118,7 +127,7 @@
             // cboIdioma
             // 
             this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(158, 240);
+            this.cboIdioma.Location = new System.Drawing.Point(324, 236);
             this.cboIdioma.Name = "cboIdioma";
             this.cboIdioma.Size = new System.Drawing.Size(121, 21);
             this.cboIdioma.TabIndex = 29;
@@ -126,7 +135,7 @@
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(158, 211);
+            this.cboCategoria.Location = new System.Drawing.Point(324, 207);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 28;
@@ -134,7 +143,7 @@
             // cboEditor
             // 
             this.cboEditor.FormattingEnabled = true;
-            this.cboEditor.Location = new System.Drawing.Point(158, 113);
+            this.cboEditor.Location = new System.Drawing.Point(324, 111);
             this.cboEditor.Name = "cboEditor";
             this.cboEditor.Size = new System.Drawing.Size(121, 21);
             this.cboEditor.TabIndex = 27;
@@ -142,7 +151,7 @@
             // cboAutor
             // 
             this.cboAutor.FormattingEnabled = true;
-            this.cboAutor.Location = new System.Drawing.Point(158, 81);
+            this.cboAutor.Location = new System.Drawing.Point(324, 79);
             this.cboAutor.Name = "cboAutor";
             this.cboAutor.Size = new System.Drawing.Size(121, 21);
             this.cboAutor.TabIndex = 26;
@@ -436,6 +445,41 @@
             this.pnl_opciones.Size = new System.Drawing.Size(200, 567);
             this.pnl_opciones.TabIndex = 10;
             // 
+            // txtAutor
+            // 
+            this.txtAutor.Location = new System.Drawing.Point(158, 76);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(100, 20);
+            this.txtAutor.TabIndex = 32;
+            // 
+            // txtEditor
+            // 
+            this.txtEditor.Location = new System.Drawing.Point(158, 108);
+            this.txtEditor.Name = "txtEditor";
+            this.txtEditor.Size = new System.Drawing.Size(100, 20);
+            this.txtEditor.TabIndex = 33;
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(158, 213);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.TabIndex = 34;
+            // 
+            // txtIdioma
+            // 
+            this.txtIdioma.Location = new System.Drawing.Point(158, 240);
+            this.txtIdioma.Name = "txtIdioma";
+            this.txtIdioma.Size = new System.Drawing.Size(100, 20);
+            this.txtIdioma.TabIndex = 35;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(158, 304);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtEstado.TabIndex = 36;
+            // 
             // LibroCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,5 +533,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtFecha;
+        private System.Windows.Forms.TextBox txtEditor;
+        private System.Windows.Forms.TextBox txtAutor;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.TextBox txtIdioma;
+        private System.Windows.Forms.TextBox txtEstado;
     }
 }

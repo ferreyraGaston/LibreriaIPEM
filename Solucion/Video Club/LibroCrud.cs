@@ -32,17 +32,35 @@ namespace Video_Club
             if (libroObj.Id > 0)
             {
                 txtTitulo.Text = libroObj.Titulo;
-                cboAutor.ValueMember= Convert.ToString(libroObj.Autor);
-                //libroObj.Editor = Convert.ToInt32(cboEditor.SelectedValue);
-                //libroObj.FechaPublic = dtFecha.Value;
-                //libroObj.Edicion = txtEdicion.Text;
-                //libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedValue);
-                //libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedValue);
-                //libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
-                //libroObj.Estado = Convert.ToInt32(cboEstado.SelectedValue);
-                //libroObj.Notas = txtNotas.Text;
-                //libroObj.Stock = Convert.ToInt32(txtStock.Text);
-                //libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
+                txtAutor.Text = libroObj.AutorCo;
+                txtEditor.Text = libroObj.EditorCo;
+                txtCategoria.Text = libroObj.CategoriaCo;
+                txtIdioma.Text = libroObj.IdiomaCo;
+                txtEstado.Text = libroObj.EstadoCo;
+                txtEdicion.Text = libroObj.Edicion;
+                txtPagina.Text = Convert.ToString(libroObj.Pagina);
+                txtNotas.Text = libroObj.Notas;
+                txtStock.Text = Convert.ToString(libroObj.Stock);
+                txtCondicion.Text = Convert.ToString(libroObj.CondicionLib);
+
+                cboAutor.Visible = false;
+                cboEditor.Visible = false;
+                cboCategoria.Visible = false;
+                cboIdioma.Visible = false;
+                cboEstado.Visible = false;
+            }else
+            {
+                txtAutor.Visible = false;
+                txtEditor.Visible = false;
+                txtCategoria.Visible = false;
+                txtIdioma.Visible = false;
+                txtEstado.Visible = false;
+
+                cboAutor.Visible = true;
+                cboEditor.Visible = true;
+                cboCategoria.Visible = true;
+                cboIdioma.Visible = true;
+                cboEstado.Visible = true;
             }
 
 

@@ -23,6 +23,17 @@ namespace Entidades
         static private int condicionLib;
         static private bool estadoLibro;
 
+        static private string autorCo;
+        static private string editorCo;
+        static private string categoriaCo;
+        static private string idiomaCo;
+        static private string estadoCo;
+
+        public string AutorCo { get => autorCo; set => autorCo = value; }
+        public string EditorCo { get => editorCo; set => editorCo = value; }
+        public string CategoriaCo { get => categoriaCo; set => categoriaCo = value; }
+        public string IdiomaCo { get => idiomaCo; set => idiomaCo = value; }
+        public string EstadoCo { get => estadoCo; set => estadoCo = value; }
         public int Id { get => id; set => id = value; }
         public string Titulo { get => titulo; set => titulo = value; }
         public int Autor { get => autor; set => autor = value; }

@@ -55,18 +55,18 @@ namespace Video_Club
 
             posicion = dgv_detalle.CurrentRow.Index;
             libroObj.Id = int.Parse(dgv_detalle[0, posicion].Value.ToString());
-            //libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
-            //libroObj.Autor = int.Parse(dgv_detalle[2, posicion].Value.ToString());
-            //libroObj.Editor = int.Parse(dgv_detalle[3, posicion].Value.ToString());
-            //libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
-            //libroObj.Edicion = dgv_detalle[5, posicion].Value.ToString();
-            //libroObj.Categoria = int.Parse(dgv_detalle[6, posicion].Value.ToString());
-            //libroObj.Idioma = int.Parse(dgv_detalle[7, posicion].Value.ToString());
-            //libroObj.Pagina = int.Parse(dgv_detalle[8, posicion].Value.ToString());
-            //libroObj.Estado = int.Parse(dgv_detalle[9, posicion].Value.ToString());
-            //libroObj.Notas = dgv_detalle[10, posicion].Value.ToString();
-            //libroObj.Stock = int.Parse(dgv_detalle[11, posicion].Value.ToString());
-            //libroObj.CondicionLib = int.Parse(dgv_detalle[12, posicion].Value.ToString());
+            libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
+            libroObj.AutorCo = dgv_detalle[2, posicion].Value.ToString();
+            libroObj.EditorCo = dgv_detalle[3, posicion].Value.ToString();
+            libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
+            libroObj.Edicion = dgv_detalle[5, posicion].Value.ToString();
+            libroObj.CategoriaCo = dgv_detalle[6, posicion].Value.ToString();
+            libroObj.IdiomaCo = dgv_detalle[7, posicion].Value.ToString();
+            libroObj.Pagina = int.Parse(dgv_detalle[8, posicion].Value.ToString());
+            libroObj.EstadoCo = dgv_detalle[9, posicion].Value.ToString();
+            libroObj.Notas = dgv_detalle[10, posicion].Value.ToString();
+            libroObj.Stock = int.Parse(dgv_detalle[11, posicion].Value.ToString());
+            libroObj.CondicionLib = int.Parse(dgv_detalle[12, posicion].Value.ToString());
 
             libroObj.EstadoLibro = true;
             btnRegistrar.Visible = false;
