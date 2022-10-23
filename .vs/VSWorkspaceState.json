@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Solucion",
+    "\\Solucion\\Video Club"
   ],
-  "SelectedNode": "\\Solucion.sln",
+  "SelectedNode": "\\Solucion\\Video Club\\LibroCrud.cs",
   "PreviewInSolutionExplorer": false
 }
