@@ -161,7 +161,7 @@ namespace Video_Club
             libroObj.Titulo= txtTitulo.Text;
             libroObj.Autor = Convert.ToInt32(cboAutor.SelectedValue);
             libroObj.Editor = Convert.ToInt32(cboEditor.SelectedValue);
-            libroObj.FechaPublic =dtFecha.Value;
+            libroObj.FechaPublic = dtFecha.Text;
             libroObj.Edicion = txtEdicion.Text;
             libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedValue);
             libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedValue);
@@ -172,7 +172,7 @@ namespace Video_Club
             libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
            
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "INSERT INTO libros(titulo,autor,editor,fechaPublic,edicion,categoria,idioma,pagina,estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
+            string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);

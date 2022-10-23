@@ -12,7 +12,8 @@ namespace Entidades
         static private string titulo;
         static private int autor;
         static private int editor;
-        static private DateTime fechaPublic;
+        //static private DateTime fechaPublic;
+        static private string fechaPublic;
         static private string edicion;
         static private int categoria;
         static private int idioma;
@@ -29,6 +30,7 @@ namespace Entidades
         static private string idiomaCo;
         static private string estadoCo;
 
+        public string FechaPublic { get => fechaPublic; set => fechaPublic = value; }
         public string AutorCo { get => autorCo; set => autorCo = value; }
         public string EditorCo { get => editorCo; set => editorCo = value; }
         public string CategoriaCo { get => categoriaCo; set => categoriaCo = value; }
@@ -38,7 +40,7 @@ namespace Entidades
         public string Titulo { get => titulo; set => titulo = value; }
         public int Autor { get => autor; set => autor = value; }
         public int Editor { get => editor; set => editor = value; }
-        public DateTime FechaPublic { get => fechaPublic; set => fechaPublic = value; }
+        //public DateTime FechaPublic { get => fechaPublic; set => fechaPublic = value; }
         public string Edicion { get => edicion; set => edicion = value; }
         public int Categoria { get => categoria; set => categoria = value; }
         public int Idioma { get => idioma; set => idioma = value; }

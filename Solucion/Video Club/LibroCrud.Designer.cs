@@ -111,9 +111,11 @@
             // 
             // dtFecha
             // 
+            this.dtFecha.CustomFormat = "yyyy/MM/dd";
+            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFecha.Location = new System.Drawing.Point(158, 142);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtFecha.Size = new System.Drawing.Size(100, 20);
             this.dtFecha.TabIndex = 31;
             // 
             // cboEstado

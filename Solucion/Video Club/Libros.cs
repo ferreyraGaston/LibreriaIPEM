@@ -58,7 +58,8 @@ namespace Video_Club
             libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
             libroObj.AutorCo = dgv_detalle[2, posicion].Value.ToString();
             libroObj.EditorCo = dgv_detalle[3, posicion].Value.ToString();
-            libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
+            //libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
+            libroObj.FechaPublic = dgv_detalle[4, posicion].Value.ToString();
             libroObj.Edicion = dgv_detalle[5, posicion].Value.ToString();
             libroObj.CategoriaCo = dgv_detalle[6, posicion].Value.ToString();
             libroObj.IdiomaCo = dgv_detalle[7, posicion].Value.ToString();
@@ -82,18 +83,6 @@ namespace Video_Club
             panel7.Visible = false;
             dgv_detalle.Visible = false;
             LibroClass libroObj = new LibroClass();
-            libroObj.Id = 0;
-            libroObj.Titulo = "";
-            libroObj.Autor = 1;
-            libroObj.Editor = 0;
-            libroObj.Edicion = "";
-            libroObj.Categoria = 0;
-            libroObj.Idioma = 0;
-            libroObj.Pagina = 0;
-            libroObj.Estado = 0;
-            libroObj.Notas = "";
-            libroObj.Stock = 0;
-            libroObj.CondicionLib = 0;
             libroObj.EstadoLibro = false;
          
             AbrirFormEnPanel(new LibroCrud());
