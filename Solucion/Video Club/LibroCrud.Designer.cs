@@ -41,19 +41,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtPagina = new System.Windows.Forms.TextBox();
             this.txtNotas = new System.Windows.Forms.TextBox();
-            this.txtIdioma = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtEditor = new System.Windows.Forms.TextBox();
             this.txtEdicion = new System.Windows.Forms.TextBox();
-            this.txtAutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -87,19 +81,13 @@
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txtPagina);
             this.panel2.Controls.Add(this.txtNotas);
-            this.panel2.Controls.Add(this.txtIdioma);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtEstado);
-            this.panel2.Controls.Add(this.txtCategoria);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.txtEditor);
             this.panel2.Controls.Add(this.txtEdicion);
-            this.panel2.Controls.Add(this.txtAutor);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtFecha);
             this.panel2.Controls.Add(this.txtTitulo);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label3);
@@ -110,11 +98,11 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+      
             // 
             // dtFecha
             // 
-            this.dtFecha.Location = new System.Drawing.Point(295, 151);
+            this.dtFecha.Location = new System.Drawing.Point(158, 142);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(200, 20);
             this.dtFecha.TabIndex = 31;
@@ -122,7 +110,7 @@
             // cboEstado
             // 
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(295, 312);
+            this.cboEstado.Location = new System.Drawing.Point(158, 307);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 30;
@@ -130,7 +118,7 @@
             // cboIdioma
             // 
             this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(295, 240);
+            this.cboIdioma.Location = new System.Drawing.Point(158, 240);
             this.cboIdioma.Name = "cboIdioma";
             this.cboIdioma.Size = new System.Drawing.Size(121, 21);
             this.cboIdioma.TabIndex = 29;
@@ -138,7 +126,7 @@
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(295, 211);
+            this.cboCategoria.Location = new System.Drawing.Point(158, 211);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 28;
@@ -146,7 +134,7 @@
             // cboEditor
             // 
             this.cboEditor.FormattingEnabled = true;
-            this.cboEditor.Location = new System.Drawing.Point(295, 122);
+            this.cboEditor.Location = new System.Drawing.Point(158, 113);
             this.cboEditor.Name = "cboEditor";
             this.cboEditor.Size = new System.Drawing.Size(121, 21);
             this.cboEditor.TabIndex = 27;
@@ -154,7 +142,7 @@
             // cboAutor
             // 
             this.cboAutor.FormattingEnabled = true;
-            this.cboAutor.Location = new System.Drawing.Point(295, 90);
+            this.cboAutor.Location = new System.Drawing.Point(158, 81);
             this.cboAutor.Name = "cboAutor";
             this.cboAutor.Size = new System.Drawing.Size(121, 21);
             this.cboAutor.TabIndex = 26;
@@ -209,13 +197,6 @@
             this.txtNotas.Size = new System.Drawing.Size(100, 20);
             this.txtNotas.TabIndex = 17;
             // 
-            // txtIdioma
-            // 
-            this.txtIdioma.Location = new System.Drawing.Point(158, 242);
-            this.txtIdioma.Name = "txtIdioma";
-            this.txtIdioma.Size = new System.Drawing.Size(100, 20);
-            this.txtIdioma.TabIndex = 20;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -226,20 +207,6 @@
             this.label4.Size = new System.Drawing.Size(46, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Notas";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(158, 312);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 19;
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(158, 213);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoria.TabIndex = 18;
             // 
             // label5
             // 
@@ -285,26 +252,12 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Categoría";
             // 
-            // txtEditor
-            // 
-            this.txtEditor.Location = new System.Drawing.Point(158, 122);
-            this.txtEditor.Name = "txtEditor";
-            this.txtEditor.Size = new System.Drawing.Size(100, 20);
-            this.txtEditor.TabIndex = 11;
-            // 
             // txtEdicion
             // 
             this.txtEdicion.Location = new System.Drawing.Point(158, 177);
             this.txtEdicion.Name = "txtEdicion";
             this.txtEdicion.Size = new System.Drawing.Size(100, 20);
             this.txtEdicion.TabIndex = 8;
-            // 
-            // txtAutor
-            // 
-            this.txtAutor.Location = new System.Drawing.Point(158, 87);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(100, 20);
-            this.txtAutor.TabIndex = 10;
             // 
             // label7
             // 
@@ -316,13 +269,6 @@
             this.label7.Size = new System.Drawing.Size(61, 15);
             this.label7.TabIndex = 7;
             this.label7.Text = "Edicion";
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(158, 151);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(100, 20);
-            this.txtFecha.TabIndex = 9;
             // 
             // txtTitulo
             // 
@@ -489,7 +435,6 @@
             this.pnl_opciones.Name = "pnl_opciones";
             this.pnl_opciones.Size = new System.Drawing.Size(200, 567);
             this.pnl_opciones.TabIndex = 10;
-            this.pnl_opciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_opciones_Paint);
             // 
             // LibroCrud
             // 
@@ -511,11 +456,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtEditor;
         private System.Windows.Forms.TextBox txtEdicion;
-        private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
@@ -541,10 +483,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtPagina;
         private System.Windows.Forms.TextBox txtNotas;
-        private System.Windows.Forms.TextBox txtIdioma;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;

@@ -27,7 +27,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idLibros,titulo,Categoria from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria";
+            string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -55,7 +55,7 @@ namespace Video_Club
 
             posicion = dgv_detalle.CurrentRow.Index;
             libroObj.Id = int.Parse(dgv_detalle[0, posicion].Value.ToString());
-            libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
+            //libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
             //libroObj.Autor = int.Parse(dgv_detalle[2, posicion].Value.ToString());
             //libroObj.Editor = int.Parse(dgv_detalle[3, posicion].Value.ToString());
             //libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
@@ -82,8 +82,9 @@ namespace Video_Club
             panel7.Visible = false;
             dgv_detalle.Visible = false;
             LibroClass libroObj = new LibroClass();
+            libroObj.Id = 0;
             libroObj.Titulo = "";
-            libroObj.Autor = 0;
+            libroObj.Autor = 1;
             libroObj.Editor = 0;
             libroObj.Edicion = "";
             libroObj.Categoria = 0;

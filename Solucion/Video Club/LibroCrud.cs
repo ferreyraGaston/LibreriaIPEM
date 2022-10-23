@@ -17,40 +17,35 @@ namespace Video_Club
     {
         public LibroCrud()
         {
-            InitializeComponent();
-            CargarTextbox();
+            InitializeComponent();        
             listarCategoria();
             listarAutor();
             listarIdioma();
             listarEditorial();
             listarEstado();
             estadoUsuario();
+            CargarTextbox();
         }
         void CargarTextbox()
         {
-          
-            //MessageBox.Show("nombre " + usuarioObj2.Nombre1);
-            //textNombre.Text = usuarioObj2.Nombre1;
-            //textApellido.Text = usuarioObj2.Apellido1;
-            //textDireccion.Text = usuarioObj2.Direccion1;
-            //textTelefono.Text = usuarioObj2.Telefono1;
-            //textEmail.Text = usuarioObj2.Email1;
-            //textDni.Text = Convert.ToString(usuarioObj2.Dni1);
-            //textTipoUsuario.Text = Convert.ToString(usuarioObj2.TipoUsuario1);
-
             LibroClass libroObj = new LibroClass();
-            txtTitulo.Text= libroObj.Titulo ;
-            //libroObj.Autor = Convert.ToInt32(cboAutor.SelectedValue);
-            //libroObj.Editor = Convert.ToInt32(cboEditor.SelectedValue);
-            //libroObj.FechaPublic = dtFecha.Value;
-            //libroObj.Edicion = txtEdicion.Text;
-            //libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedValue);
-            //libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedValue);
-            //libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
-            //libroObj.Estado = Convert.ToInt32(cboEstado.SelectedValue);
-            //libroObj.Notas = txtNotas.Text;
-            //libroObj.Stock = Convert.ToInt32(txtStock.Text);
-            //libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
+            if (libroObj.Id > 0)
+            {
+                txtTitulo.Text = libroObj.Titulo;
+                cboAutor.ValueMember= Convert.ToString(libroObj.Autor);
+                //libroObj.Editor = Convert.ToInt32(cboEditor.SelectedValue);
+                //libroObj.FechaPublic = dtFecha.Value;
+                //libroObj.Edicion = txtEdicion.Text;
+                //libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedValue);
+                //libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedValue);
+                //libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
+                //libroObj.Estado = Convert.ToInt32(cboEstado.SelectedValue);
+                //libroObj.Notas = txtNotas.Text;
+                //libroObj.Stock = Convert.ToInt32(txtStock.Text);
+                //libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
+            }
+
+
 
         }
         private void AbrirFormEnPanel(object formhija)
@@ -201,21 +196,6 @@ namespace Video_Club
                 btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
                 btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
 
-                cboAutor.Visible = false;
-                cboEditor.Visible = false;
-                cboCategoria.Visible = false;
-                cboIdioma.Visible = false;
-                cboEstado.Visible = false;
-                cboEstado.Visible = false;
-
-                dtFecha.Visible = true;
-                txtAutor.Visible = true;
-                txtEditor.Visible = true;
-                txtCategoria.Visible = true;
-                txtIdioma.Visible = true;
-                txtEstado.Visible = true;
-                txtFecha.Visible = true;
-
                 txtTitulo.Focus();
             }
             else
@@ -229,34 +209,11 @@ namespace Video_Club
                 btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
                 btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
 
-                cboAutor.Visible = true;
-                cboEditor.Visible = true;
-                cboCategoria.Visible = true;
-                cboIdioma.Visible = true;
-                cboEstado.Visible = true;
-                dtFecha.Visible = true;
-
-                txtAutor.Visible = false;
-                txtEditor.Visible = false;
-                txtCategoria.Visible = false;
-                txtIdioma.Visible = false;
-                txtEstado.Visible = false;
-                txtFecha.Visible = false;   
-
                 txtTitulo.Focus();
             }
 
 
         }
 
-        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
