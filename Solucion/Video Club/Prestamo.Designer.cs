@@ -301,6 +301,7 @@ namespace Video_Club
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(9, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
