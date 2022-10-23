@@ -88,9 +88,10 @@ namespace Video_Club
             usuarioObj.Email1 = textEmail.Text;
             usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
             usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
+            usuarioObj.EstadoUsuario = 0;
 
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono) VALUES('" + usuarioObj.Nombre1 + "','" + usuarioObj.Apellido1 + "','" + usuarioObj.Dni1 + "','" + usuarioObj.TipoUsuario1 + "','" + usuarioObj.Email1 + "','" + usuarioObj.Direccion1 + "','" + usuarioObj.Telefono1 + "')";
+            string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono,estadoUsuario) VALUES('" + usuarioObj.Nombre1 + "','" + usuarioObj.Apellido1 + "','" + usuarioObj.Dni1 + "','" + usuarioObj.TipoUsuario1 + "','" + usuarioObj.Email1 + "','" + usuarioObj.Direccion1 + "','" + usuarioObj.Telefono1 + "','" + usuarioObj.EstadoUsuario + "')";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);

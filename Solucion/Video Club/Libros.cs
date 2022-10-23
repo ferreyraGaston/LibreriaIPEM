@@ -50,7 +50,7 @@ namespace Video_Club
         }
         private void dgv_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            AbrirFormEnPanel(new LibroCrud());
+            
             LibroClass libroObj = new LibroClass();
 
             posicion = dgv_detalle.CurrentRow.Index;
@@ -69,7 +69,10 @@ namespace Video_Club
             //libroObj.CondicionLib = int.Parse(dgv_detalle[12, posicion].Value.ToString());
 
             libroObj.EstadoLibro = true;
+            btnRegistrar.Visible = false;
+            panel7.Visible = false;
             dgv_detalle.Visible = false;
+            AbrirFormEnPanel(new LibroCrud());
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

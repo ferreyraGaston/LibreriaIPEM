@@ -187,9 +187,9 @@ namespace Video_Club
 
         void estadoUsuario()
         {
-            UsuarioClass usuarioObj = new UsuarioClass();
+            LibroClass libroObj = new LibroClass();
 
-            if (usuarioObj.Estado == true)
+            if (libroObj.EstadoLibro == true)
             {
 
                 btn_eliminar.Enabled = true;
