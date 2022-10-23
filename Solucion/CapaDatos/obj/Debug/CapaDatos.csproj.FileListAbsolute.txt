@@ -38,3 +38,19 @@ D:\Desarollo C#\Ipem-134\Solucion\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompi
 D:\Desarollo C#\Ipem-134\Solucion\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 D:\Desarollo C#\Ipem-134\Solucion\CapaDatos\obj\Debug\CapaDatos.dll
 D:\Desarollo C#\Ipem-134\Solucion\CapaDatos\obj\Debug\CapaDatos.pdb
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\CapaDatos.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\CapaDatos.pdb
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\Google.Protobuf.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\ZstdNet.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\System.Buffers.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\K4os.Compression.LZ4.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\K4os.Hash.xxHash.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\bin\Debug\MySql.Data.xml
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\obj\Debug\CapaDatos.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\CapaDatos\obj\Debug\CapaDatos.pdb

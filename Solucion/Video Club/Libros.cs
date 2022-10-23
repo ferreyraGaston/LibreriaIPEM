@@ -24,7 +24,7 @@ namespace Video_Club
         }
         void CargarTablaLibro()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=sabriluciasolMAXI999+";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
@@ -114,6 +114,11 @@ namespace Video_Club
                     e.CellStyle.BackColor = Color.Green;
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

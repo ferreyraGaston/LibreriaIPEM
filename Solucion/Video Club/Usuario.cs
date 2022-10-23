@@ -30,7 +30,7 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=sabriluciasolMAXI999+";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select * from usuario";

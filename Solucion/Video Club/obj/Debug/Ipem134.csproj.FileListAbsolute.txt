@@ -75,3 +75,41 @@ D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\Entidades.pdb
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\MySql.Data.xml
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\obj\Debug\Video_Club.Consultas.resources
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CopyComplete
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Video Club.exe.config
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Video Club.exe
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Video Club.pdb
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\CapaDatos.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\CapaNegocio.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Entidades.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Google.Protobuf.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\ZstdNet.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\BouncyCastle.Crypto.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Ubiety.Dns.Core.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\System.Buffers.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\K4os.Compression.LZ4.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\K4os.Hash.xxHash.dll
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\CapaDatos.pdb
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\CapaNegocio.pdb
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\Entidades.pdb
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\bin\Debug\MySql.Data.xml
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Ipem134.csproj.AssemblyReference.cache
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Ipem134.csproj.SuggestedBindingRedirects.cache
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video Club.exe.config
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.Consultas.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.LibroCrud.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.Usuario.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.Prestamo.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.Form1.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.inicio.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.Properties.Resources.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.RepAlquiler.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.RepPagos.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.RepVentas.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.Libros.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video_Club.UsuarioCrud.resources
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Ipem134.csproj.GenerateResource.cache
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CoreCompileInputs.cache
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CopyComplete
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video Club.exe
+E:\Programas C\PROYECTO IPEM134\Solucion\Video Club\obj\Debug\Video Club.pdb

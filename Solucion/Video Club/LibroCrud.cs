@@ -240,7 +240,7 @@ namespace Video_Club
             LibroClass libroObj = new LibroClass();
             if (MessageBox.Show("el Id: " + libroObj.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=sabriluciasolMAXI999+";
                 string sql = "delete from libros where idLibros='" + libroObj.Id + "';";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();

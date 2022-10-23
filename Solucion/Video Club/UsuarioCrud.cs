@@ -90,7 +90,7 @@ namespace Video_Club
             usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
             usuarioObj.EstadoUsuario = 0;
 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=sabriluciasolMAXI999+";
             string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono,estadoUsuario) VALUES('" + usuarioObj.Nombre1 + "','" + usuarioObj.Apellido1 + "','" + usuarioObj.Dni1 + "','" + usuarioObj.TipoUsuario1 + "','" + usuarioObj.Email1 + "','" + usuarioObj.Direccion1 + "','" + usuarioObj.Telefono1 + "','" + usuarioObj.EstadoUsuario + "')";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
@@ -113,7 +113,7 @@ namespace Video_Club
             usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
             usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=sabriluciasolMAXI999+";
             string sql = "update usuario set NombreUsuario='" + usuarioObj.Nombre1 + "',ApellidoUsuario='" + usuarioObj.Apellido1 + "',DniUsuario='" + usuarioObj.Dni1 + "',TipoUsuario='" + usuarioObj.TipoUsuario1 + "' ,email='" + usuarioObj.Email1 + "',direccion='" + usuarioObj.Direccion1 + "',telefono='" + usuarioObj.Telefono1 + "' where id_usuario='" + usuarioObj.Id1 + "';";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
@@ -141,7 +141,7 @@ namespace Video_Club
             UsuarioClass usuarioObj = new UsuarioClass();
             if (MessageBox.Show("el Id: " + usuarioObj.Id1, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=sabriluciasolMAXI999+";
                 string sql = "delete from usuario where id_usuario='" + usuarioObj.Id1 + "';";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();
