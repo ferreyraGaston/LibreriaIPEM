@@ -84,7 +84,7 @@ namespace Video_Club
             dgv_detalle.Visible = false;
             LibroClass libroObj = new LibroClass();
             libroObj.EstadoLibro = false;
-         
+            libroObj.Id = 0;
             AbrirFormEnPanel(new LibroCrud());
         }
 

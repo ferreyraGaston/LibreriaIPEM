@@ -18,11 +18,7 @@ namespace Video_Club
         public LibroCrud()
         {
             InitializeComponent();        
-            listarCategoria();
-            listarAutor();
-            listarIdioma();
-            listarEditorial();
-            listarEstado();
+    
             estadoUsuario();
             CargarTextbox();
         }
@@ -50,6 +46,12 @@ namespace Video_Club
                 cboEstado.Visible = false;
             }else
             {
+                listarCategoria();
+                listarAutor();
+                listarIdioma();
+                listarEditorial();
+                listarEstado();
+
                 txtAutor.Visible = false;
                 txtEditor.Visible = false;
                 txtCategoria.Visible = false;
@@ -233,5 +235,33 @@ namespace Video_Club
 
         }
 
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            LibroClass libroObj = new LibroClass();
+            if (MessageBox.Show("el Id: " + libroObj.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "delete from libros where idLibros='" + libroObj.Id + "';";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se elimino exitosamente");
+                con.Close();
+            }
+
+            limpiar();
+
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
+            btn_agregar.Enabled = true;
+            btn_nuevo.Enabled = true;
+
+            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
+            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
+            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+            txtTitulo.Focus();
+        }
     }
 }

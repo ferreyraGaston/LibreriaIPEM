@@ -397,6 +397,7 @@
             this.btn_eliminar.TabIndex = 13;
             this.btn_eliminar.Text = "ELiminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // panel3
             // 
