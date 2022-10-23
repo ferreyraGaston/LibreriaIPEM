@@ -220,7 +220,7 @@ namespace Video_Club
             this.btn_RepALquiler.Name = "btn_RepALquiler";
             this.btn_RepALquiler.Size = new System.Drawing.Size(162, 32);
             this.btn_RepALquiler.TabIndex = 6;
-            this.btn_RepALquiler.Text = "Rep. ";
+            this.btn_RepALquiler.Text = "Reserva";
             this.btn_RepALquiler.UseVisualStyleBackColor = false;
             this.btn_RepALquiler.Click += new System.EventHandler(this.btn_RepALquiler_Click);
             // 
@@ -237,7 +237,7 @@ namespace Video_Club
             this.btn_RepVentas.Name = "btn_RepVentas";
             this.btn_RepVentas.Size = new System.Drawing.Size(162, 32);
             this.btn_RepVentas.TabIndex = 4;
-            this.btn_RepVentas.Text = "Rep.";
+            this.btn_RepVentas.Text = "Devoluciones";
             this.btn_RepVentas.UseVisualStyleBackColor = false;
             this.btn_RepVentas.Click += new System.EventHandler(this.btn_RepVentas_Click);
             // 
@@ -262,14 +262,14 @@ namespace Video_Club
             this.btn_Reportes.Name = "btn_Reportes";
             this.btn_Reportes.Size = new System.Drawing.Size(188, 32);
             this.btn_Reportes.TabIndex = 9;
-            this.btn_Reportes.Text = "Reportes";
+            this.btn_Reportes.Text = "Acciones";
             this.btn_Reportes.UseVisualStyleBackColor = false;
             this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.panel4.Location = new System.Drawing.Point(22, 340);
+            this.panel4.Location = new System.Drawing.Point(22, 291);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 32);
             this.panel4.TabIndex = 8;
@@ -284,7 +284,7 @@ namespace Video_Club
             this.btn_Prestamo.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Prestamo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Prestamo.Image")));
             this.btn_Prestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Prestamo.Location = new System.Drawing.Point(32, 340);
+            this.btn_Prestamo.Location = new System.Drawing.Point(32, 291);
             this.btn_Prestamo.Name = "btn_Prestamo";
             this.btn_Prestamo.Size = new System.Drawing.Size(188, 32);
             this.btn_Prestamo.TabIndex = 7;
@@ -295,7 +295,7 @@ namespace Video_Club
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.panel3.Location = new System.Drawing.Point(22, 291);
+            this.panel3.Location = new System.Drawing.Point(23, 338);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 32);
             this.panel3.TabIndex = 6;
@@ -310,11 +310,11 @@ namespace Video_Club
             this.btn_Socios.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Socios.Image = ((System.Drawing.Image)(resources.GetObject("btn_Socios.Image")));
             this.btn_Socios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Socios.Location = new System.Drawing.Point(32, 291);
+            this.btn_Socios.Location = new System.Drawing.Point(33, 338);
             this.btn_Socios.Name = "btn_Socios";
             this.btn_Socios.Size = new System.Drawing.Size(188, 32);
             this.btn_Socios.TabIndex = 5;
-            this.btn_Socios.Text = "Socios";
+            this.btn_Socios.Text = "Admin";
             this.btn_Socios.UseVisualStyleBackColor = false;
             this.btn_Socios.Click += new System.EventHandler(this.btn_Socios_Click);
             // 
