@@ -29,10 +29,14 @@ namespace Video_Club
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbReservado = new System.Windows.Forms.RadioButton();
+            this.rbNoDisponible = new System.Windows.Forms.RadioButton();
+            this.rbDisponible = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -45,10 +49,8 @@ namespace Video_Club
             this.dgv_detalle = new System.Windows.Forms.DataGridView();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chbDisponible = new System.Windows.Forms.CheckBox();
-            this.chbNoDisponible = new System.Windows.Forms.CheckBox();
-            this.chbReservado = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).BeginInit();
@@ -58,9 +60,7 @@ namespace Video_Club
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.panel2.Controls.Add(this.chbReservado);
-            this.panel2.Controls.Add(this.chbNoDisponible);
-            this.panel2.Controls.Add(this.chbDisponible);
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.panel7);
@@ -71,6 +71,59 @@ namespace Video_Club
             this.panel2.Size = new System.Drawing.Size(1084, 548);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbReservado);
+            this.groupBox1.Controls.Add(this.rbNoDisponible);
+            this.groupBox1.Controls.Add(this.rbDisponible);
+            this.groupBox1.Location = new System.Drawing.Point(18, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(447, 51);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            // 
+            // rbReservado
+            // 
+            this.rbReservado.AutoSize = true;
+            this.rbReservado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbReservado.ForeColor = System.Drawing.Color.White;
+            this.rbReservado.Location = new System.Drawing.Point(284, 20);
+            this.rbReservado.Name = "rbReservado";
+            this.rbReservado.Size = new System.Drawing.Size(102, 20);
+            this.rbReservado.TabIndex = 0;
+            this.rbReservado.TabStop = true;
+            this.rbReservado.Text = "Reservado";
+            this.rbReservado.UseVisualStyleBackColor = true;
+            this.rbReservado.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // rbNoDisponible
+            // 
+            this.rbNoDisponible.AutoSize = true;
+            this.rbNoDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNoDisponible.ForeColor = System.Drawing.Color.White;
+            this.rbNoDisponible.Location = new System.Drawing.Point(130, 20);
+            this.rbNoDisponible.Name = "rbNoDisponible";
+            this.rbNoDisponible.Size = new System.Drawing.Size(122, 20);
+            this.rbNoDisponible.TabIndex = 0;
+            this.rbNoDisponible.TabStop = true;
+            this.rbNoDisponible.Text = "No disponible";
+            this.rbNoDisponible.UseVisualStyleBackColor = true;
+            this.rbNoDisponible.CheckedChanged += new System.EventHandler(this.rbNoDisponible_CheckedChanged);
+            // 
+            // rbDisponible
+            // 
+            this.rbDisponible.AutoSize = true;
+            this.rbDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDisponible.ForeColor = System.Drawing.Color.White;
+            this.rbDisponible.Location = new System.Drawing.Point(7, 20);
+            this.rbDisponible.Name = "rbDisponible";
+            this.rbDisponible.Size = new System.Drawing.Size(100, 20);
+            this.rbDisponible.TabIndex = 0;
+            this.rbDisponible.TabStop = true;
+            this.rbDisponible.Text = "Disponible";
+            this.rbDisponible.UseVisualStyleBackColor = true;
+            this.rbDisponible.CheckedChanged += new System.EventHandler(this.rbDisponible_CheckedChanged);
             // 
             // panel3
             // 
@@ -186,34 +239,34 @@ namespace Video_Club
             this.dgv_detalle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
             this.dgv_detalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_detalle.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_detalle.EnableHeadersVisualStyles = false;
             this.dgv_detalle.Location = new System.Drawing.Point(18, 90);
             this.dgv_detalle.Name = "dgv_detalle";
             this.dgv_detalle.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_detalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_detalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_detalle.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_detalle.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_detalle.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_detalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_detalle.Size = new System.Drawing.Size(1054, 389);
             this.dgv_detalle.TabIndex = 3;
@@ -241,45 +294,6 @@ namespace Video_Club
             this.panel1.Size = new System.Drawing.Size(1084, 32);
             this.panel1.TabIndex = 1;
             // 
-            // chbDisponible
-            // 
-            this.chbDisponible.AutoSize = true;
-            this.chbDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbDisponible.ForeColor = System.Drawing.Color.White;
-            this.chbDisponible.Location = new System.Drawing.Point(23, 43);
-            this.chbDisponible.Name = "chbDisponible";
-            this.chbDisponible.Size = new System.Drawing.Size(101, 20);
-            this.chbDisponible.TabIndex = 20;
-            this.chbDisponible.Text = "Disponible";
-            this.chbDisponible.UseVisualStyleBackColor = true;
-            this.chbDisponible.CheckedChanged += new System.EventHandler(this.chbDisponible_CheckedChanged);
-            // 
-            // chbNoDisponible
-            // 
-            this.chbNoDisponible.AutoSize = true;
-            this.chbNoDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbNoDisponible.ForeColor = System.Drawing.Color.White;
-            this.chbNoDisponible.Location = new System.Drawing.Point(130, 44);
-            this.chbNoDisponible.Name = "chbNoDisponible";
-            this.chbNoDisponible.Size = new System.Drawing.Size(125, 20);
-            this.chbNoDisponible.TabIndex = 20;
-            this.chbNoDisponible.Text = "No Disponible";
-            this.chbNoDisponible.UseVisualStyleBackColor = true;
-            this.chbNoDisponible.CheckedChanged += new System.EventHandler(this.chbNoDisponible_CheckedChanged);
-            // 
-            // chbReservado
-            // 
-            this.chbReservado.AutoSize = true;
-            this.chbReservado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbReservado.ForeColor = System.Drawing.Color.White;
-            this.chbReservado.Location = new System.Drawing.Point(262, 44);
-            this.chbReservado.Name = "chbReservado";
-            this.chbReservado.Size = new System.Drawing.Size(103, 20);
-            this.chbReservado.TabIndex = 20;
-            this.chbReservado.Text = "Reservado";
-            this.chbReservado.UseVisualStyleBackColor = true;
-            this.chbReservado.CheckedChanged += new System.EventHandler(this.chbReservado_CheckedChanged);
-            // 
             // Libros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,7 +306,8 @@ namespace Video_Club
             this.Name = "Libros";
             this.Text = "ventas";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -317,8 +332,9 @@ namespace Video_Club
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.CheckBox chbReservado;
-        private System.Windows.Forms.CheckBox chbNoDisponible;
-        private System.Windows.Forms.CheckBox chbDisponible;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbReservado;
+        private System.Windows.Forms.RadioButton rbNoDisponible;
+        private System.Windows.Forms.RadioButton rbDisponible;
     }
 }
