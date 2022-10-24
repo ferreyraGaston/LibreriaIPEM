@@ -72,6 +72,7 @@ namespace Video_Club
             libroObj.EstadoLibro = true;
             btnRegistrar.Visible = false;
             panel7.Visible = false;
+            panel3.Visible = false;
             dgv_detalle.Visible = false;
             AbrirFormEnPanel(new LibroCrud());
         }

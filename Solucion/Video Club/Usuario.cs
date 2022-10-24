@@ -68,7 +68,8 @@ namespace Video_Club
             //MessageBox.Show("nombre "+ usuarioObj.Nombre1);
             btn_registrar.Visible = false;
             panel6.Visible = false;
-      
+            panel3.Visible = false;
+            dataGridView1.Visible = false;
             AbrirFormEnPanel(new UsuarioCrud());
         }
         private void btn_registrar_Click_1(object sender, EventArgs e)
@@ -141,6 +142,37 @@ namespace Video_Club
             dataGridView1.DataSource = dt;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             txtBuscar.Text = "";
+        }
+
+        private void rbDisponible_CheckedChanged(object sender, EventArgs e)
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from usuario where usuario.estadoUsuario ='0';";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtBuscar.Text = "";
+        }
+
+        private void rbNoDisponible_CheckedChanged(object sender, EventArgs e)
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from usuario where usuario.estadoUsuario ='1';";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtBuscar.Text = "";
+
         }
     }
 }
