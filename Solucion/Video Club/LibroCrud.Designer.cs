@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtIdioma = new System.Windows.Forms.TextBox();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtEditor = new System.Windows.Forms.TextBox();
-            this.txtAutor = new System.Windows.Forms.TextBox();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.cboIdioma = new System.Windows.Forms.ComboBox();
@@ -76,11 +71,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.panel2.Controls.Add(this.txtEstado);
-            this.panel2.Controls.Add(this.txtIdioma);
-            this.panel2.Controls.Add(this.txtCategoria);
-            this.panel2.Controls.Add(this.txtEditor);
-            this.panel2.Controls.Add(this.txtAutor);
             this.panel2.Controls.Add(this.dtFecha);
             this.panel2.Controls.Add(this.cboEstado);
             this.panel2.Controls.Add(this.cboIdioma);
@@ -112,41 +102,6 @@
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(158, 304);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 36;
-            // 
-            // txtIdioma
-            // 
-            this.txtIdioma.Location = new System.Drawing.Point(158, 240);
-            this.txtIdioma.Name = "txtIdioma";
-            this.txtIdioma.Size = new System.Drawing.Size(100, 20);
-            this.txtIdioma.TabIndex = 35;
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(158, 213);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoria.TabIndex = 34;
-            // 
-            // txtEditor
-            // 
-            this.txtEditor.Location = new System.Drawing.Point(158, 108);
-            this.txtEditor.Name = "txtEditor";
-            this.txtEditor.Size = new System.Drawing.Size(100, 20);
-            this.txtEditor.TabIndex = 33;
-            // 
-            // txtAutor
-            // 
-            this.txtAutor.Location = new System.Drawing.Point(158, 76);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(100, 20);
-            this.txtAutor.TabIndex = 32;
-            // 
             // dtFecha
             // 
             this.dtFecha.CustomFormat = "yyyy/MM/dd";
@@ -159,7 +114,7 @@
             // cboEstado
             // 
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(324, 307);
+            this.cboEstado.Location = new System.Drawing.Point(119, 309);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(121, 21);
             this.cboEstado.TabIndex = 30;
@@ -167,7 +122,7 @@
             // cboIdioma
             // 
             this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(324, 236);
+            this.cboIdioma.Location = new System.Drawing.Point(119, 236);
             this.cboIdioma.Name = "cboIdioma";
             this.cboIdioma.Size = new System.Drawing.Size(121, 21);
             this.cboIdioma.TabIndex = 29;
@@ -175,7 +130,7 @@
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(324, 207);
+            this.cboCategoria.Location = new System.Drawing.Point(119, 207);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 28;
@@ -183,7 +138,7 @@
             // cboEditor
             // 
             this.cboEditor.FormattingEnabled = true;
-            this.cboEditor.Location = new System.Drawing.Point(324, 111);
+            this.cboEditor.Location = new System.Drawing.Point(98, 95);
             this.cboEditor.Name = "cboEditor";
             this.cboEditor.Size = new System.Drawing.Size(121, 21);
             this.cboEditor.TabIndex = 27;
@@ -191,14 +146,14 @@
             // cboAutor
             // 
             this.cboAutor.FormattingEnabled = true;
-            this.cboAutor.Location = new System.Drawing.Point(324, 79);
+            this.cboAutor.Location = new System.Drawing.Point(98, 63);
             this.cboAutor.Name = "cboAutor";
             this.cboAutor.Size = new System.Drawing.Size(121, 21);
             this.cboAutor.TabIndex = 26;
             // 
             // txtCondicion
             // 
-            this.txtCondicion.Location = new System.Drawing.Point(158, 399);
+            this.txtCondicion.Location = new System.Drawing.Point(128, 401);
             this.txtCondicion.Name = "txtCondicion";
             this.txtCondicion.Size = new System.Drawing.Size(100, 20);
             this.txtCondicion.TabIndex = 24;
@@ -216,7 +171,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(158, 373);
+            this.txtStock.Location = new System.Drawing.Point(128, 375);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 25;
@@ -234,14 +189,14 @@
             // 
             // txtPagina
             // 
-            this.txtPagina.Location = new System.Drawing.Point(158, 274);
+            this.txtPagina.Location = new System.Drawing.Point(128, 276);
             this.txtPagina.Name = "txtPagina";
             this.txtPagina.Size = new System.Drawing.Size(100, 20);
             this.txtPagina.TabIndex = 21;
             // 
             // txtNotas
             // 
-            this.txtNotas.Location = new System.Drawing.Point(158, 338);
+            this.txtNotas.Location = new System.Drawing.Point(128, 340);
             this.txtNotas.Name = "txtNotas";
             this.txtNotas.Size = new System.Drawing.Size(100, 20);
             this.txtNotas.TabIndex = 17;
@@ -321,7 +276,7 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(158, 52);
+            this.txtTitulo.Location = new System.Drawing.Point(98, 25);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(100, 20);
             this.txtTitulo.TabIndex = 8;
@@ -331,7 +286,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Broadway", 9.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(9, 113);
+            this.label8.Location = new System.Drawing.Point(12, 104);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 15);
             this.label8.TabIndex = 7;
@@ -342,7 +297,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Broadway", 9.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 81);
+            this.label3.Location = new System.Drawing.Point(16, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 5;
@@ -364,7 +319,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 9.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 52);
+            this.label1.Location = new System.Drawing.Point(14, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 3;
@@ -460,6 +415,7 @@
             this.btn_modificar.TabIndex = 11;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // panel5
             // 
@@ -566,11 +522,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtFecha;
-        private System.Windows.Forms.TextBox txtEditor;
-        private System.Windows.Forms.TextBox txtAutor;
-        private System.Windows.Forms.TextBox txtCategoria;
-        private System.Windows.Forms.TextBox txtIdioma;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPrestar;
     }

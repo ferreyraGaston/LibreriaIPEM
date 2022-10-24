@@ -73,10 +73,11 @@ namespace Video_Club
             AbrirFormEnPanel(new UsuarioCrud());
         }
         private void btn_registrar_Click_1(object sender, EventArgs e)
-        {
-            
+        {     
             btn_registrar.Visible=false;
             panel6.Visible = false;
+            panel3.Visible = false;
+            dataGridView1.Visible = false;
             UsuarioClass usuarioObj = new UsuarioClass();
             usuarioObj.Id1 = 0;
             usuarioObj.Nombre1 = "";
@@ -89,12 +90,6 @@ namespace Video_Club
             usuarioObj.Estado = false;
             AbrirFormEnPanel(new UsuarioCrud());
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (this.dataGridView1.Columns[e.ColumnIndex].Name == "estadoUsuario")

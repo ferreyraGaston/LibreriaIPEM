@@ -49,10 +49,8 @@ namespace Video_Club
 
         }
         private void dgv_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+        {           
             LibroClass libroObj = new LibroClass();
-
             posicion = dgv_detalle.CurrentRow.Index;
             libroObj.Id = int.Parse(dgv_detalle[0, posicion].Value.ToString());
             libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
@@ -82,6 +80,7 @@ namespace Video_Club
 
             btnRegistrar.Visible = false;
             panel7.Visible = false;
+            panel3.Visible = false;
             dgv_detalle.Visible = false;
             LibroClass libroObj = new LibroClass();
             libroObj.EstadoLibro = false;
