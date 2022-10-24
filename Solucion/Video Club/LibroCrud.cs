@@ -18,7 +18,6 @@ namespace Video_Club
         public LibroCrud()
         {
             InitializeComponent();        
-    
             estadoUsuario();
             CargarTextbox();
         }
@@ -262,6 +261,20 @@ namespace Video_Club
             btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
             btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
             txtTitulo.Focus();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPrestar_Click(object sender, EventArgs e)
+        {
+            LibroClass libroObj = new LibroClass();
+            PrestamoClass prestamoObj = new PrestamoClass();
+
+            prestamoObj.IdLibro = libroObj.Id;
+
         }
     }
 }

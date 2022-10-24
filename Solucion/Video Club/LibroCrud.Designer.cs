@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtIdioma = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtEditor = new System.Windows.Forms.TextBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.cboIdioma = new System.Windows.Forms.ComboBox();
@@ -62,11 +67,8 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnl_opciones = new System.Windows.Forms.Panel();
-            this.txtAutor = new System.Windows.Forms.TextBox();
-            this.txtEditor = new System.Windows.Forms.TextBox();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtIdioma = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPrestar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnl_opciones.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +110,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(158, 304);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtEstado.TabIndex = 36;
+            // 
+            // txtIdioma
+            // 
+            this.txtIdioma.Location = new System.Drawing.Point(158, 240);
+            this.txtIdioma.Name = "txtIdioma";
+            this.txtIdioma.Size = new System.Drawing.Size(100, 20);
+            this.txtIdioma.TabIndex = 35;
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(158, 213);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.TabIndex = 34;
+            // 
+            // txtEditor
+            // 
+            this.txtEditor.Location = new System.Drawing.Point(158, 108);
+            this.txtEditor.Name = "txtEditor";
+            this.txtEditor.Size = new System.Drawing.Size(100, 20);
+            this.txtEditor.TabIndex = 33;
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.Location = new System.Drawing.Point(158, 76);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(100, 20);
+            this.txtAutor.TabIndex = 32;
             // 
             // dtFecha
             // 
@@ -434,6 +472,8 @@
             // pnl_opciones
             // 
             this.pnl_opciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
+            this.pnl_opciones.Controls.Add(this.panel1);
+            this.pnl_opciones.Controls.Add(this.btnPrestar);
             this.pnl_opciones.Controls.Add(this.panel4);
             this.pnl_opciones.Controls.Add(this.btn_agregar);
             this.pnl_opciones.Controls.Add(this.btn_nuevo);
@@ -448,40 +488,30 @@
             this.pnl_opciones.Size = new System.Drawing.Size(200, 567);
             this.pnl_opciones.TabIndex = 10;
             // 
-            // txtAutor
+            // panel1
             // 
-            this.txtAutor.Location = new System.Drawing.Point(158, 76);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(100, 20);
-            this.txtAutor.TabIndex = 32;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel1.Location = new System.Drawing.Point(2, 413);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 32);
+            this.panel1.TabIndex = 18;
             // 
-            // txtEditor
+            // btnPrestar
             // 
-            this.txtEditor.Location = new System.Drawing.Point(158, 108);
-            this.txtEditor.Name = "txtEditor";
-            this.txtEditor.Size = new System.Drawing.Size(100, 20);
-            this.txtEditor.TabIndex = 33;
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(158, 213);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoria.TabIndex = 34;
-            // 
-            // txtIdioma
-            // 
-            this.txtIdioma.Location = new System.Drawing.Point(158, 240);
-            this.txtIdioma.Name = "txtIdioma";
-            this.txtIdioma.Size = new System.Drawing.Size(100, 20);
-            this.txtIdioma.TabIndex = 35;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(158, 304);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 36;
+            this.btnPrestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btnPrestar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrestar.FlatAppearance.BorderSize = 0;
+            this.btnPrestar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnPrestar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestar.Location = new System.Drawing.Point(12, 413);
+            this.btnPrestar.Name = "btnPrestar";
+            this.btnPrestar.Size = new System.Drawing.Size(185, 32);
+            this.btnPrestar.TabIndex = 17;
+            this.btnPrestar.Text = "Prestar";
+            this.btnPrestar.UseVisualStyleBackColor = false;
+            this.btnPrestar.Click += new System.EventHandler(this.btnPrestar_Click);
             // 
             // LibroCrud
             // 
@@ -541,5 +571,7 @@
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.TextBox txtIdioma;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnPrestar;
     }
 }

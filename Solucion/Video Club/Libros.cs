@@ -128,6 +128,7 @@ namespace Video_Club
             da.Fill(dt);
             dgv_detalle.DataSource = dt;
             dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtBuscar.Text = "";
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)

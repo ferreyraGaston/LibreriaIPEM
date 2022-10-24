@@ -112,5 +112,35 @@ namespace Video_Club
                 }
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from usuario where usuario.id_usuario ='" + txtBuscar.Text + "' || usuario.NombreUsuario='" + txtBuscar.Text + "' || usuario.ApellidoUsuario='" + txtBuscar.Text + "' || usuario.DniUsuario='" + txtBuscar.Text + "';";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtBuscar.Text = "";
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select * from usuario";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtBuscar.Text = "";
+        }
     }
 }
