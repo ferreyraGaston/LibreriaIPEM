@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.cboEstado = new System.Windows.Forms.ComboBox();
@@ -64,8 +65,10 @@
             this.pnl_opciones = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrestar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.pnl_opciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -504,6 +507,10 @@
             this.btnPrestar.UseVisualStyleBackColor = false;
             this.btnPrestar.Click += new System.EventHandler(this.btnPrestar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // LibroCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,6 +524,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnl_opciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,5 +567,6 @@
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPrestar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

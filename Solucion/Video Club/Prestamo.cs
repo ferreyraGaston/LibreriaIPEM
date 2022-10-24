@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Video_Club
         public Prestamo()
         {
             InitializeComponent();
+            PrestamoClass prestamooObj = new PrestamoClass();
+            textCodigo.Text = Convert.ToString(prestamooObj.IdLibro); 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
