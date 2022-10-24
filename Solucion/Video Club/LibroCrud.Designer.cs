@@ -96,6 +96,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 567);
@@ -105,223 +106,257 @@
             // dtFecha
             // 
             this.dtFecha.CustomFormat = "yyyy/MM/dd";
+            this.dtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFecha.Location = new System.Drawing.Point(158, 142);
+            this.dtFecha.Location = new System.Drawing.Point(305, 44);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(100, 20);
+            this.dtFecha.Size = new System.Drawing.Size(180, 29);
             this.dtFecha.TabIndex = 31;
             // 
             // cboEstado
             // 
+            this.cboEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.ForeColor = System.Drawing.Color.White;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(119, 309);
+            this.cboEstado.Location = new System.Drawing.Point(307, 496);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(121, 21);
+            this.cboEstado.Size = new System.Drawing.Size(179, 32);
             this.cboEstado.TabIndex = 30;
             // 
             // cboIdioma
             // 
+            this.cboIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.cboIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboIdioma.ForeColor = System.Drawing.Color.White;
             this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(119, 236);
+            this.cboIdioma.Location = new System.Drawing.Point(307, 396);
             this.cboIdioma.Name = "cboIdioma";
-            this.cboIdioma.Size = new System.Drawing.Size(121, 21);
+            this.cboIdioma.Size = new System.Drawing.Size(179, 32);
             this.cboIdioma.TabIndex = 29;
             // 
             // cboCategoria
             // 
+            this.cboCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategoria.ForeColor = System.Drawing.Color.White;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(119, 207);
+            this.cboCategoria.Location = new System.Drawing.Point(306, 313);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cboCategoria.Size = new System.Drawing.Size(180, 32);
             this.cboCategoria.TabIndex = 28;
             // 
             // cboEditor
             // 
+            this.cboEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.cboEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEditor.ForeColor = System.Drawing.Color.White;
             this.cboEditor.FormattingEnabled = true;
-            this.cboEditor.Location = new System.Drawing.Point(98, 95);
+            this.cboEditor.Location = new System.Drawing.Point(306, 224);
             this.cboEditor.Name = "cboEditor";
-            this.cboEditor.Size = new System.Drawing.Size(121, 21);
+            this.cboEditor.Size = new System.Drawing.Size(179, 32);
             this.cboEditor.TabIndex = 27;
             // 
             // cboAutor
             // 
+            this.cboAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.cboAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboAutor.ForeColor = System.Drawing.Color.White;
             this.cboAutor.FormattingEnabled = true;
-            this.cboAutor.Location = new System.Drawing.Point(98, 63);
+            this.cboAutor.Location = new System.Drawing.Point(305, 128);
             this.cboAutor.Name = "cboAutor";
-            this.cboAutor.Size = new System.Drawing.Size(121, 21);
+            this.cboAutor.Size = new System.Drawing.Size(180, 32);
             this.cboAutor.TabIndex = 26;
             // 
             // txtCondicion
             // 
-            this.txtCondicion.Location = new System.Drawing.Point(128, 401);
+            this.txtCondicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.txtCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCondicion.ForeColor = System.Drawing.Color.White;
+            this.txtCondicion.Location = new System.Drawing.Point(23, 396);
             this.txtCondicion.Name = "txtCondicion";
-            this.txtCondicion.Size = new System.Drawing.Size(100, 20);
+            this.txtCondicion.Size = new System.Drawing.Size(100, 29);
             this.txtCondicion.TabIndex = 24;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(18, 399);
+            this.label11.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label11.Location = new System.Drawing.Point(18, 370);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 15);
+            this.label11.Size = new System.Drawing.Size(127, 24);
             this.label11.TabIndex = 23;
             this.label11.Text = "Condición";
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(128, 375);
+            this.txtStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStock.ForeColor = System.Drawing.Color.White;
+            this.txtStock.Location = new System.Drawing.Point(23, 313);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.Size = new System.Drawing.Size(100, 29);
             this.txtStock.TabIndex = 25;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(12, 370);
+            this.label12.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label12.Location = new System.Drawing.Point(18, 287);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 15);
+            this.label12.Size = new System.Drawing.Size(72, 24);
             this.label12.TabIndex = 22;
             this.label12.Text = "Stock";
             // 
             // txtPagina
             // 
-            this.txtPagina.Location = new System.Drawing.Point(128, 276);
+            this.txtPagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.txtPagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagina.ForeColor = System.Drawing.Color.White;
+            this.txtPagina.Location = new System.Drawing.Point(21, 224);
             this.txtPagina.Name = "txtPagina";
-            this.txtPagina.Size = new System.Drawing.Size(100, 20);
+            this.txtPagina.Size = new System.Drawing.Size(100, 29);
             this.txtPagina.TabIndex = 21;
             // 
             // txtNotas
             // 
-            this.txtNotas.Location = new System.Drawing.Point(128, 340);
+            this.txtNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.txtNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotas.ForeColor = System.Drawing.Color.White;
+            this.txtNotas.Location = new System.Drawing.Point(23, 497);
             this.txtNotas.Name = "txtNotas";
-            this.txtNotas.Size = new System.Drawing.Size(100, 20);
+            this.txtNotas.Size = new System.Drawing.Size(100, 29);
             this.txtNotas.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 338);
+            this.label4.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label4.Location = new System.Drawing.Point(18, 460);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.Size = new System.Drawing.Size(72, 24);
             this.label4.TabIndex = 15;
             this.label4.Text = "Notas";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(9, 274);
+            this.label5.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label5.Location = new System.Drawing.Point(16, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 15);
+            this.label5.Size = new System.Drawing.Size(92, 24);
             this.label5.TabIndex = 16;
             this.label5.Text = "Pagina";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 242);
+            this.label6.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label6.Location = new System.Drawing.Point(302, 370);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 15);
+            this.label6.Size = new System.Drawing.Size(95, 24);
             this.label6.TabIndex = 14;
             this.label6.Text = "Idioma";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(12, 309);
+            this.label9.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label9.Location = new System.Drawing.Point(302, 460);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 15);
+            this.label9.Size = new System.Drawing.Size(87, 24);
             this.label9.TabIndex = 13;
             this.label9.Text = "Estado";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 213);
+            this.label10.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label10.Location = new System.Drawing.Point(301, 287);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 15);
+            this.label10.Size = new System.Drawing.Size(121, 24);
             this.label10.TabIndex = 12;
             this.label10.Text = "Categoría";
             // 
             // txtEdicion
             // 
-            this.txtEdicion.Location = new System.Drawing.Point(158, 177);
+            this.txtEdicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.txtEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdicion.ForeColor = System.Drawing.Color.White;
+            this.txtEdicion.Location = new System.Drawing.Point(17, 129);
             this.txtEdicion.Name = "txtEdicion";
-            this.txtEdicion.Size = new System.Drawing.Size(100, 20);
+            this.txtEdicion.Size = new System.Drawing.Size(196, 29);
             this.txtEdicion.TabIndex = 8;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(18, 177);
+            this.label7.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label7.Location = new System.Drawing.Point(12, 100);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 15);
+            this.label7.Size = new System.Drawing.Size(97, 24);
             this.label7.TabIndex = 7;
             this.label7.Text = "Edicion";
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(98, 25);
+            this.txtTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitulo.ForeColor = System.Drawing.Color.White;
+            this.txtTitulo.Location = new System.Drawing.Point(17, 43);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(100, 20);
+            this.txtTitulo.Size = new System.Drawing.Size(196, 29);
             this.txtTitulo.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 104);
+            this.label8.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label8.Location = new System.Drawing.Point(300, 193);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 15);
+            this.label8.Size = new System.Drawing.Size(112, 24);
             this.label8.TabIndex = 7;
             this.label8.Text = "Editorial";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 69);
+            this.label3.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label3.Location = new System.Drawing.Point(300, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 15);
+            this.label3.Size = new System.Drawing.Size(75, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Autor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 148);
+            this.label2.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label2.Location = new System.Drawing.Point(300, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 15);
+            this.label2.Size = new System.Drawing.Size(203, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Fecha de Public:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Broadway", 9.75F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 25);
+            this.label1.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.Size = new System.Drawing.Size(78, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Titulo";
             // 
