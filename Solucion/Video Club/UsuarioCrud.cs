@@ -80,60 +80,70 @@ namespace Video_Club
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            UsuarioClass usuarioObj = new UsuarioClass();
-            usuarioObj.Nombre1 = textNombre.Text;
-            usuarioObj.Apellido1 = textApellido.Text;
-            usuarioObj.Direccion1 = textDireccion.Text;
-            usuarioObj.Telefono1 = textTelefono.Text;
-            usuarioObj.Email1 = textEmail.Text;
-            usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
-            usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
-            usuarioObj.EstadoUsuario = 0;
+            BorrarError();
+            if (ValidarCampos())
+            {
+                UsuarioClass usuarioObj = new UsuarioClass();
+                usuarioObj.Nombre1 = textNombre.Text;
+                usuarioObj.Apellido1 = textApellido.Text;
+                usuarioObj.Direccion1 = textDireccion.Text;
+                usuarioObj.Telefono1 = textTelefono.Text;
+                usuarioObj.Email1 = textEmail.Text;
+                usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
+                usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
+                usuarioObj.EstadoUsuario = 0;
 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono,estadoUsuario) VALUES('" + usuarioObj.Nombre1 + "','" + usuarioObj.Apellido1 + "','" + usuarioObj.Dni1 + "','" + usuarioObj.TipoUsuario1 + "','" + usuarioObj.Email1 + "','" + usuarioObj.Direccion1 + "','" + usuarioObj.Telefono1 + "','" + usuarioObj.EstadoUsuario + "')";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand(sql, con);
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se ingresaron exitosamente");
-            con.Close();
-            limpiar();
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "INSERT INTO usuario(NombreUsuario,ApellidoUsuario,DniUsuario,TipoUsuario,email,direccion,telefono,estadoUsuario) VALUES('" + usuarioObj.Nombre1 + "','" + usuarioObj.Apellido1 + "','" + usuarioObj.Dni1 + "','" + usuarioObj.TipoUsuario1 + "','" + usuarioObj.Email1 + "','" + usuarioObj.Direccion1 + "','" + usuarioObj.Telefono1 + "','" + usuarioObj.EstadoUsuario + "')";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se ingresaron exitosamente");
+                con.Close();
+                limpiar();
+            }
+            
    
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            UsuarioClass usuarioObj = new UsuarioClass();
-            usuarioObj.Nombre1 = textNombre.Text;
-            usuarioObj.Apellido1 = textApellido.Text;
-            usuarioObj.Direccion1 = textDireccion.Text;
-            usuarioObj.Telefono1 = textTelefono.Text;
-            usuarioObj.Email1 = textEmail.Text;
-            usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
-            usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
+            BorrarError();
+            if (ValidarCampos())
+            {
+                UsuarioClass usuarioObj = new UsuarioClass();
+                usuarioObj.Nombre1 = textNombre.Text;
+                usuarioObj.Apellido1 = textApellido.Text;
+                usuarioObj.Direccion1 = textDireccion.Text;
+                usuarioObj.Telefono1 = textTelefono.Text;
+                usuarioObj.Email1 = textEmail.Text;
+                usuarioObj.Dni1 = Convert.ToInt32(textDni.Text);
+                usuarioObj.TipoUsuario1 = Convert.ToInt32(textTipoUsuario.Text);
 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "update usuario set NombreUsuario='" + usuarioObj.Nombre1 + "',ApellidoUsuario='" + usuarioObj.Apellido1 + "',DniUsuario='" + usuarioObj.Dni1 + "',TipoUsuario='" + usuarioObj.TipoUsuario1 + "' ,email='" + usuarioObj.Email1 + "',direccion='" + usuarioObj.Direccion1 + "',telefono='" + usuarioObj.Telefono1 + "' where id_usuario='" + usuarioObj.Id1 + "';";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand(sql, con);
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se actualizaron exitosamente");
-            con.Close();
-            limpiar();
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "update usuario set NombreUsuario='" + usuarioObj.Nombre1 + "',ApellidoUsuario='" + usuarioObj.Apellido1 + "',DniUsuario='" + usuarioObj.Dni1 + "',TipoUsuario='" + usuarioObj.TipoUsuario1 + "' ,email='" + usuarioObj.Email1 + "',direccion='" + usuarioObj.Direccion1 + "',telefono='" + usuarioObj.Telefono1 + "' where id_usuario='" + usuarioObj.Id1 + "';";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se actualizaron exitosamente");
+                con.Close();
+                limpiar();
 
 
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
+                btn_eliminar.Enabled = false;
+                btn_modificar.Enabled = false;
+                btn_agregar.Enabled = true;
+                btn_nuevo.Enabled = true;
 
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textNombre.Focus();
+                btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
+                btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+                textNombre.Focus();
+            }
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)

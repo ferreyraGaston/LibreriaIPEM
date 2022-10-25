@@ -79,6 +79,16 @@ namespace Video_Club
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
             limpiar();
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
+            btn_agregar.Enabled = true;
+            btn_nuevo.Enabled = true;
+
+            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
+            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
+            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+            textNombre.Focus();
         }
        private void listarCategoria()
         {
