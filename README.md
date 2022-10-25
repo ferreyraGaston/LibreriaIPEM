@@ -55,7 +55,7 @@ Damos la bienvenida a todos los colaboradores 💙
 
 <p align="center">
   <a>
-    <img alt="Edit on CodeSandbox" src="https://github.com/gastonloco/C-Plantilla-Formulario/blob/main/img/diagrama.JPG">
+    <img alt="Edit on CodeSandbox" src="https://github.com/gastonloco/LibreriaIPEM/blob/main/img/diagrama.JPG">
   </a>
 </p>
 
