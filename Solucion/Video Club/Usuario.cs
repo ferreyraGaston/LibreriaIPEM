@@ -126,16 +126,7 @@ namespace Video_Club
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from usuario";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            CargarTablaUsuario();
             txtBuscar.Text = "";
         }
 

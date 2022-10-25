@@ -52,7 +52,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI from usuario";
+            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO from usuario";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -78,6 +78,48 @@ namespace Video_Club
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnUsBuscar_Click(object sender, EventArgs e)
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO from usuario where usuario.id_usuario ='" + txtUsuario.Text + "' || usuario.NombreUsuario='" + txtUsuario.Text + "' || usuario.ApellidoUsuario='" + txtUsuario.Text + "' || usuario.DniUsuario='" + txtUsuario.Text + "';";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dgUsuario.DataSource = dt;
+            dgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtUsuario.Text = "";
+        }
+
+        private void btnUsRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarTablaUsuario();
+            txtUsuario.Text = "";
+        }
+
+        private void btnLiBuscar_Click(object sender, EventArgs e)
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where libros.idLibros ='" + txtLibro.Text + "' || libros.titulo='" + txtLibro.Text + "'|| autor.nombreAutor= '" + txtLibro.Text + "' || idioma.Idioma='" + txtLibro.Text + "' || categoria.Categoria='" + txtLibro.Text + "' || editorial.Editorial='" + txtLibro.Text + "';";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dgLibro.DataSource = dt;
+            dgLibro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            txtLibro.Text = "";
+        }
+
+        private void btnLiRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarTablaLibro();
+            txtLibro.Text = "";
         }
     }
 }
