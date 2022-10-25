@@ -78,7 +78,7 @@ namespace Video_Club
         }
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Libros());
+            limpiar();
         }
        private void listarCategoria()
         {
@@ -187,18 +187,17 @@ namespace Video_Club
 
         void limpiar()
         {
-            //txtTitulo.Text = "";
-            //cboAutor.v;
-            //cboEditor.SelectedValue;
-            //dtFecha.Text;
+            txtTitulo.Text= "";
             txtEdicion.Text = "";
-            //cboCategoria.SelectedValue;
-            //cboIdioma.SelectedValue;
-            //txtPagina.Text;
-            //cboEstado.SelectedValue;
+            txtPagina.Text = "";
+            txtStock.Text = "";
+            txtCondicion.Text = "";
             txtNotas.Text = "";
-            //txtStock.Text;
-            //txtCondicion.Text;
+            cboAutor.Text = "";
+            cboEditor.Text = "";
+            cboCategoria.Text = "";
+            cboIdioma.Text = "";
+            cboEstado.Text = "";
         }
 
         void estadoUsuario()
