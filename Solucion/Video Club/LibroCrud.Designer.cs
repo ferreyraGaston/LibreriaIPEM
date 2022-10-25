@@ -318,6 +318,7 @@
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(196, 29);
             this.txtTitulo.TabIndex = 8;
+            this.txtTitulo.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitulo_Validating);
             // 
             // label8
             // 

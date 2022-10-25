@@ -155,29 +155,34 @@ namespace Video_Club
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            LibroClass libroObj = new LibroClass();
-            libroObj.Titulo= txtTitulo.Text;
-            libroObj.Autor = Convert.ToInt32(cboAutor.SelectedIndex)+1;
-            libroObj.Editor = Convert.ToInt32(cboEditor.SelectedIndex)+1;
-            libroObj.FechaPublic = dtFecha.Text;
-            libroObj.Edicion = txtEdicion.Text;
-            libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedIndex)+1;
-            libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedIndex)+1;
-            libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
-            libroObj.Estado = Convert.ToInt32(cboEstado.SelectedIndex)+1;
-            libroObj.Notas = txtNotas.Text;
-            libroObj.Stock = Convert.ToInt32(txtStock.Text);
-            libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
-           
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand(sql, con);
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se ingresaron exitosamente");
-            con.Close();
-            limpiar();
+            BorrarError();
+            if (ValidarCampos())
+            {
+                LibroClass libroObj = new LibroClass();
+                libroObj.Titulo = txtTitulo.Text;
+                libroObj.Autor = Convert.ToInt32(cboAutor.SelectedIndex) + 1;
+                libroObj.Editor = Convert.ToInt32(cboEditor.SelectedIndex) + 1;
+                libroObj.FechaPublic = dtFecha.Text;
+                libroObj.Edicion = txtEdicion.Text;
+                libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedIndex) + 1;
+                libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedIndex) + 1;
+                libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
+                libroObj.Estado = Convert.ToInt32(cboEstado.SelectedIndex) + 1;
+                libroObj.Notas = txtNotas.Text;
+                libroObj.Stock = Convert.ToInt32(txtStock.Text);
+                libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
+
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se ingresaron exitosamente");
+                con.Close();
+                limpiar();
+            }
+            
         }
 
         void limpiar()
@@ -276,41 +281,170 @@ namespace Video_Club
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            LibroClass libroObj = new LibroClass();
-            libroObj.Titulo = txtTitulo.Text;
-            libroObj.Autor = Convert.ToInt32(cboAutor.SelectedIndex) + 1;
-            libroObj.Editor = Convert.ToInt32(cboEditor.SelectedIndex) + 1;
-            libroObj.FechaPublic = dtFecha.Text;
-            libroObj.Edicion = txtEdicion.Text;
-            libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedIndex) + 1;
-            libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedIndex) + 1;
-            libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
-            libroObj.Estado = Convert.ToInt32(cboEstado.SelectedIndex) + 1;
-            libroObj.Notas = txtNotas.Text;
-            libroObj.Stock = Convert.ToInt32(txtStock.Text);
-            libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
+            BorrarError();
+            if (ValidarCampos())
+            {
+                LibroClass libroObj = new LibroClass();
+                libroObj.Titulo = txtTitulo.Text;
+                libroObj.Autor = Convert.ToInt32(cboAutor.SelectedIndex) + 1;
+                libroObj.Editor = Convert.ToInt32(cboEditor.SelectedIndex) + 1;
+                libroObj.FechaPublic = dtFecha.Text;
+                libroObj.Edicion = txtEdicion.Text;
+                libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedIndex) + 1;
+                libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedIndex) + 1;
+                libroObj.Pagina = Convert.ToInt32(txtPagina.Text);
+                libroObj.Estado = Convert.ToInt32(cboEstado.SelectedIndex) + 1;
+                libroObj.Notas = txtNotas.Text;
+                libroObj.Stock = Convert.ToInt32(txtStock.Text);
+                libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + libroObj.FechaPublic + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            MySqlCommand comando = new MySqlCommand(sql, con);
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se actualizaron exitosamente");
-            con.Close();
-            limpiar();
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + libroObj.FechaPublic + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se actualizaron exitosamente");
+                con.Close();
+                limpiar();
 
 
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
+                btn_eliminar.Enabled = false;
+                btn_modificar.Enabled = false;
+                btn_agregar.Enabled = true;
+                btn_nuevo.Enabled = true;
 
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-           txtTitulo.Focus();
+                btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
+                btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
+                btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+                txtTitulo.Focus();
+            }
+           
+        }
+
+        private void txtTitulo_Validating(object sender, CancelEventArgs e)
+        {
+        bool error = false;
+        foreach(Char caracter in txtTitulo.Text)
+            if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+            {
+                error = false;
+                break;
+            }
+            else
+            {
+                error = true;
+                break;
+            }
+
+                if (error)
+            {
+                errorProvider1.Clear();
+            }else
+            {
+                errorProvider1.SetError(txtTitulo, "No se admiten numeros");
+            }
+        }
+
+        private void BorrarError()
+        {
+            errorProvider1.SetError(txtTitulo, "");
+            errorProvider1.SetError(txtEdicion, "");
+            errorProvider1.SetError(txtPagina, "");
+            errorProvider1.SetError(txtStock, "");
+            errorProvider1.SetError(txtCondicion, "");
+            errorProvider1.SetError(txtNotas, "");
+            errorProvider1.SetError(cboAutor, "");
+            errorProvider1.SetError(cboEditor, "");
+            errorProvider1.SetError(cboCategoria, "");
+            errorProvider1.SetError(cboIdioma, "");
+            errorProvider1.SetError(cboEstado, "");
+         
+        }
+        private bool ValidarCampos()
+        {
+            bool validarOk = true;
+            if (txtTitulo.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtTitulo, "Ingresar Titulo");
+            }
+            if (txtEdicion.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtEdicion, "Ingresar el tipo de edicion");
+            }
+            if (txtPagina.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtPagina, "Ingresar el numero de pagina");
+            }
+            if (txtStock.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtStock, "Ingresar la cantidad de ejemplares");
+            }
+            if (txtCondicion.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtCondicion, "Ingresar el tipo de condicion");
+            }
+            if (txtNotas.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtNotas, "Detalle el libro");
+            }
+            //
+            if (cboAutor.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(cboAutor, "Seleccione el tipo de autor");
+            }
+            if (cboEditor.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(cboEditor, "Seleccione el tipo de editor");
+            }
+            if (cboCategoria.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(cboCategoria, "Seleccione el tipo de categoría");
+            }
+            if (cboIdioma.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(cboIdioma, "Seleccione el tipo de idioma");
+            }
+            if (cboEstado.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(cboEstado, "Seleccione el tipo de estado");
+            }
+
+            int num;
+            if (!int.TryParse(txtPagina.Text, out num))
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtPagina, "Ingrese el valor pero en numeros");
+            }
+            return validarOk;
+
+            int num2;
+            if (!int.TryParse(txtStock.Text, out num2))
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtStock, "Ingrese el valor pero en numeros");
+            }
+            return validarOk;
+
+            int num3;
+            if (!int.TryParse(txtCondicion.Text, out num3))
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtCondicion, "Ingrese el valor pero en numeros");
+            }
+            return validarOk;
         }
     }
 }
