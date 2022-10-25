@@ -88,7 +88,7 @@ namespace Video_Club
             btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
             btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
             btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-            textNombre.Focus();
+            txtTitulo.Focus();
         }
        private void listarCategoria()
         {
