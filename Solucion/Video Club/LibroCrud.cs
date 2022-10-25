@@ -231,10 +231,7 @@ namespace Video_Club
 
                 txtTitulo.Focus();
             }
-
-
         }
-
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             LibroClass libroObj = new LibroClass();
@@ -263,21 +260,6 @@ namespace Video_Club
             btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
             txtTitulo.Focus();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnPrestar_Click(object sender, EventArgs e)
-        {
-            LibroClass libroObj = new LibroClass();
-            PrestamoClass prestamoObj = new PrestamoClass();
-
-            prestamoObj.IdLibro = libroObj.Id;
-
-        }
-
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             BorrarError();
@@ -322,29 +304,7 @@ namespace Video_Club
            
         }
 
-        private void txtTitulo_Validating(object sender, CancelEventArgs e)
-        {
-        bool error = false;
-        foreach(Char caracter in txtTitulo.Text)
-            if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
-            {
-                error = false;
-                break;
-            }
-            else
-            {
-                error = true;
-                break;
-            }
 
-                if (error)
-            {
-                errorProvider1.Clear();
-            }else
-            {
-                errorProvider1.SetError(txtTitulo, "No se admiten numeros");
-            }
-        }
 
         private void BorrarError()
         {
@@ -421,29 +381,82 @@ namespace Video_Club
                 errorProvider1.SetError(cboEstado, "Seleccione el tipo de estado");
             }
 
-            int num;
-            if (!int.TryParse(txtPagina.Text, out num))
-            {
-                validarOk = false;
-                errorProvider1.SetError(txtPagina, "Ingrese el valor pero en numeros");
-            }
             return validarOk;
+        }
 
-            int num2;
-            if (!int.TryParse(txtStock.Text, out num2))
-            {
-                validarOk = false;
-                errorProvider1.SetError(txtStock, "Ingrese el valor pero en numeros");
-            }
-            return validarOk;
+        private void txtPagina_Validating(object sender, CancelEventArgs e)
+        {
+            bool error = false;
+            foreach (Char caracter in txtPagina.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+                    
+                }
+                else
+                {
+                    error = true;
+                    break;
+                }
 
-            int num3;
-            if (!int.TryParse(txtCondicion.Text, out num3))
+            if (error)
             {
-                validarOk = false;
-                errorProvider1.SetError(txtCondicion, "Ingrese el valor pero en numeros");
+                errorProvider1.SetError(txtPagina, "No se admiten letras");
+    
             }
-            return validarOk;
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void txtStock_Validating(object sender, CancelEventArgs e)
+        {
+            bool error = false;
+            foreach (Char caracter in txtStock.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+
+                }
+                else
+                {
+                    error = true;
+                    break;
+                }
+
+            if (error)
+            {
+                errorProvider1.SetError(txtStock, "No se admiten letras");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void txtCondicion_Validating(object sender, CancelEventArgs e)
+        {
+            bool error = false;
+            foreach (Char caracter in txtCondicion.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+
+                }
+                else
+                {
+                    error = true;
+                    break;
+                }
+
+            if (error)
+            {
+                errorProvider1.SetError(txtCondicion, "No se admiten letras");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }

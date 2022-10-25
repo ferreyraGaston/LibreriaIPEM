@@ -102,7 +102,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dtFecha
             // 
@@ -178,6 +177,7 @@
             this.txtCondicion.Name = "txtCondicion";
             this.txtCondicion.Size = new System.Drawing.Size(100, 29);
             this.txtCondicion.TabIndex = 24;
+            this.txtCondicion.Validating += new System.ComponentModel.CancelEventHandler(this.txtCondicion_Validating);
             // 
             // label11
             // 
@@ -199,6 +199,7 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 29);
             this.txtStock.TabIndex = 25;
+            this.txtStock.Validating += new System.ComponentModel.CancelEventHandler(this.txtStock_Validating);
             // 
             // label12
             // 
@@ -220,6 +221,7 @@
             this.txtPagina.Name = "txtPagina";
             this.txtPagina.Size = new System.Drawing.Size(100, 29);
             this.txtPagina.TabIndex = 21;
+            this.txtPagina.Validating += new System.ComponentModel.CancelEventHandler(this.txtPagina_Validating);
             // 
             // txtNotas
             // 
@@ -316,7 +318,6 @@
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(196, 29);
             this.txtTitulo.TabIndex = 8;
-            this.txtTitulo.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitulo_Validating);
             // 
             // label8
             // 
