@@ -75,7 +75,6 @@
             this.pnl_opciones.Name = "pnl_opciones";
             this.pnl_opciones.Size = new System.Drawing.Size(200, 450);
             this.pnl_opciones.TabIndex = 12;
-            this.pnl_opciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_opciones_Paint);
             // 
             // panel4
             // 
@@ -199,7 +198,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 450);
             this.panel2.TabIndex = 11;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textTipoUsuario
             // 
@@ -231,6 +229,7 @@
             this.textDni.Name = "textDni";
             this.textDni.Size = new System.Drawing.Size(224, 29);
             this.textDni.TabIndex = 39;
+            this.textDni.Validating += new System.ComponentModel.CancelEventHandler(this.textDni_Validating);
             // 
             // label6
             // 
@@ -263,6 +262,7 @@
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(219, 29);
             this.textTelefono.TabIndex = 36;
+            this.textTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.textTelefono_Validating);
             // 
             // textEmail
             // 
@@ -304,6 +304,7 @@
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(224, 29);
             this.textApellido.TabIndex = 34;
+            this.textApellido.Validating += new System.ComponentModel.CancelEventHandler(this.textApellido_Validating);
             // 
             // textNombre
             // 
@@ -314,6 +315,7 @@
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(224, 29);
             this.textNombre.TabIndex = 33;
+            this.textNombre.Validating += new System.ComponentModel.CancelEventHandler(this.textNombre_Validating);
             // 
             // label10
             // 

@@ -179,15 +179,157 @@ namespace Video_Club
             btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
             textNombre.Focus();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void BorrarError()
         {
+            errorProvider1.SetError(textNombre, "");
+            errorProvider1.SetError(textApellido, "");
+            errorProvider1.SetError(textTelefono, "");
+            errorProvider1.SetError(textDni, "");
+            errorProvider1.SetError(textDireccion, "");
+            errorProvider1.SetError(textTipoUsuario, "");
+            errorProvider1.SetError(textEmail, "");
+        }
+        private bool ValidarCampos()
+        {
+            bool validarOk = true;
+            if (textNombre.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textNombre, "Ingresar el nombre");
+            }
+            if (textApellido.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textApellido, "Ingresar el apellido");
+            }
+            if (textTelefono.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textTelefono, "Ingresar el télefono");
+            }
+            if (textDni.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textDni, "Ingresar el DNI");
+            }
+            if (textDireccion.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textDireccion, "Ingresar la dirección");
+            }
+            if (textTipoUsuario.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textTipoUsuario, "Seleccione el tipo de usuario");
+            }
+            //
+            if (textEmail.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textEmail, "Ingrese el email");
+            }     
 
+            return validarOk;
         }
 
-        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        private void textNombre_Validating(object sender, CancelEventArgs e)
         {
+            bool error = false;
+            foreach (Char caracter in textNombre.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+                    error = true;
+                    break;
+                }
+                else
+                {
+                    
+                }
 
+            if (error)
+            {
+                errorProvider1.SetError(textNombre, "No se admiten nomeros");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void textApellido_Validating(object sender, CancelEventArgs e)
+        {
+            bool error = false;
+            foreach (Char caracter in textApellido.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+                    error = true;
+                    break;
+                }
+                else
+                {
+
+                }
+
+            if (error)
+            {
+                errorProvider1.SetError(textApellido, "No se admiten nomeros");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void textTelefono_Validating(object sender, CancelEventArgs e)
+        {
+            bool error = false;
+            foreach (Char caracter in textTelefono.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+
+                }
+                else
+                {
+                    error = true;
+                    break;
+                }
+
+            if (error)
+            {
+                errorProvider1.SetError(textTelefono, "No se admiten letras");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void textDni_Validating(object sender, CancelEventArgs e)
+        {
+            bool error = false;
+            foreach (Char caracter in textDni.Text)
+                if (char.IsDigit(caracter)) // recorre caracter por caracter buscando un char
+                {
+
+                }
+                else
+                {
+                    error = true;
+                    break;
+                }
+
+            if (error)
+            {
+                errorProvider1.SetError(textDni, "No se admiten letras");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }
