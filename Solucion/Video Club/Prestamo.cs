@@ -14,6 +14,8 @@ namespace Video_Club
 {
     public partial class Prestamo : Form
     {
+        int posicion = 0;
+        int posicion2 = 0;
         public Prestamo()
         {
             InitializeComponent();
@@ -60,26 +62,6 @@ namespace Video_Club
             dgUsuario.DataSource = dt;
             dgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void textPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnUsBuscar_Click(object sender, EventArgs e)
         {
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
@@ -120,6 +102,23 @@ namespace Video_Club
         {
             CargarTablaLibro();
             txtLibro.Text = "";
+        }
+
+        private void dgUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PrestamoClass prestamoObj = new PrestamoClass();
+            posicion = dgUsuario.CurrentRow.Index;
+            prestamoObj.IdUsuario = int.Parse(dgUsuario[0, posicion].Value.ToString());
+            txtIdUsuario.Text = dgUsuario[0, posicion].Value.ToString();
+        }
+
+        private void dgLibro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PrestamoClass prestamoObj = new PrestamoClass();
+            posicion2 = dgLibro.CurrentRow.Index;
+            prestamoObj.IdLibro = int.Parse(dgLibro[0, posicion2].Value.ToString());
+            prestamoObj.Stock = int.Parse(dgLibro[12, posicion2].Value.ToString())-1;
+            txtIdLibro.Text = dgLibro[0, posicion2].Value.ToString();
         }
     }
 }
