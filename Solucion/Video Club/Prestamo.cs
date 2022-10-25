@@ -138,6 +138,18 @@ namespace Video_Club
             MessageBox.Show("Los datos se ingresaron exitosamente");
             con.Close();
             }
+            else
+            {
+                if(txtIdUsuario.Text=="")
+                {
+                    MessageBox.Show("Debes seleccionar el un Usuario.. ");
+                }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar el un Libro.. ");
+                }
+                
+            }
             CargarTablaPrestamo();
         }
 
