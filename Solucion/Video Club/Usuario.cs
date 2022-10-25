@@ -169,5 +169,10 @@ namespace Video_Club
             txtBuscar.Text = "";
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
