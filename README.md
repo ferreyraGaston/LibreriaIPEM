@@ -48,4 +48,15 @@ Damos la bienvenida a todos los colaboradores 💙
 
 --- 
 
+## Diagrama Base de Datos
 
+
+
+
+<p align="center">
+  <a>
+    <img alt="Edit on CodeSandbox" src="https://github.com/gastonloco/C-Plantilla-Formulario/blob/main/img/diagrama.JPG">
+  </a>
+</p>
+
+--- 
