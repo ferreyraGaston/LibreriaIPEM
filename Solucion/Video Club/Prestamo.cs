@@ -19,6 +19,7 @@ namespace Video_Club
             InitializeComponent();
             CargarTablaLibro();
             CargarTablaUsuario();
+            CargarTablaPrestamo();
         }
         void CargarTablaLibro()
         {
@@ -30,16 +31,28 @@ namespace Video_Club
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgLibro.DataSource = dt;
+            dgLibro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
-
+        void CargarTablaPrestamo()
+        {
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            string sql = "select idPrestamo as ID,NombreUsuario as Nombre,ApellidoUsuario as Apellido,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros;";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            DataTable dt = new DataTable();
+            con.Close();
+            da.Fill(dt);
+            dgPrestamo.DataSource = dt;
+            dgPrestamo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
         void CargarTablaUsuario()
         {
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from usuario";
+            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI from usuario";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
