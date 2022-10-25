@@ -173,16 +173,9 @@ namespace Video_Club
             {
                 validarOk = false;
                 errorProvider1.SetError(txtIdLibro, "Seleccionar el Libro");
-            }
-           
+            }          
             return validarOk;
         }
-
-        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             PrestamoClass prestamoObj = new PrestamoClass();
@@ -214,7 +207,6 @@ namespace Video_Club
             PrestamoClass prestamoObj = new PrestamoClass();
             posicion3 = dgPrestamo.CurrentRow.Index;
             prestamoObj.IdPrestamo = int.Parse(dgPrestamo[0, posicion3].Value.ToString());
-
         }
     }
 }

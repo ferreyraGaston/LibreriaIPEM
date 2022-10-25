@@ -178,7 +178,6 @@ namespace Video_Club
             this.pnl_opciones.Name = "pnl_opciones";
             this.pnl_opciones.Size = new System.Drawing.Size(200, 595);
             this.pnl_opciones.TabIndex = 7;
-            this.pnl_opciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_opciones_Paint);
             // 
             // textCodigo
             // 
