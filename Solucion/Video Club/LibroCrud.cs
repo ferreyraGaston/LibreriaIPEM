@@ -468,5 +468,10 @@ namespace Video_Club
                 errorProvider1.Clear();
             }
         }
+
+        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

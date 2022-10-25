@@ -120,5 +120,54 @@ namespace Video_Club
             prestamoObj.Stock = int.Parse(dgLibro[12, posicion2].Value.ToString())-1;
             txtIdLibro.Text = dgLibro[0, posicion2].Value.ToString();
         }
+
+        private void btn_registrar_Click(object sender, EventArgs e)
+        {
+            BorrarError();
+            if (ValidarCampos())
+            {
+            PrestamoClass prestamoObj = new PrestamoClass();
+            prestamoObj.FechaSalida= dtFechaSalida.Text;
+            prestamoObj.FechaEntrega= dtFechaEntrega.Text;  
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string sql = "INSERT INTO prestamo(idUsuario,idLibro,fechaSalida,fechaEntrega) VALUES('" + prestamoObj.IdUsuario + "','" + prestamoObj.IdLibro + "','" + prestamoObj.FechaSalida + "','" + prestamoObj.FechaEntrega + "')";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand(sql, con);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Los datos se ingresaron exitosamente");
+            con.Close();
+            }
+            CargarTablaPrestamo();
+        }
+
+        private void BorrarError()
+        {
+            errorProvider1.SetError(txtIdUsuario, "");
+            errorProvider1.SetError(txtIdLibro, "");
+            errorProvider1.SetError(dtFechaSalida, "");
+            errorProvider1.SetError(dtFechaEntrega, "");
+        }
+        private bool ValidarCampos()
+        {
+            bool validarOk = true;
+            if (txtIdUsuario.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtIdUsuario, "Ingresar Titulo");
+            }
+            if (txtIdLibro.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(txtIdLibro, "Ingresar el tipo de edicion");
+            }
+           
+            return validarOk;
+        }
+
+        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

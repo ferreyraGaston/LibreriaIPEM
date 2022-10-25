@@ -479,6 +479,7 @@
             this.pnl_opciones.Name = "pnl_opciones";
             this.pnl_opciones.Size = new System.Drawing.Size(200, 567);
             this.pnl_opciones.TabIndex = 10;
+            this.pnl_opciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_opciones_Paint);
             // 
             // errorProvider1
             // 
