@@ -154,12 +154,12 @@ namespace Video_Club
             if (txtIdUsuario.Text == "")
             {
                 validarOk = false;
-                errorProvider1.SetError(txtIdUsuario, "Ingresar Titulo");
+                errorProvider1.SetError(txtIdUsuario, "Seleccionar el Usuario");
             }
             if (txtIdLibro.Text == "")
             {
                 validarOk = false;
-                errorProvider1.SetError(txtIdLibro, "Ingresar el tipo de edicion");
+                errorProvider1.SetError(txtIdLibro, "Seleccionar el Libro");
             }
            
             return validarOk;
