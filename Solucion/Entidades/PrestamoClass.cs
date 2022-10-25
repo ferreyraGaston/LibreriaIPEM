@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class PrestamoClass
     {
+        static private int idPrestamo;
         static private int idUsuario;
         static private int idLibro;
         static private int stock;
@@ -16,6 +17,7 @@ namespace Entidades
         static private string fechaEntrega;
         static private bool condicion;
 
+        public int IdPrestamo { get => idPrestamo; set => idPrestamo = value; }
         public int Stock { get => stock; set => stock = value; }
         public int IdEstadoLibro { get => idEstadoLibro; set => idEstadoLibro = value; }
         public string FechaSalida { get => fechaSalida; set => fechaSalida = value; }

@@ -16,6 +16,7 @@ namespace Video_Club
     {
         int posicion = 0;
         int posicion2 = 0;
+        int posicion3 = 0;
         public Prestamo()
         {
             InitializeComponent();
@@ -179,6 +180,40 @@ namespace Video_Club
 
         private void pnl_opciones_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            PrestamoClass prestamoObj = new PrestamoClass();
+            if (prestamoObj.IdPrestamo > 0)
+            {
+            if (MessageBox.Show("el Id: " + prestamoObj.IdPrestamo, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "delete from prestamo where idPrestamo='" + prestamoObj.IdPrestamo + "';";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se elimino exitosamente");
+                con.Close();
+                CargarTablaPrestamo();
+            }
+            btn_eliminar.Enabled = false;
+            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+            }
+            else
+            {
+                MessageBox.Show("Selecciona el prestamo que dese eliminar");
+            }
+        }
+
+        private void dgPrestamo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PrestamoClass prestamoObj = new PrestamoClass();
+            posicion3 = dgPrestamo.CurrentRow.Index;
+            prestamoObj.IdPrestamo = int.Parse(dgPrestamo[0, posicion3].Value.ToString());
 
         }
     }
