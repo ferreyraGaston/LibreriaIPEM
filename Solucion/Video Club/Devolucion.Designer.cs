@@ -103,7 +103,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Broadway", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.label6.Location = new System.Drawing.Point(22, 51);
+            this.label6.Location = new System.Drawing.Point(17, 52);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 24);
             this.label6.TabIndex = 14;
@@ -231,7 +231,7 @@
             this.panel12.Controls.Add(this.btnDeBuscar);
             this.panel12.Controls.Add(this.panel14);
             this.panel12.Controls.Add(this.panel15);
-            this.panel12.Location = new System.Drawing.Point(450, 45);
+            this.panel12.Location = new System.Drawing.Point(445, 46);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(409, 61);
             this.panel12.TabIndex = 24;
@@ -288,7 +288,7 @@
             this.dtFechaDevolucion.CustomFormat = "yyyy/MM/dd";
             this.dtFechaDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaDevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaDevolucion.Location = new System.Drawing.Point(204, 51);
+            this.dtFechaDevolucion.Location = new System.Drawing.Point(199, 52);
             this.dtFechaDevolucion.Name = "dtFechaDevolucion";
             this.dtFechaDevolucion.Size = new System.Drawing.Size(122, 29);
             this.dtFechaDevolucion.TabIndex = 33;
@@ -311,7 +311,7 @@
             this.dgDevolucion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDevolucion.EnableHeadersVisualStyles = false;
-            this.dgDevolucion.Location = new System.Drawing.Point(12, 112);
+            this.dgDevolucion.Location = new System.Drawing.Point(7, 113);
             this.dgDevolucion.Name = "dgDevolucion";
             this.dgDevolucion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
