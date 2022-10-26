@@ -237,7 +237,7 @@ namespace Video_Club
             this.btn_RepVentas.Name = "btn_RepVentas";
             this.btn_RepVentas.Size = new System.Drawing.Size(162, 32);
             this.btn_RepVentas.TabIndex = 4;
-            this.btn_RepVentas.Text = "Devoluciones";
+            this.btn_RepVentas.Text = "Rep. Prestamos";
             this.btn_RepVentas.UseVisualStyleBackColor = false;
             this.btn_RepVentas.Click += new System.EventHandler(this.btn_RepVentas_Click);
             // 

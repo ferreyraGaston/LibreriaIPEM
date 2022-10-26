@@ -1,7 +1,7 @@
 ﻿
 namespace Video_Club
 {
-    partial class RepPagos
+    partial class Reservas
     {
         /// <summary>
         /// Required designer variable.

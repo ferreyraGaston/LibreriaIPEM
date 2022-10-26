@@ -11,9 +11,9 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace Video_Club
 {
-    public partial class RepPagos : Form
+    public partial class Reservas : Form
     {
-        public RepPagos()
+        public Reservas()
         {
             InitializeComponent();
         }
