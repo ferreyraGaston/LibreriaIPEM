@@ -114,7 +114,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from usuario where usuario.id_usuario ='" + txtBuscar.Text + "' || usuario.NombreUsuario='" + txtBuscar.Text + "' || usuario.ApellidoUsuario='" + txtBuscar.Text + "' || usuario.DniUsuario='" + txtBuscar.Text + "';";
+            string sql = "select * from usuario where usuario.id_usuario ='" + txtBuscar.Text + "' || usuario.NombreUsuario LIKE '%" + txtBuscar.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtBuscar.Text + "%' || usuario.DniUsuario LIKE '%" + txtBuscar.Text + "%';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
