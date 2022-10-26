@@ -138,16 +138,16 @@ namespace Video_Club
             comando.ExecuteNonQuery();
             con.Close();
 
-            if(prestamoObj.Stock==1)
-                { 
-            string sql2 = "update libros set stock='" + prestamoObj.Stock + "', id_estado=2  where idLibros='" + prestamoObj.IdLibro + "';";
-            MySqlConnection con2 = new MySqlConnection(cadena);
-            con2.Open();
-            MySqlCommand comando2 = new MySqlCommand(sql2, con2);
-            comando2.ExecuteNonQuery();
-            MessageBox.Show("Los datos se actualizaron exitosamente");
-            con2.Close();
-                }
+            if(prestamoObj.Stock<1)
+            { 
+                string sql2 = "update libros set stock='" + prestamoObj.Stock + "', id_estado=2  where idLibros='" + prestamoObj.IdLibro + "';";
+                MySqlConnection con2 = new MySqlConnection(cadena);
+                con2.Open();
+                MySqlCommand comando2 = new MySqlCommand(sql2, con2);
+                comando2.ExecuteNonQuery();
+                MessageBox.Show("Los datos se actualizaron exitosamente");
+                con2.Close();
+            }
             else
             {
                 string sql2 = "update libros set stock='" + prestamoObj.Stock + "'  where idLibros='" + prestamoObj.IdLibro + "';";
