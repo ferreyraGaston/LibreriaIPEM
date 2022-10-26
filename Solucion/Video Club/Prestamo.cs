@@ -118,7 +118,7 @@ namespace Video_Club
             PrestamoClass prestamoObj = new PrestamoClass();
             posicion2 = dgLibro.CurrentRow.Index;
             prestamoObj.IdLibro = int.Parse(dgLibro[0, posicion2].Value.ToString());
-            prestamoObj.Stock = int.Parse(dgLibro[12, posicion2].Value.ToString())-1;
+            prestamoObj.Stock = int.Parse(dgLibro[11, posicion2].Value.ToString())-1;
             txtIdLibro.Text = dgLibro[0, posicion2].Value.ToString();
         }
 
@@ -136,8 +136,29 @@ namespace Video_Club
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);
             comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se ingresaron exitosamente");
             con.Close();
+
+            if(prestamoObj.Stock==1)
+                { 
+            string sql2 = "update libros set stock='" + prestamoObj.Stock + "', id_estado=2  where idLibros='" + prestamoObj.IdLibro + "';";
+            MySqlConnection con2 = new MySqlConnection(cadena);
+            con2.Open();
+            MySqlCommand comando2 = new MySqlCommand(sql2, con2);
+            comando2.ExecuteNonQuery();
+            MessageBox.Show("Los datos se actualizaron exitosamente");
+            con2.Close();
+                }
+            else
+            {
+                string sql2 = "update libros set stock='" + prestamoObj.Stock + "'  where idLibros='" + prestamoObj.IdLibro + "';";
+                MySqlConnection con2 = new MySqlConnection(cadena);
+                con2.Open();
+                MySqlCommand comando2 = new MySqlCommand(sql2, con2);
+                comando2.ExecuteNonQuery();
+                MessageBox.Show("Los datos se actualizaron exitosamente");
+                con2.Close();
+            }
+
             }
             else
             {
@@ -145,7 +166,6 @@ namespace Video_Club
                 {
                     MessageBox.Show("Debes seleccionar el un Usuario.. ");
                 }
-                else
                 {
                     MessageBox.Show("Debes seleccionar el un Libro.. ");
                 }
@@ -161,6 +181,7 @@ namespace Video_Club
             errorProvider1.SetError(dtFechaSalida, "");
             errorProvider1.SetError(dtFechaEntrega, "");
         }
+               
         private bool ValidarCampos()
         {
             bool validarOk = true;
