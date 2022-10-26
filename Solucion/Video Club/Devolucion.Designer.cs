@@ -38,8 +38,6 @@
             this.btnDeRefrescar = new System.Windows.Forms.Button();
             this.txtDevolver = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -88,6 +86,7 @@
             this.btnDeRefrescar.TabIndex = 22;
             this.btnDeRefrescar.Text = "Refrescar";
             this.btnDeRefrescar.UseVisualStyleBackColor = false;
+            this.btnDeRefrescar.Click += new System.EventHandler(this.btnDeRefrescar_Click);
             // 
             // txtDevolver
             // 
@@ -104,30 +103,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Broadway", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.label6.Location = new System.Drawing.Point(566, 49);
+            this.label6.Location = new System.Drawing.Point(22, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 24);
             this.label6.TabIndex = 14;
             this.label6.Text = "F. Devolución";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Broadway", 15.75F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.label4.Location = new System.Drawing.Point(12, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 24);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Id Usuario";
-            // 
-            // txtIdUsuario
-            // 
-            this.txtIdUsuario.Enabled = false;
-            this.txtIdUsuario.Location = new System.Drawing.Point(165, 49);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(35, 20);
-            this.txtIdUsuario.TabIndex = 8;
             // 
             // label2
             // 
@@ -251,7 +231,7 @@
             this.panel12.Controls.Add(this.btnDeBuscar);
             this.panel12.Controls.Add(this.panel14);
             this.panel12.Controls.Add(this.panel15);
-            this.panel12.Location = new System.Drawing.Point(450, 112);
+            this.panel12.Location = new System.Drawing.Point(450, 45);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(409, 61);
             this.panel12.TabIndex = 24;
@@ -297,8 +277,6 @@
             this.panel7.Controls.Add(this.dgDevolucion);
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.txtIdUsuario);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
@@ -310,7 +288,7 @@
             this.dtFechaDevolucion.CustomFormat = "yyyy/MM/dd";
             this.dtFechaDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaDevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaDevolucion.Location = new System.Drawing.Point(737, 46);
+            this.dtFechaDevolucion.Location = new System.Drawing.Point(204, 51);
             this.dtFechaDevolucion.Name = "dtFechaDevolucion";
             this.dtFechaDevolucion.Size = new System.Drawing.Size(122, 29);
             this.dtFechaDevolucion.TabIndex = 33;
@@ -333,7 +311,7 @@
             this.dgDevolucion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDevolucion.EnableHeadersVisualStyles = false;
-            this.dgDevolucion.Location = new System.Drawing.Point(12, 187);
+            this.dgDevolucion.Location = new System.Drawing.Point(12, 112);
             this.dgDevolucion.Name = "dgDevolucion";
             this.dgDevolucion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -352,7 +330,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDevolucion.Size = new System.Drawing.Size(847, 313);
+            this.dgDevolucion.Size = new System.Drawing.Size(847, 388);
             this.dgDevolucion.TabIndex = 27;
             this.dgDevolucion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDevolucion_CellContentClick);
             // 
@@ -457,8 +435,6 @@
         private System.Windows.Forms.Button btnDeRefrescar;
         private System.Windows.Forms.TextBox txtDevolver;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
