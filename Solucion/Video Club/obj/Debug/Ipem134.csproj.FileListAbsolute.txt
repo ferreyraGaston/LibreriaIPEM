@@ -72,6 +72,6 @@ D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\CapaDatos.pdb
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\CapaNegocio.pdb
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\Entidades.pdb
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\MySql.Data.xml
-D:\Desarollo C#\Ipem-134\Solucion\Video Club\obj\Debug\Video_Club.Consultas.resources
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CopyComplete
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Principal.resources
+D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Devolucion.resources

@@ -15,8 +15,10 @@ namespace Entidades
         static private int idEstadoLibro;
         static private string fechaSalida;
         static private string fechaEntrega;
+        static private string fechaDevolucion;
         static private bool condicion;
 
+        public string FechaDevolucion { get => fechaDevolucion; set => fechaDevolucion = value; }
         public int IdPrestamo { get => idPrestamo; set => idPrestamo = value; }
         public int Stock { get => stock; set => stock = value; }
         public int IdEstadoLibro { get => idEstadoLibro; set => idEstadoLibro = value; }

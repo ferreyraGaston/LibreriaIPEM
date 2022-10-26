@@ -48,7 +48,7 @@ namespace Video_Club
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Prestamo = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Socios = new System.Windows.Forms.Button();
+            this.btn_devolucion = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Clientes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -142,7 +142,7 @@ namespace Video_Club
             this.MenuVertical.Controls.Add(this.panel4);
             this.MenuVertical.Controls.Add(this.btn_Prestamo);
             this.MenuVertical.Controls.Add(this.panel3);
-            this.MenuVertical.Controls.Add(this.btn_Socios);
+            this.MenuVertical.Controls.Add(this.btn_devolucion);
             this.MenuVertical.Controls.Add(this.panel2);
             this.MenuVertical.Controls.Add(this.btn_Clientes);
             this.MenuVertical.Controls.Add(this.panel1);
@@ -300,23 +300,23 @@ namespace Video_Club
             this.panel3.Size = new System.Drawing.Size(10, 32);
             this.panel3.TabIndex = 6;
             // 
-            // btn_Socios
+            // btn_devolucion
             // 
-            this.btn_Socios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.btn_Socios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Socios.FlatAppearance.BorderSize = 0;
-            this.btn_Socios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.btn_Socios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Socios.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Socios.Image = ((System.Drawing.Image)(resources.GetObject("btn_Socios.Image")));
-            this.btn_Socios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Socios.Location = new System.Drawing.Point(33, 338);
-            this.btn_Socios.Name = "btn_Socios";
-            this.btn_Socios.Size = new System.Drawing.Size(188, 32);
-            this.btn_Socios.TabIndex = 5;
-            this.btn_Socios.Text = "Admin";
-            this.btn_Socios.UseVisualStyleBackColor = false;
-            this.btn_Socios.Click += new System.EventHandler(this.btn_Socios_Click);
+            this.btn_devolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_devolucion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_devolucion.FlatAppearance.BorderSize = 0;
+            this.btn_devolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btn_devolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_devolucion.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_devolucion.Image = ((System.Drawing.Image)(resources.GetObject("btn_devolucion.Image")));
+            this.btn_devolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_devolucion.Location = new System.Drawing.Point(33, 338);
+            this.btn_devolucion.Name = "btn_devolucion";
+            this.btn_devolucion.Size = new System.Drawing.Size(188, 32);
+            this.btn_devolucion.TabIndex = 5;
+            this.btn_devolucion.Text = "Devolución";
+            this.btn_devolucion.UseVisualStyleBackColor = false;
+            this.btn_devolucion.Click += new System.EventHandler(this.btn_devolucion_Click);
             // 
             // panel2
             // 
@@ -390,7 +390,7 @@ namespace Video_Club
             this.PanelSalir.Size = new System.Drawing.Size(1079, 615);
             this.PanelSalir.TabIndex = 3;
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -400,7 +400,7 @@ namespace Video_Club
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.BarraTitulo.ResumeLayout(false);
@@ -432,7 +432,7 @@ namespace Video_Club
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_Prestamo;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btn_Socios;
+        private System.Windows.Forms.Button btn_devolucion;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Clientes;
         private System.Windows.Forms.Panel Panel_SubMenu;

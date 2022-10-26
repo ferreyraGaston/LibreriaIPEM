@@ -129,9 +129,10 @@ namespace Video_Club
             {
                 PrestamoClass prestamoObj = new PrestamoClass();
                 prestamoObj.FechaSalida= dtFechaSalida.Text;
-                prestamoObj.FechaEntrega= dtFechaEntrega.Text;  
+                prestamoObj.FechaEntrega= dtFechaEntrega.Text;
+                //prestamoObj.Condicion = Convert.ToBoolean(0);
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "INSERT INTO prestamo(idUsuario,idLibro,fechaSalida,fechaEntrega) VALUES('" + prestamoObj.IdUsuario + "','" + prestamoObj.IdLibro + "','" + prestamoObj.FechaSalida + "','" + prestamoObj.FechaEntrega + "')";
+                string sql = "INSERT INTO prestamo(idUsuario,idLibro,fechaSalida,fechaEntrega,condicion) VALUES('" + prestamoObj.IdUsuario + "','" + prestamoObj.IdLibro + "','" + prestamoObj.FechaSalida + "','" + prestamoObj.FechaEntrega + "',0)";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);

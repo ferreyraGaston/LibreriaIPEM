@@ -113,11 +113,7 @@ namespace Video_Club
 
         }
 
-        private void btn_Socios_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new Consultas());
-        }
-
+    
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new inicio());
@@ -150,6 +146,11 @@ namespace Video_Club
         private void btn_Prestamo_Click_1(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Prestamo());
+        }
+
+        private void btn_devolucion_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Devolucion());
         }
     }
 }
