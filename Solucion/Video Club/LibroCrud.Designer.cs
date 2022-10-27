@@ -35,7 +35,6 @@
             this.cboIdioma = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.cboEditor = new System.Windows.Forms.ComboBox();
-            this.cboAutor = new System.Windows.Forms.ComboBox();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnl_opciones = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cboAutor = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.pnl_opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -72,12 +72,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.panel2.Controls.Add(this.cboAutor);
             this.panel2.Controls.Add(this.dtFecha);
             this.panel2.Controls.Add(this.cboEstado);
             this.panel2.Controls.Add(this.cboIdioma);
             this.panel2.Controls.Add(this.cboCategoria);
             this.panel2.Controls.Add(this.cboEditor);
-            this.panel2.Controls.Add(this.cboAutor);
             this.panel2.Controls.Add(this.txtCondicion);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txtStock);
@@ -152,21 +152,11 @@
             this.cboEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEditor.ForeColor = System.Drawing.Color.White;
             this.cboEditor.FormattingEnabled = true;
-            this.cboEditor.Location = new System.Drawing.Point(306, 224);
+            this.cboEditor.Location = new System.Drawing.Point(307, 221);
             this.cboEditor.Name = "cboEditor";
             this.cboEditor.Size = new System.Drawing.Size(179, 32);
             this.cboEditor.TabIndex = 27;
-            // 
-            // cboAutor
-            // 
-            this.cboAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.cboAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboAutor.ForeColor = System.Drawing.Color.White;
-            this.cboAutor.FormattingEnabled = true;
-            this.cboAutor.Location = new System.Drawing.Point(305, 128);
-            this.cboAutor.Name = "cboAutor";
-            this.cboAutor.Size = new System.Drawing.Size(180, 32);
-            this.cboAutor.TabIndex = 26;
+            this.cboEditor.SelectedIndexChanged += new System.EventHandler(this.cboEditor_SelectedIndexChanged);
             // 
             // txtCondicion
             // 
@@ -485,6 +475,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // cboAutor
+            // 
+            this.cboAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.cboAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboAutor.ForeColor = System.Drawing.Color.White;
+            this.cboAutor.FormattingEnabled = true;
+            this.cboAutor.Location = new System.Drawing.Point(304, 126);
+            this.cboAutor.Name = "cboAutor";
+            this.cboAutor.Size = new System.Drawing.Size(179, 32);
+            this.cboAutor.TabIndex = 32;
+            // 
             // LibroCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,7 +527,6 @@
         private System.Windows.Forms.ComboBox cboIdioma;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.ComboBox cboEditor;
-        private System.Windows.Forms.ComboBox cboAutor;
         private System.Windows.Forms.TextBox txtCondicion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtStock;
@@ -540,5 +540,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cboAutor;
     }
 }

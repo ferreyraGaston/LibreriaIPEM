@@ -41,28 +41,28 @@ namespace Video_Club
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_titulo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.txtDevolver = new System.Windows.Forms.TextBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.btnDeBuscar = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnDeRefrescar = new System.Windows.Forms.Button();
-            this.dgDevolucion = new System.Windows.Forms.DataGridView();
-            this.dtFechaDevolucion = new System.Windows.Forms.DateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtFechaDevolucion = new System.Windows.Forms.DateTimePicker();
+            this.dgDevolucion = new System.Windows.Forms.DataGridView();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnDeRefrescar = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnDeBuscar = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.txtDevolver = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDevolucion)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDevolucion)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textCodigo
@@ -155,105 +155,51 @@ namespace Video_Club
             this.panel2.Size = new System.Drawing.Size(1089, 572);
             this.panel2.TabIndex = 12;
             // 
-            // lbl_titulo
+            // panel7
             // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Location = new System.Drawing.Point(361, 9);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(97, 13);
-            this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "Ventas o Alquileres";
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.panel7.Controls.Add(this.dateTimePicker1);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.dtFechaDevolucion);
+            this.panel7.Controls.Add(this.dgDevolucion);
+            this.panel7.Controls.Add(this.panel12);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1089, 572);
+            this.panel7.TabIndex = 13;
             // 
-            // panel1
+            // dateTimePicker1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.lbl_titulo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1089, 32);
-            this.panel1.TabIndex = 11;
+            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(154, 65);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(122, 29);
+            this.dateTimePicker1.TabIndex = 35;
             // 
-            // panel12
+            // label3
             // 
-            this.panel12.Controls.Add(this.btnDeRefrescar);
-            this.panel12.Controls.Add(this.panel13);
-            this.panel12.Controls.Add(this.btnDeBuscar);
-            this.panel12.Controls.Add(this.panel14);
-            this.panel12.Controls.Add(this.panel15);
-            this.panel12.Location = new System.Drawing.Point(645, 21);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(409, 61);
-            this.panel12.TabIndex = 24;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Broadway", 15.75F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.label3.Location = new System.Drawing.Point(22, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 24);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "F. Hasta";
             // 
-            // panel15
+            // dtFechaDevolucion
             // 
-            this.panel15.Controls.Add(this.txtDevolver);
-            this.panel15.Location = new System.Drawing.Point(3, 10);
-            this.panel15.Name = "panel15";
-            this.panel15.Padding = new System.Windows.Forms.Padding(7);
-            this.panel15.Size = new System.Drawing.Size(168, 43);
-            this.panel15.TabIndex = 1;
-            // 
-            // txtDevolver
-            // 
-            this.txtDevolver.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDevolver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDevolver.Location = new System.Drawing.Point(7, 7);
-            this.txtDevolver.Name = "txtDevolver";
-            this.txtDevolver.Size = new System.Drawing.Size(154, 22);
-            this.txtDevolver.TabIndex = 0;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.panel14.Location = new System.Drawing.Point(178, 11);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 37);
-            this.panel14.TabIndex = 21;
-            // 
-            // btnDeBuscar
-            // 
-            this.btnDeBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.btnDeBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeBuscar.FlatAppearance.BorderSize = 0;
-            this.btnDeBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.btnDeBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeBuscar.Location = new System.Drawing.Point(188, 12);
-            this.btnDeBuscar.Name = "btnDeBuscar";
-            this.btnDeBuscar.Size = new System.Drawing.Size(89, 36);
-            this.btnDeBuscar.TabIndex = 20;
-            this.btnDeBuscar.Text = "Buscar";
-            this.btnDeBuscar.UseVisualStyleBackColor = false;
-            this.btnDeBuscar.Click += new System.EventHandler(this.btnDeBuscar_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.panel13.Location = new System.Drawing.Point(299, 11);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 37);
-            this.panel13.TabIndex = 23;
-            // 
-            // btnDeRefrescar
-            // 
-            this.btnDeRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.btnDeRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeRefrescar.FlatAppearance.BorderSize = 0;
-            this.btnDeRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.btnDeRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeRefrescar.Location = new System.Drawing.Point(309, 12);
-            this.btnDeRefrescar.Name = "btnDeRefrescar";
-            this.btnDeRefrescar.Size = new System.Drawing.Size(95, 36);
-            this.btnDeRefrescar.TabIndex = 22;
-            this.btnDeRefrescar.Text = "Refrescar";
-            this.btnDeRefrescar.UseVisualStyleBackColor = false;
-            this.btnDeRefrescar.Click += new System.EventHandler(this.btnDeRefrescar_Click);
+            this.dtFechaDevolucion.CustomFormat = "yyyy/MM/dd";
+            this.dtFechaDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaDevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaDevolucion.Location = new System.Drawing.Point(154, 21);
+            this.dtFechaDevolucion.Name = "dtFechaDevolucion";
+            this.dtFechaDevolucion.Size = new System.Drawing.Size(122, 29);
+            this.dtFechaDevolucion.TabIndex = 33;
             // 
             // dgDevolucion
             // 
@@ -296,30 +242,86 @@ namespace Video_Club
             this.dgDevolucion.TabIndex = 27;
             this.dgDevolucion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDevolucion_CellContentClick);
             // 
-            // dtFechaDevolucion
+            // panel12
             // 
-            this.dtFechaDevolucion.CustomFormat = "yyyy/MM/dd";
-            this.dtFechaDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFechaDevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaDevolucion.Location = new System.Drawing.Point(154, 21);
-            this.dtFechaDevolucion.Name = "dtFechaDevolucion";
-            this.dtFechaDevolucion.Size = new System.Drawing.Size(122, 29);
-            this.dtFechaDevolucion.TabIndex = 33;
+            this.panel12.Controls.Add(this.btnDeRefrescar);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Controls.Add(this.btnDeBuscar);
+            this.panel12.Controls.Add(this.panel14);
+            this.panel12.Controls.Add(this.panel15);
+            this.panel12.Location = new System.Drawing.Point(645, 21);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(409, 61);
+            this.panel12.TabIndex = 24;
             // 
-            // panel7
+            // btnDeRefrescar
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
-            this.panel7.Controls.Add(this.dateTimePicker1);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.dtFechaDevolucion);
-            this.panel7.Controls.Add(this.dgDevolucion);
-            this.panel7.Controls.Add(this.panel12);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1089, 572);
-            this.panel7.TabIndex = 13;
+            this.btnDeRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btnDeRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeRefrescar.FlatAppearance.BorderSize = 0;
+            this.btnDeRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnDeRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeRefrescar.Location = new System.Drawing.Point(309, 12);
+            this.btnDeRefrescar.Name = "btnDeRefrescar";
+            this.btnDeRefrescar.Size = new System.Drawing.Size(95, 36);
+            this.btnDeRefrescar.TabIndex = 22;
+            this.btnDeRefrescar.Text = "Refrescar";
+            this.btnDeRefrescar.UseVisualStyleBackColor = false;
+            this.btnDeRefrescar.Click += new System.EventHandler(this.btnDeRefrescar_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel13.Location = new System.Drawing.Point(299, 11);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(10, 37);
+            this.panel13.TabIndex = 23;
+            // 
+            // btnDeBuscar
+            // 
+            this.btnDeBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btnDeBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeBuscar.FlatAppearance.BorderSize = 0;
+            this.btnDeBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnDeBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeBuscar.Location = new System.Drawing.Point(188, 12);
+            this.btnDeBuscar.Name = "btnDeBuscar";
+            this.btnDeBuscar.Size = new System.Drawing.Size(89, 36);
+            this.btnDeBuscar.TabIndex = 20;
+            this.btnDeBuscar.Text = "Buscar";
+            this.btnDeBuscar.UseVisualStyleBackColor = false;
+            this.btnDeBuscar.Click += new System.EventHandler(this.btnDeBuscar_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel14.Location = new System.Drawing.Point(178, 11);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(10, 37);
+            this.panel14.TabIndex = 21;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.txtDevolver);
+            this.panel15.Location = new System.Drawing.Point(3, 10);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(7);
+            this.panel15.Size = new System.Drawing.Size(168, 43);
+            this.panel15.TabIndex = 1;
+            // 
+            // txtDevolver
+            // 
+            this.txtDevolver.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDevolver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDevolver.Location = new System.Drawing.Point(7, 7);
+            this.txtDevolver.Name = "txtDevolver";
+            this.txtDevolver.Size = new System.Drawing.Size(154, 22);
+            this.txtDevolver.TabIndex = 0;
             // 
             // label6
             // 
@@ -332,26 +334,24 @@ namespace Video_Club
             this.label6.TabIndex = 14;
             this.label6.Text = "F. Desde";
             // 
-            // dateTimePicker1
+            // lbl_titulo
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(154, 65);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(122, 29);
-            this.dateTimePicker1.TabIndex = 35;
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Location = new System.Drawing.Point(361, 9);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(97, 13);
+            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.Text = "Ventas o Alquileres";
             // 
-            // label3
+            // panel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Broadway", 15.75F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
-            this.label3.Location = new System.Drawing.Point(22, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 24);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "F. Hasta";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.lbl_titulo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1089, 32);
+            this.panel1.TabIndex = 11;
             // 
             // RepVentas
             // 
@@ -367,14 +367,14 @@ namespace Video_Club
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDevolucion)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDevolucion)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

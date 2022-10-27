@@ -95,7 +95,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from categoria order by Categoria asc";
+            string sql = "select * from categoria order by idCategoria asc";
             MySqlCommand da = new MySqlCommand(sql, con);
             MySqlDataReader dr =da.ExecuteReader();
             while(dr.Read())
@@ -109,12 +109,12 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from autor order by apellidoAutor asc";
+            string sql = "select * from autor order by idAutor asc";
             MySqlCommand da = new MySqlCommand(sql, con);
             MySqlDataReader dr = da.ExecuteReader();
             while (dr.Read())
             {
-                cboAutor.Items.Add(dr[1].ToString()+" "+ dr[2].ToString());
+                cboAutor.Items.Add(dr[1].ToString());
             }
             con.Close();
         }
@@ -124,7 +124,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from estado order by Estado asc";
+            string sql = "select * from estado order by idEstado asc";
             MySqlCommand da = new MySqlCommand(sql, con);
             MySqlDataReader dr = da.ExecuteReader();
             while (dr.Read())
@@ -139,7 +139,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from idioma order by Idioma asc";
+            string sql = "select * from idioma order by idIdioma asc";
             MySqlCommand da = new MySqlCommand(sql, con);
             MySqlDataReader dr = da.ExecuteReader();
             while (dr.Read())
@@ -153,7 +153,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from editorial order by Editorial asc";
+            string sql = "select * from editorial order by idEditorial asc";
             MySqlCommand da = new MySqlCommand(sql, con);
             MySqlDataReader dr = da.ExecuteReader();
             while (dr.Read())
@@ -216,7 +216,6 @@ namespace Video_Club
 
             if (libroObj.EstadoLibro == true)
             {
-
                 btn_eliminar.Enabled = true;
                 btn_modificar.Enabled = true;
                 btn_agregar.Enabled = false;
@@ -225,7 +224,6 @@ namespace Video_Club
                 btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
                 btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
                 btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
-
                 txtTitulo.Focus();
             }
             else
@@ -470,6 +468,11 @@ namespace Video_Club
         }
 
         private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cboEditor_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

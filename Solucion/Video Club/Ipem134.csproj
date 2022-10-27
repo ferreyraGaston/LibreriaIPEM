@@ -68,6 +68,12 @@
     <Compile Include="Devolucion.Designer.cs">
       <DependentUpon>Devolucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogo.Designer.cs">
+      <DependentUpon>Dialogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="Devolucion.resx">
       <DependentUpon>Devolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogo.resx">
+      <DependentUpon>Dialogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibroCrud.resx">
       <DependentUpon>LibroCrud.cs</DependentUpon>

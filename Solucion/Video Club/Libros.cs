@@ -56,7 +56,6 @@ namespace Video_Club
             libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
             libroObj.AutorCo = dgv_detalle[2, posicion].Value.ToString();
             libroObj.EditorCo = dgv_detalle[3, posicion].Value.ToString();
-            //libroObj.FechaPublic = DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
             libroObj.FechaPublic = dgv_detalle[4, posicion].Value.ToString();
             libroObj.Edicion = dgv_detalle[5, posicion].Value.ToString();
             libroObj.CategoriaCo = dgv_detalle[6, posicion].Value.ToString();
@@ -118,6 +117,9 @@ namespace Video_Club
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            rbReservado.Checked = false;
+            rbNoDisponible.Checked = false;
+            rbDisponible.Checked = false;
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
@@ -129,21 +131,17 @@ namespace Video_Club
             dgv_detalle.DataSource = dt;
             dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             txtBuscar.Text = "";
+            
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            rbReservado.Checked = false;
+            rbNoDisponible.Checked = false;
+            rbDisponible.Checked = false;
+            CargarTablaLibro();
             txtBuscar.Text = "";
+            
         }
 
 

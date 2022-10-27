@@ -111,6 +111,8 @@ namespace Video_Club
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            rbNoDisponible.Checked = false;
+            rbDisponible.Checked = false;
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
@@ -126,6 +128,8 @@ namespace Video_Club
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
+            rbNoDisponible.Checked = false;
+            rbDisponible.Checked = false;
             CargarTablaUsuario();
             txtBuscar.Text = "";
         }
