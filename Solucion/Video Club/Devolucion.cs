@@ -66,9 +66,10 @@ namespace Video_Club
             con2.Open();
             MySqlCommand comando2 = new MySqlCommand(sql2, con2);
             comando2.ExecuteNonQuery();
-            MessageBox.Show("Los datos se actualizaron exitosamente");
+            //MessageBox.Show("Los datos se actualizaron exitosamente");
             con2.Close();
-
+            Dialogo FormDialog = new Dialogo();
+            FormDialog.ShowDialog();
             CargarTablaPrestamo();
         }
 
@@ -86,6 +87,12 @@ namespace Video_Club
         private void btnDeRefrescar_Click(object sender, EventArgs e)
         {
             CargarTablaPrestamo();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            Dialogo FormDialog = new Dialogo();
+            FormDialog.ShowDialog();
         }
     }
 }

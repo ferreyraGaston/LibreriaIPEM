@@ -141,24 +141,29 @@ namespace Video_Club
 
             if(prestamoObj.Stock<1)
             { 
-                string sql2 = "update libros set stock='" + prestamoObj.Stock + "', id_estado=2  where idLibros='" + prestamoObj.IdLibro + "';";
-                MySqlConnection con2 = new MySqlConnection(cadena);
-                con2.Open();
-                MySqlCommand comando2 = new MySqlCommand(sql2, con2);
-                comando2.ExecuteNonQuery();
-                MessageBox.Show("Los datos se actualizaron exitosamente");
-                con2.Close();
-            }
+                    string sql2 = "update libros set stock='" + prestamoObj.Stock + "', id_estado=2  where idLibros='" + prestamoObj.IdLibro + "';";
+                    MySqlConnection con2 = new MySqlConnection(cadena);
+                    con2.Open();
+                    MySqlCommand comando2 = new MySqlCommand(sql2, con2);
+                    comando2.ExecuteNonQuery();
+                    //MessageBox.Show("Los datos se actualizaron exitosamente");
+                    con2.Close();
+                    Dialogo FormDialog = new Dialogo();
+                    FormDialog.ShowDialog();
+                }
             else
             {
-                string sql2 = "update libros set stock='" + prestamoObj.Stock + "'  where idLibros='" + prestamoObj.IdLibro + "';";
-                MySqlConnection con2 = new MySqlConnection(cadena);
-                con2.Open();
-                MySqlCommand comando2 = new MySqlCommand(sql2, con2);
-                comando2.ExecuteNonQuery();
-                MessageBox.Show("Los datos se actualizaron exitosamente");
-                con2.Close();
-            }
+                    string sql2 = "update libros set stock='" + prestamoObj.Stock + "'  where idLibros='" + prestamoObj.IdLibro + "';";
+                    MySqlConnection con2 = new MySqlConnection(cadena);
+                    con2.Open();
+                    MySqlCommand comando2 = new MySqlCommand(sql2, con2);
+                    comando2.ExecuteNonQuery();
+                    //MessageBox.Show("Los datos se actualizaron exitosamente");
+                    con2.Close();
+                    Dialogo FormDialog = new Dialogo();
+                    FormDialog.ShowDialog();
+
+                }
 
             }
             else
@@ -172,6 +177,7 @@ namespace Video_Club
                 }
                 
             }
+          
             CargarTablaPrestamo();
         }
 
@@ -206,14 +212,16 @@ namespace Video_Club
             if (MessageBox.Show("el Id: " + prestamoObj.IdPrestamo, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "delete from prestamo where idPrestamo='" + prestamoObj.IdPrestamo + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
-                con.Open();
-                MySqlCommand comando = new MySqlCommand(sql, con);
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Los datos se elimino exitosamente");
-                con.Close();
-                CargarTablaPrestamo();
+                    string sql = "delete from prestamo where idPrestamo='" + prestamoObj.IdPrestamo + "';";
+                    MySqlConnection con = new MySqlConnection(cadena);
+                    con.Open();
+                    MySqlCommand comando = new MySqlCommand(sql, con);
+                    comando.ExecuteNonQuery();
+                    //MessageBox.Show("Los datos se elimino exitosamente");
+                    con.Close();
+                    Dialogo FormDialog = new Dialogo();
+                    FormDialog.ShowDialog();
+                    CargarTablaPrestamo();
             }
             btn_eliminar.Enabled = false;
             btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);

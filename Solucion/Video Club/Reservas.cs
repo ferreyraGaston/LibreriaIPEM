@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+
 namespace Video_Club
 {
     public partial class Reservas : Form
@@ -42,6 +44,13 @@ namespace Video_Club
         private void RepPagos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+    
+            Dialogo FormDialog= new Dialogo();
+            FormDialog.ShowDialog();
         }
     }
 }

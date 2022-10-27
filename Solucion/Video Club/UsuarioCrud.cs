@@ -99,9 +99,11 @@ namespace Video_Club
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Los datos se ingresaron exitosamente");
+                //MessageBox.Show("Los datos se ingresaron exitosamente");
                 con.Close();
                 limpiar();
+                Dialogo FormDialog = new Dialogo();
+                FormDialog.ShowDialog();
             }
             
    
@@ -127,7 +129,7 @@ namespace Video_Club
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Los datos se actualizaron exitosamente");
+                //MessageBox.Show("Los datos se actualizaron exitosamente");
                 con.Close();
                 limpiar();
 
@@ -142,6 +144,9 @@ namespace Video_Club
                 btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
                 btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
                 textNombre.Focus();
+
+                Dialogo FormDialog = new Dialogo();
+                FormDialog.ShowDialog();
             }
             
         }
@@ -157,8 +162,10 @@ namespace Video_Club
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Los datos se elimino exitosamente");
+                //MessageBox.Show("Los datos se elimino exitosamente");
                 con.Close();
+                Dialogo FormDialog = new Dialogo();
+                FormDialog.ShowDialog();
             }
 
             limpiar();
