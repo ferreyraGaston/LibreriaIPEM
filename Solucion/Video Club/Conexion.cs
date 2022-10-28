@@ -20,10 +20,12 @@ namespace Video_Club
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=132314141";
+            con.ConnectionString = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
 
             try
             {
@@ -32,7 +34,7 @@ namespace Video_Club
                 {
                     PruebaCon pruebaCon = new PruebaCon();
                     pruebaCon.ShowDialog();
-                    button1.Visible = true;
+                    
                 }
             }
             catch (Exception ex)
@@ -41,12 +43,6 @@ namespace Video_Club
                 pruebaNoCon.ShowDialog();
             }
             con.Close();
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-    
-            Dialogo FormDialog= new Dialogo();
-            FormDialog.ShowDialog();
         }
     }
 }
