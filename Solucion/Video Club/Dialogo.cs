@@ -42,5 +42,15 @@ namespace Video_Club
         {
 
         }
+
+        private void icon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDialog_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

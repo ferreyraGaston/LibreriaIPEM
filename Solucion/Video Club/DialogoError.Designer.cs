@@ -1,6 +1,6 @@
 ﻿namespace Video_Club
 {
-    partial class Dialogo
+    partial class DialogoError
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dialogo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogoError));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.icon = new System.Windows.Forms.PictureBox();
             this.icon_delay = new System.Windows.Forms.Timer(this.components);
-            this.btnOk = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lbDialog = new System.Windows.Forms.Label();
+            this.btnOk = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label_delay = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             this.SuspendLayout();
@@ -57,13 +57,12 @@
             this.icon.BackColor = System.Drawing.SystemColors.Control;
             this.icon.Enabled = false;
             this.icon.Image = ((System.Drawing.Image)(resources.GetObject("icon.Image")));
-            this.icon.Location = new System.Drawing.Point(111, 12);
+            this.icon.Location = new System.Drawing.Point(112, 13);
             this.icon.Name = "icon";
             this.icon.Size = new System.Drawing.Size(211, 170);
             this.icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.icon.TabIndex = 0;
+            this.icon.TabIndex = 3;
             this.icon.TabStop = false;
-            this.icon.Click += new System.EventHandler(this.icon_Click);
             // 
             // icon_delay
             // 
@@ -71,45 +70,44 @@
             this.icon_delay.Interval = 1500;
             this.icon_delay.Tick += new System.EventHandler(this.icon_delay_Tick);
             // 
+            // lbDialog
+            // 
+            this.lbDialog.AutoSize = true;
+            this.lbDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDialog.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbDialog.Location = new System.Drawing.Point(95, 186);
+            this.lbDialog.Name = "lbDialog";
+            this.lbDialog.Size = new System.Drawing.Size(246, 25);
+            this.lbDialog.TabIndex = 5;
+            this.lbDialog.Text = "Error al Cargar los datos";
+            this.lbDialog.Visible = false;
+            // 
             // btnOk
             // 
             this.btnOk.ActiveBorderThickness = 1;
             this.btnOk.ActiveCornerRadius = 20;
-            this.btnOk.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnOk.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOk.ActiveForecolor = System.Drawing.Color.White;
-            this.btnOk.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnOk.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOk.BackColor = System.Drawing.Color.White;
             this.btnOk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOk.BackgroundImage")));
             this.btnOk.ButtonText = "OK";
             this.btnOk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOk.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnOk.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOk.IdleBorderThickness = 1;
             this.btnOk.IdleCornerRadius = 20;
             this.btnOk.IdleFillColor = System.Drawing.Color.White;
-            this.btnOk.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnOk.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnOk.Location = new System.Drawing.Point(143, 215);
+            this.btnOk.IdleForecolor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOk.IdleLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOk.Location = new System.Drawing.Point(144, 216);
             this.btnOk.Margin = new System.Windows.Forms.Padding(5);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(140, 54);
-            this.btnOk.TabIndex = 1;
+            this.btnOk.TabIndex = 4;
             this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnOk.Visible = false;
-            this.btnOk.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // lbDialog
-            // 
-            this.lbDialog.AutoSize = true;
-            this.lbDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDialog.ForeColor = System.Drawing.Color.Green;
-            this.lbDialog.Location = new System.Drawing.Point(61, 185);
-            this.lbDialog.Name = "lbDialog";
-            this.lbDialog.Size = new System.Drawing.Size(301, 25);
-            this.lbDialog.TabIndex = 2;
-            this.lbDialog.Text = "El registro se realizó con éxito";
-            this.lbDialog.Visible = false;
-            this.lbDialog.Click += new System.EventHandler(this.lbDialog_Click);
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label_delay
             // 
@@ -117,20 +115,18 @@
             this.label_delay.Interval = 500;
             this.label_delay.Tick += new System.EventHandler(this.label_delay_Tick);
             // 
-            // Dialogo
+            // DialogoError
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(425, 283);
+            this.Controls.Add(this.icon);
             this.Controls.Add(this.lbDialog);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.icon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dialogo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dialogo";
-            this.Load += new System.EventHandler(this.Dialogo_Load);
+            this.Name = "DialogoError";
+            this.Text = "DialogoError";
             ((System.ComponentModel.ISupportInitialize)(this.icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,8 +138,8 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox icon;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnOk;
         private System.Windows.Forms.Label lbDialog;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnOk;
         private System.Windows.Forms.Timer icon_delay;
         private System.Windows.Forms.Timer label_delay;
     }

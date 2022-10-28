@@ -257,6 +257,12 @@
     <Compile Include="Dialogo.Designer.cs">
       <DependentUpon>Dialogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogoError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogoError.Designer.cs">
+      <DependentUpon>DialogoError.cs</DependentUpon>
+    </Compile>
     <Compile Include="PruebaCon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogo.resx">
       <DependentUpon>Dialogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogoError.resx">
+      <DependentUpon>DialogoError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibroCrud.resx">
       <DependentUpon>LibroCrud.cs</DependentUpon>
