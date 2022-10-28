@@ -97,3 +97,4 @@ D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Ipem134.csproj.Fody.CopyL
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\Bunifu.Charts.WinForms.xml
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaCon.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Conexion.resources
+D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaNoCon.resources

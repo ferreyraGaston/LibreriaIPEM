@@ -263,6 +263,12 @@
     <Compile Include="PruebaCon.Designer.cs">
       <DependentUpon>PruebaCon.cs</DependentUpon>
     </Compile>
+    <Compile Include="PruebaNoCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PruebaNoCon.Designer.cs">
+      <DependentUpon>PruebaNoCon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PruebaCon.resx">
       <DependentUpon>PruebaCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PruebaNoCon.resx">
+      <DependentUpon>PruebaNoCon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>

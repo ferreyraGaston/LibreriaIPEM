@@ -23,7 +23,7 @@ namespace Video_Club
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            con.ConnectionString = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=132314141";
 
             try
             {
@@ -37,7 +37,8 @@ namespace Video_Club
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex + "    Falla de Conexión");
+                PruebaNoCon pruebaNoCon = new PruebaNoCon();
+                pruebaNoCon.ShowDialog();
             }
             con.Close();
         }
