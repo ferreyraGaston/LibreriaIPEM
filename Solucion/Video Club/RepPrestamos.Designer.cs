@@ -338,9 +338,9 @@ namespace Video_Club
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel13.ForeColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(299, 11);
+            this.panel13.Location = new System.Drawing.Point(299, 12);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 37);
+            this.panel13.Size = new System.Drawing.Size(10, 36);
             this.panel13.TabIndex = 23;
             // 
             // btnDeBuscar
@@ -365,9 +365,9 @@ namespace Video_Club
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel14.ForeColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(178, 11);
+            this.panel14.Location = new System.Drawing.Point(178, 12);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 37);
+            this.panel14.Size = new System.Drawing.Size(10, 36);
             this.panel14.TabIndex = 21;
             // 
             // panel15

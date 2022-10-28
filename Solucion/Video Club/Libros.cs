@@ -19,8 +19,8 @@ namespace Video_Club
         {
             InitializeComponent();
             CargarTablaLibro();
-            btnRegistrar.Enabled = true;
-            btnRegistrar.BackColor = Color.FromArgb(169, 16, 121);
+            btnReg.Enabled = true;
+            btnReg.BackColor = Color.FromArgb(8, 58, 169);
         }
         void CargarTablaLibro()
         {
@@ -67,29 +67,11 @@ namespace Video_Club
             libroObj.CondicionLib = int.Parse(dgv_detalle[12, posicion].Value.ToString());
 
             libroObj.EstadoLibro = true;
-            btnRegistrar.Visible = false;
+            btnReg.Visible = false;
             panel7.Visible = false;
             panel3.Visible = false;
             dgv_detalle.Visible = false;
             AbrirFormEnPanel(new LibroCrud());
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-
-            btnRegistrar.Visible = false;
-            panel7.Visible = false;
-            panel3.Visible = false;
-            dgv_detalle.Visible = false;
-            LibroClass libroObj = new LibroClass();
-            libroObj.EstadoLibro = false;
-            libroObj.Id = 0;
-            AbrirFormEnPanel(new LibroCrud());
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void dgv_detalle_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -188,6 +170,18 @@ namespace Video_Club
             dgv_detalle.DataSource = dt;
             dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             txtBuscar.Text = "";
+        }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            btnReg.Visible = false;
+            panel7.Visible = false;
+            panel3.Visible = false;
+            dgv_detalle.Visible = false;
+            LibroClass libroObj = new LibroClass();
+            libroObj.EstadoLibro = false;
+            libroObj.Id = 0;
+            AbrirFormEnPanel(new LibroCrud());
         }
     }
 }

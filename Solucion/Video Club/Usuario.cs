@@ -26,7 +26,7 @@ namespace Video_Club
             InitializeComponent();
             CargarTablaUsuario();
             btn_registrar.Enabled = true;
-            btn_registrar.BackColor = Color.FromArgb(169, 16, 121);
+            btn_registrar.BackColor = Color.FromArgb(8, 58, 169);
         }
         void CargarTablaUsuario()
         {

@@ -129,8 +129,8 @@ namespace Video_Club
             // 
             this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.FlatAppearance.BorderSize = 0;
-            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btn_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.White;
@@ -147,8 +147,8 @@ namespace Video_Club
             // 
             this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar.FlatAppearance.BorderSize = 0;
-            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btn_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_registrar.ForeColor = System.Drawing.Color.White;
@@ -432,8 +432,8 @@ namespace Video_Club
             // 
             this.btnUsRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btnUsRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsRefrescar.FlatAppearance.BorderSize = 0;
-            this.btnUsRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnUsRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnUsRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.btnUsRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsRefrescar.ForeColor = System.Drawing.Color.White;
@@ -450,17 +450,17 @@ namespace Video_Club
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel13.ForeColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(299, 11);
+            this.panel13.Location = new System.Drawing.Point(299, 12);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 37);
+            this.panel13.Size = new System.Drawing.Size(10, 36);
             this.panel13.TabIndex = 23;
             // 
             // btnUsBuscar
             // 
             this.btnUsBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btnUsBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsBuscar.FlatAppearance.BorderSize = 0;
-            this.btnUsBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnUsBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnUsBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.btnUsBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsBuscar.ForeColor = System.Drawing.Color.White;
@@ -477,9 +477,9 @@ namespace Video_Club
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel14.ForeColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(178, 11);
+            this.panel14.Location = new System.Drawing.Point(178, 12);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 37);
+            this.panel14.Size = new System.Drawing.Size(10, 36);
             this.panel14.TabIndex = 21;
             // 
             // panel15
@@ -517,8 +517,8 @@ namespace Video_Club
             // 
             this.btnLiRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btnLiRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLiRefrescar.FlatAppearance.BorderSize = 0;
-            this.btnLiRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnLiRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnLiRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.btnLiRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLiRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLiRefrescar.ForeColor = System.Drawing.Color.White;
@@ -535,17 +535,17 @@ namespace Video_Club
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel9.ForeColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(299, 11);
+            this.panel9.Location = new System.Drawing.Point(299, 12);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 37);
+            this.panel9.Size = new System.Drawing.Size(10, 36);
             this.panel9.TabIndex = 23;
             // 
             // btnLiBuscar
             // 
             this.btnLiBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btnLiBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLiBuscar.FlatAppearance.BorderSize = 0;
-            this.btnLiBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.btnLiBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnLiBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.btnLiBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLiBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLiBuscar.ForeColor = System.Drawing.Color.White;
@@ -562,9 +562,9 @@ namespace Video_Club
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel10.ForeColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(178, 11);
+            this.panel10.Location = new System.Drawing.Point(178, 12);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 37);
+            this.panel10.Size = new System.Drawing.Size(10, 36);
             this.panel10.TabIndex = 21;
             // 
             // panel11
