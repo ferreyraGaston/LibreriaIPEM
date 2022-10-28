@@ -98,3 +98,4 @@ D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\Bunifu.Charts.WinForms.xm
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaCon.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Conexion.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaNoCon.resources
+D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.DialogoError.resources

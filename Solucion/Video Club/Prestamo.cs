@@ -170,10 +170,14 @@ namespace Video_Club
             {
                 if(txtIdUsuario.Text=="")
                 {
-                    MessageBox.Show("Debes seleccionar el un Usuario.. ");
+                    //MessageBox.Show("Debes seleccionar el un Usuario.. ");
+                    DialogoError FormDialogError = new DialogoError();
+                    FormDialogError.ShowDialog();
                 }
                 {
-                    MessageBox.Show("Debes seleccionar el un Libro.. ");
+                    //MessageBox.Show("Debes seleccionar el un Libro.. ");
+                    DialogoError FormDialogError = new DialogoError();
+                    FormDialogError.ShowDialog();
                 }
                 
             }
