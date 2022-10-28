@@ -108,5 +108,19 @@ namespace Video_Club
             dgDevolucion.DataSource = dt;
             dgDevolucion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
+
+        private void dtFechaHasta_ValueChanged(object sender, EventArgs e)
+        {
+            rbFechSalida.Checked = false;
+            rbFechEntrega.Checked = false;
+            rbFechDevol.Checked = false;
+        }
+
+        private void dtFechaDesde_ValueChanged(object sender, EventArgs e)
+        {
+            rbFechSalida.Checked = false;
+            rbFechEntrega.Checked = false;
+            rbFechDevol.Checked = false;
+        }
     }
 }
