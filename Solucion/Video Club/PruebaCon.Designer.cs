@@ -59,7 +59,7 @@
             this.icon2.BackColor = System.Drawing.SystemColors.Control;
             this.icon2.Enabled = false;
             this.icon2.Image = ((System.Drawing.Image)(resources.GetObject("icon2.Image")));
-            this.icon2.Location = new System.Drawing.Point(108, 12);
+            this.icon2.Location = new System.Drawing.Point(115, 12);
             this.icon2.Name = "icon2";
             this.icon2.Size = new System.Drawing.Size(211, 170);
             this.icon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +69,7 @@
             // icon_delay
             // 
             this.icon_delay.Enabled = true;
-            this.icon_delay.Interval = 1500;
+            this.icon_delay.Interval = 500;
             this.icon_delay.Tick += new System.EventHandler(this.icon_delay_Tick);
             // 
             // lbDialog
@@ -114,7 +114,7 @@
             // label_delay
             // 
             this.label_delay.Enabled = true;
-            this.label_delay.Interval = 500;
+            this.label_delay.Interval = 2000;
             this.label_delay.Tick += new System.EventHandler(this.label_delay_Tick);
             // 
             // icon1
@@ -122,7 +122,7 @@
             this.icon1.BackColor = System.Drawing.SystemColors.Control;
             this.icon1.Enabled = false;
             this.icon1.Image = ((System.Drawing.Image)(resources.GetObject("icon1.Image")));
-            this.icon1.Location = new System.Drawing.Point(108, 12);
+            this.icon1.Location = new System.Drawing.Point(115, 12);
             this.icon1.Name = "icon1";
             this.icon1.Size = new System.Drawing.Size(211, 170);
             this.icon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +143,6 @@
             this.Name = "PruebaCon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PruebaCon";
-            this.Load += new System.EventHandler(this.PruebaCon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon1)).EndInit();
             this.ResumeLayout(false);

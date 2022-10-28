@@ -43282,9 +43282,9 @@
     <value>178, 20</value>
   </metadata>
   <metadata name="icon_delay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>302, 20</value>
+    <value>403, 23</value>
   </metadata>
   <metadata name="label_delay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>411, 20</value>
+    <value>292, 23</value>
   </metadata>
 </root>
