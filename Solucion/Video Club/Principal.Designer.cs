@@ -67,7 +67,7 @@ namespace Video_Club
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
             this.BarraTitulo.Controls.Add(this.PicRestaurar);
             this.BarraTitulo.Controls.Add(this.PicMin);
             this.BarraTitulo.Controls.Add(this.PicMax);
@@ -135,7 +135,7 @@ namespace Video_Club
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
             this.MenuVertical.Controls.Add(this.Panel_SubMenu);
             this.MenuVertical.Controls.Add(this.panel5);
             this.MenuVertical.Controls.Add(this.btn_Reportes);
@@ -170,7 +170,7 @@ namespace Video_Club
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel9.Location = new System.Drawing.Point(3, 97);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(10, 32);
@@ -178,7 +178,7 @@ namespace Video_Club
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel8.Location = new System.Drawing.Point(3, 50);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(10, 32);
@@ -186,11 +186,12 @@ namespace Video_Club
             // 
             // btn_RepPagos
             // 
-            this.btn_RepPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_RepPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_RepPagos.FlatAppearance.BorderSize = 0;
             this.btn_RepPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_RepPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RepPagos.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RepPagos.ForeColor = System.Drawing.Color.White;
             this.btn_RepPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RepPagos.Location = new System.Drawing.Point(13, 97);
             this.btn_RepPagos.Name = "btn_RepPagos";
@@ -202,7 +203,7 @@ namespace Video_Club
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 32);
@@ -210,11 +211,12 @@ namespace Video_Club
             // 
             // btn_RepALquiler
             // 
-            this.btn_RepALquiler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_RepALquiler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_RepALquiler.FlatAppearance.BorderSize = 0;
             this.btn_RepALquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_RepALquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RepALquiler.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RepALquiler.ForeColor = System.Drawing.Color.White;
             this.btn_RepALquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RepALquiler.Location = new System.Drawing.Point(13, 50);
             this.btn_RepALquiler.Name = "btn_RepALquiler";
@@ -226,12 +228,13 @@ namespace Video_Club
             // 
             // btn_RepVentas
             // 
-            this.btn_RepVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_RepVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_RepVentas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RepVentas.FlatAppearance.BorderSize = 0;
             this.btn_RepVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_RepVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RepVentas.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RepVentas.ForeColor = System.Drawing.Color.White;
             this.btn_RepVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RepVentas.Location = new System.Drawing.Point(13, 3);
             this.btn_RepVentas.Name = "btn_RepVentas";
@@ -243,7 +246,7 @@ namespace Video_Club
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel5.Location = new System.Drawing.Point(22, 390);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 32);
@@ -251,11 +254,12 @@ namespace Video_Club
             // 
             // btn_Reportes
             // 
-            this.btn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_Reportes.FlatAppearance.BorderSize = 0;
             this.btn_Reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Reportes.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes.ForeColor = System.Drawing.Color.White;
             this.btn_Reportes.Image = ((System.Drawing.Image)(resources.GetObject("btn_Reportes.Image")));
             this.btn_Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reportes.Location = new System.Drawing.Point(32, 390);
@@ -268,7 +272,7 @@ namespace Video_Club
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel4.Location = new System.Drawing.Point(22, 291);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 32);
@@ -276,12 +280,13 @@ namespace Video_Club
             // 
             // btn_Prestamo
             // 
-            this.btn_Prestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_Prestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_Prestamo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Prestamo.FlatAppearance.BorderSize = 0;
             this.btn_Prestamo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_Prestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Prestamo.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Prestamo.ForeColor = System.Drawing.Color.White;
             this.btn_Prestamo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Prestamo.Image")));
             this.btn_Prestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Prestamo.Location = new System.Drawing.Point(32, 291);
@@ -294,7 +299,7 @@ namespace Video_Club
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel3.Location = new System.Drawing.Point(23, 338);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 32);
@@ -302,12 +307,13 @@ namespace Video_Club
             // 
             // btn_devolucion
             // 
-            this.btn_devolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_devolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_devolucion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_devolucion.FlatAppearance.BorderSize = 0;
             this.btn_devolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_devolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_devolucion.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_devolucion.ForeColor = System.Drawing.Color.White;
             this.btn_devolucion.Image = ((System.Drawing.Image)(resources.GetObject("btn_devolucion.Image")));
             this.btn_devolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_devolucion.Location = new System.Drawing.Point(33, 338);
@@ -320,7 +326,7 @@ namespace Video_Club
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel2.Location = new System.Drawing.Point(22, 242);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 32);
@@ -328,12 +334,13 @@ namespace Video_Club
             // 
             // btn_Clientes
             // 
-            this.btn_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Clientes.FlatAppearance.BorderSize = 0;
             this.btn_Clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Clientes.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clientes.ForeColor = System.Drawing.Color.White;
             this.btn_Clientes.Image = ((System.Drawing.Image)(resources.GetObject("btn_Clientes.Image")));
             this.btn_Clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Clientes.Location = new System.Drawing.Point(32, 242);
@@ -346,7 +353,7 @@ namespace Video_Club
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.panel1.Location = new System.Drawing.Point(22, 191);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 32);
@@ -354,12 +361,13 @@ namespace Video_Club
             // 
             // btn_ventas
             // 
-            this.btn_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(16)))), ((int)(((byte)(121)))));
+            this.btn_ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
             this.btn_ventas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ventas.FlatAppearance.BorderSize = 0;
             this.btn_ventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(10)))), ((int)(((byte)(87)))));
             this.btn_ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ventas.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ventas.ForeColor = System.Drawing.Color.White;
             this.btn_ventas.Image = ((System.Drawing.Image)(resources.GetObject("btn_ventas.Image")));
             this.btn_ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ventas.Location = new System.Drawing.Point(32, 191);
@@ -384,6 +392,7 @@ namespace Video_Club
             // 
             // PanelSalir
             // 
+            this.PanelSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(204)))));
             this.PanelSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSalir.Location = new System.Drawing.Point(221, 35);
             this.PanelSalir.Name = "PanelSalir";
