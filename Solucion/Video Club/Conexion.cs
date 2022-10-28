@@ -37,7 +37,7 @@ namespace Video_Club
                     
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 PruebaNoCon pruebaNoCon = new PruebaNoCon();
                 pruebaNoCon.ShowDialog();

@@ -22,12 +22,13 @@ namespace Video_Club
             InitializeComponent();
             CargarTablaPrestamo();
         }
+
         void CargarTablaPrestamo()
         {
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora $,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where condicion=0;";
+            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where condicion=0;";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -71,8 +72,18 @@ namespace Video_Club
                 con2.Open();
                 MySqlCommand comando2 = new MySqlCommand(sql2, con2);
                 comando2.ExecuteNonQuery();
-                MessageBox.Show("Los dias "+ difDias);
+                //MessageBox.Show("Los dias "+ difDias);
                 con2.Close();
+                
+
+                string sql3 = "update usuario set estadoUsuario=1  where id_usuario='" + prestamoObj.IdUsuario + "';";
+                MySqlConnection con3 = new MySqlConnection(cadena);
+                con3.Open();
+                MySqlCommand comando3 = new MySqlCommand(sql3, con3);
+                comando3.ExecuteNonQuery();
+                //MessageBox.Show("Los dias " + difDias);
+                con3.Close();
+
                 Dialogo FormDialog = new Dialogo();
                 FormDialog.ShowDialog();
             } 
