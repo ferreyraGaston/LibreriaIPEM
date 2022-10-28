@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Solucion",
+    "\\Solucion\\Entidades",
     "\\Solucion\\Video Club"
   ],
-  "SelectedNode": "\\Solucion\\Video Club\\Dialogo.cs",
+  "SelectedNode": "\\Solucion\\Entidades\\PrestamoClass.cs",
   "PreviewInSolutionExplorer": false
 }
