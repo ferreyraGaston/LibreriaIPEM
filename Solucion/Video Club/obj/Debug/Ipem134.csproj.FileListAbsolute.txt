@@ -58,7 +58,6 @@ D:\Desarollo C#\Ipem-134\Solucion\Video Club\bin\Debug\MySql.Data.xml
 D:\Desarollo C#\Ipem-134\Solucion\Video Club\obj\Debug\Ipem134.csproj.CopyComplete
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Principal.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Devolucion.resources
-D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Reservas.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Dialogo.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\Bunifu.Dataviz.WinForms.xml
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\Bunifu.UI.WinForms.xml
@@ -96,3 +95,5 @@ D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\System.Text.Encoding.Code
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\System.Threading.AccessControl.xml
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Ipem134.csproj.Fody.CopyLocal.cache
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\bin\Debug\Bunifu.Charts.WinForms.xml
+D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaCon.resources
+D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Conexion.resources

@@ -38,7 +38,7 @@ namespace Video_Club
             lbDialog.Visible= true;
         }
 
-        private void lbDialog_Click(object sender, EventArgs e)
+        private void Dialogo_Load(object sender, EventArgs e)
         {
 
         }

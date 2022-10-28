@@ -82,7 +82,7 @@ namespace Video_Club
         private void btn_RepPagos_Click(object sender, EventArgs e)
         {
             Panel_SubMenu.Visible = false;
-            AbrirFormEnPanel(new Reservas());
+            AbrirFormEnPanel(new Conexion());
         }
 
         private void AbrirFormEnPanel(object formhija)

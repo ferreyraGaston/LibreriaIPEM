@@ -57,7 +57,7 @@
             this.icon.BackColor = System.Drawing.SystemColors.Control;
             this.icon.Enabled = false;
             this.icon.Image = ((System.Drawing.Image)(resources.GetObject("icon.Image")));
-            this.icon.Location = new System.Drawing.Point(108, 2);
+            this.icon.Location = new System.Drawing.Point(111, 12);
             this.icon.Name = "icon";
             this.icon.Size = new System.Drawing.Size(211, 170);
             this.icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,10 +108,10 @@
             this.lbDialog.TabIndex = 2;
             this.lbDialog.Text = "El registro se realizó con éxito";
             this.lbDialog.Visible = false;
-            this.lbDialog.Click += new System.EventHandler(this.lbDialog_Click);
             // 
             // label_delay
             // 
+            this.label_delay.Enabled = true;
             this.label_delay.Interval = 500;
             this.label_delay.Tick += new System.EventHandler(this.label_delay_Tick);
             // 
@@ -128,6 +128,7 @@
             this.Name = "Dialogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dialogo";
+            this.Load += new System.EventHandler(this.Dialogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,9 +140,9 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox icon;
-        private System.Windows.Forms.Timer icon_delay;
         private Bunifu.Framework.UI.BunifuThinButton2 btnOk;
         private System.Windows.Forms.Label lbDialog;
+        private System.Windows.Forms.Timer icon_delay;
         private System.Windows.Forms.Timer label_delay;
     }
 }
