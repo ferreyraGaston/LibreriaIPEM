@@ -20,7 +20,7 @@ namespace Video_Club
             InitializeComponent();
         }
 
-
+        public string Cadena { get; internal set; }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {

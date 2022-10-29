@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDato;
+
 namespace Video_Club
 {
     public partial class Devolucion : Form
@@ -26,7 +26,7 @@ namespace Video_Club
 
         void CargarTablaPrestamo()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where condicion=0;";
@@ -39,7 +39,7 @@ namespace Video_Club
         }
         private void btnDeBuscar_Click(object sender, EventArgs e)
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.idPrestamo ='" + txtDevolver.Text + "' || usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || libros.titulo LIKE '%" + txtDevolver.Text + "%';";
@@ -60,7 +60,7 @@ namespace Video_Club
             double difDias = tspan.Days;  // mostramos la diferencias de dias
             if(difDias > 0) {
                 difDias = difDias * 10;
-                Class1 conexion = new Class1();
+                Conexion conexion = new Conexion();
                 string sql = "update libros set stock='" + prestamoObj.Stock + "', id_estado=1  where idLibros='" + prestamoObj.IdLibro + "';";
                 MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
@@ -91,7 +91,7 @@ namespace Video_Club
             else {
 
                 //prestamoObj.Condicion = Convert.ToBoolean(0);
-                Class1 conexion = new Class1();
+                Conexion conexion = new Conexion();
                 string sql = "update libros set stock='" + prestamoObj.Stock + "', id_estado=1  where idLibros='" + prestamoObj.IdLibro + "';";
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
@@ -133,6 +133,11 @@ namespace Video_Club
         {
             Dialogo FormDialog = new Dialogo();
             FormDialog.ShowDialog();
+        }
+
+        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

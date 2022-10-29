@@ -1,4 +1,4 @@
-﻿using CapaConexion;
+﻿
 using Entidades;
 using MySql.Data.MySqlClient;
 using System;
@@ -93,7 +93,7 @@ namespace Video_Club
         }
        private void listarCategoria()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from categoria order by idCategoria asc";
@@ -107,7 +107,7 @@ namespace Video_Club
         }
         private void listarAutor()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from autor order by idAutor asc";
@@ -122,7 +122,7 @@ namespace Video_Club
 
         private void listarEstado()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from estado order by idEstado asc";
@@ -137,7 +137,7 @@ namespace Video_Club
 
         private void listarIdioma()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from idioma order by idIdioma asc";
@@ -151,7 +151,7 @@ namespace Video_Club
         }
         private void listarEditorial()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from editorial order by idEditorial asc";
@@ -183,7 +183,7 @@ namespace Video_Club
                 libroObj.Stock = Convert.ToInt32(txtStock.Text);
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-                Class1 conexion = new Class1();
+                Conexion conexion = new Conexion();
                 string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
                 MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
@@ -248,7 +248,7 @@ namespace Video_Club
             LibroClass libroObj = new LibroClass();
             if (MessageBox.Show("el Id: " + libroObj.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Class1 conexion = new Class1();
+                Conexion conexion = new Conexion();
                 string sql = "delete from libros where idLibros='" + libroObj.Id + "';";
                 MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
@@ -292,7 +292,7 @@ namespace Video_Club
                 libroObj.Stock = Convert.ToInt32(txtStock.Text);
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-                Class1 conexion = new Class1();
+                Conexion conexion = new Conexion();
                 string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + libroObj.FechaPublic + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
                 MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
@@ -481,6 +481,11 @@ namespace Video_Club
         }
 
         private void cboEditor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

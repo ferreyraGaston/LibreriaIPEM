@@ -1,4 +1,4 @@
-﻿using CapaConexion;
+﻿
 using Entidades;
 using MySql.Data.MySqlClient;
 using System;
@@ -27,7 +27,7 @@ namespace Video_Club
         }
         void CargarTablaLibro()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where id_estado=1";
@@ -40,8 +40,8 @@ namespace Video_Club
         }
         void CargarTablaPrestamo()
         {
-            Class1 conexion = new Class1();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            Conexion conexion = new Conexion();
+            MySqlConnection con = new MySqlConnection();
             con.Open();
             string sql = "select idPrestamo as ID,NombreUsuario as Nombre,ApellidoUsuario as Apellido,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros;";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
@@ -53,11 +53,11 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Conexion conexion = new Conexion();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO from usuario where estadoUsuario=0";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -66,11 +66,11 @@ namespace Video_Club
         }
         private void btnUsBuscar_Click(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Conexion conexion = new Conexion();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO from usuario where usuario.id_usuario ='" + txtUsuario.Text + "' || usuario.NombreUsuario LIKE '%" + txtUsuario.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtUsuario.Text + "%' || usuario.DniUsuario LIKE '%" + txtUsuario.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -87,11 +87,11 @@ namespace Video_Club
 
         private void btnLiBuscar_Click(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Conexion conexion = new Conexion();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where libros.idLibros ='" + txtLibro.Text + "' || libros.titulo LIKE '%" + txtLibro.Text + "%'|| autor.nombreAutor LIKE '%" + txtLibro.Text + "%' || idioma.Idioma LIKE '%" + txtLibro.Text + "%' || categoria.Categoria LIKE '%" + txtLibro.Text + "%' || editorial.Editorial LIKE '%" + txtLibro.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -132,9 +132,9 @@ namespace Video_Club
                 prestamoObj.FechaSalida= dtFechaSalida.Text;
                 prestamoObj.FechaEntrega= dtFechaEntrega.Text;
                 //prestamoObj.Condicion = Convert.ToBoolean(0);
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                Conexion conexion = new Conexion();
                 string sql = "INSERT INTO prestamo(idUsuario,idLibro,fechaSalida,fechaEntrega,condicion) VALUES('" + prestamoObj.IdUsuario + "','" + prestamoObj.IdLibro + "','" + prestamoObj.FechaSalida + "','" + prestamoObj.FechaEntrega + "',0)";
-                MySqlConnection con = new MySqlConnection(cadena);
+                MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
@@ -143,7 +143,7 @@ namespace Video_Club
             if(prestamoObj.Stock<1)
             { 
                     string sql2 = "update libros set stock='" + prestamoObj.Stock + "', id_estado=2  where idLibros='" + prestamoObj.IdLibro + "';";
-                    MySqlConnection con2 = new MySqlConnection(cadena);
+                    MySqlConnection con2 = new MySqlConnection(conexion.Cadena);
                     con2.Open();
                     MySqlCommand comando2 = new MySqlCommand(sql2, con2);
                     comando2.ExecuteNonQuery();
@@ -155,7 +155,7 @@ namespace Video_Club
             else
             {
                     string sql2 = "update libros set stock='" + prestamoObj.Stock + "'  where idLibros='" + prestamoObj.IdLibro + "';";
-                    MySqlConnection con2 = new MySqlConnection(cadena);
+                    MySqlConnection con2 = new MySqlConnection(conexion.Cadena);
                     con2.Open();
                     MySqlCommand comando2 = new MySqlCommand(sql2, con2);
                     comando2.ExecuteNonQuery();
@@ -216,9 +216,9 @@ namespace Video_Club
             {
             if (MessageBox.Show("el Id: " + prestamoObj.IdPrestamo, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                    Conexion conexion = new Conexion();
                     string sql = "delete from prestamo where idPrestamo='" + prestamoObj.IdPrestamo + "';";
-                    MySqlConnection con = new MySqlConnection(cadena);
+                    MySqlConnection con = new MySqlConnection(conexion.Cadena);
                     con.Open();
                     MySqlCommand comando = new MySqlCommand(sql, con);
                     comando.ExecuteNonQuery();
@@ -242,6 +242,11 @@ namespace Video_Club
             PrestamoClass prestamoObj = new PrestamoClass();
             posicion3 = dgPrestamo.CurrentRow.Index;
             prestamoObj.IdPrestamo = int.Parse(dgPrestamo[0, posicion3].Value.ToString());
+        }
+
+        private void pnl_opciones_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -70,6 +70,7 @@ namespace Video_Club
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1084, 548);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnReg
             // 

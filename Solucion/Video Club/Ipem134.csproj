@@ -415,10 +415,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassVerificacion\ClassVerificacion.csproj">
-      <Project>{a85c49c3-f0fd-48e8-b599-8fa5099dd62b}</Project>
-      <Name>ClassVerificacion</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{a948684f-bb1d-4f9f-949d-5274e355294e}</Project>
       <Name>Entidades</Name>

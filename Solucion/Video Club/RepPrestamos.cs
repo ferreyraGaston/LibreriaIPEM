@@ -1,4 +1,4 @@
-﻿using CapaConexion;
+﻿
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
@@ -23,7 +23,7 @@ namespace Video_Club
         void CargarTablaPrestamo()
         {
 
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros;";
@@ -44,7 +44,7 @@ namespace Video_Club
             rbFechSalida.Checked = false;
             rbFechEntrega.Checked = false;
             rbFechDevol.Checked = false;
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.idPrestamo ='" + txtDevolver.Text + "' || usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || libros.titulo LIKE '%" + txtDevolver.Text + "%';";
@@ -71,7 +71,7 @@ namespace Video_Club
 
         private void rbFechSalida_CheckedChanged(object sender, EventArgs e)
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaSalida BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
@@ -85,7 +85,7 @@ namespace Video_Club
 
         private void rbFechEntrega_CheckedChanged(object sender, EventArgs e)
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaEntrega BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
@@ -99,7 +99,7 @@ namespace Video_Club
 
         private void rbFechDevol_CheckedChanged(object sender, EventArgs e)
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaDevolucion BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";

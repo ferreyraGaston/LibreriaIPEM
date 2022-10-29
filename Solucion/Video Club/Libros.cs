@@ -183,5 +183,10 @@ namespace Video_Club
             libroObj.Id = 0;
             AbrirFormEnPanel(new LibroCrud());
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

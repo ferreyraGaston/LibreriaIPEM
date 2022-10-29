@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using CapaConexion;
+
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
@@ -34,12 +34,12 @@ namespace Video_Club
         void CargarTablaUsuario()
         {
 
-            Class1 conexion = new Class1();
-        
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            Conexion conexion = new Conexion();
+            string cadena = conexion.Cadena;
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select * from usuario";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -118,8 +118,8 @@ namespace Video_Club
         {
             rbNoDisponible.Checked = false;
             rbDisponible.Checked = false;
-            Class1 conexion = new Class1();
-           
+            Conexion conexion = new Conexion();
+
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.id_usuario ='" + txtBuscar.Text + "' || usuario.NombreUsuario LIKE '%" + txtBuscar.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtBuscar.Text + "%' || usuario.DniUsuario LIKE '%" + txtBuscar.Text + "%';";
@@ -143,7 +143,7 @@ namespace Video_Club
         private void rbDisponible_CheckedChanged(object sender, EventArgs e)
         {
 
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.estadoUsuario ='0';";
@@ -158,7 +158,7 @@ namespace Video_Club
 
         private void rbNoDisponible_CheckedChanged(object sender, EventArgs e)
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.estadoUsuario ='1';";
