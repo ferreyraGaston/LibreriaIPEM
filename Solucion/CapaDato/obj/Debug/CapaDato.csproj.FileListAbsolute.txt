@@ -1,0 +1,6 @@
+D:\Desarollo C#\IPEM-134\Solucion\CapaDato\bin\Debug\CapaDato.dll
+D:\Desarollo C#\IPEM-134\Solucion\CapaDato\bin\Debug\CapaDato.pdb
+D:\Desarollo C#\IPEM-134\Solucion\CapaDato\obj\Debug\CapaDato.csproj.AssemblyReference.cache
+D:\Desarollo C#\IPEM-134\Solucion\CapaDato\obj\Debug\CapaDato.csproj.CoreCompileInputs.cache
+D:\Desarollo C#\IPEM-134\Solucion\CapaDato\obj\Debug\CapaDato.dll
+D:\Desarollo C#\IPEM-134\Solucion\CapaDato\obj\Debug\CapaDato.pdb

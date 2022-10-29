@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using CapaDato;
+using Entidades;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
@@ -92,8 +93,8 @@ namespace Video_Club
         }
        private void listarCategoria()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from categoria order by idCategoria asc";
             MySqlCommand da = new MySqlCommand(sql, con);
@@ -106,8 +107,8 @@ namespace Video_Club
         }
         private void listarAutor()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from autor order by idAutor asc";
             MySqlCommand da = new MySqlCommand(sql, con);
@@ -121,8 +122,8 @@ namespace Video_Club
 
         private void listarEstado()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from estado order by idEstado asc";
             MySqlCommand da = new MySqlCommand(sql, con);
@@ -136,8 +137,8 @@ namespace Video_Club
 
         private void listarIdioma()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from idioma order by idIdioma asc";
             MySqlCommand da = new MySqlCommand(sql, con);
@@ -150,8 +151,8 @@ namespace Video_Club
         }
         private void listarEditorial()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from editorial order by idEditorial asc";
             MySqlCommand da = new MySqlCommand(sql, con);
@@ -182,9 +183,9 @@ namespace Video_Club
                 libroObj.Stock = Convert.ToInt32(txtStock.Text);
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                Class1 conexion = new Class1();
                 string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
-                MySqlConnection con = new MySqlConnection(cadena);
+                MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
@@ -247,9 +248,9 @@ namespace Video_Club
             LibroClass libroObj = new LibroClass();
             if (MessageBox.Show("el Id: " + libroObj.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                Class1 conexion = new Class1();
                 string sql = "delete from libros where idLibros='" + libroObj.Id + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
+                MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
@@ -291,9 +292,9 @@ namespace Video_Club
                 libroObj.Stock = Convert.ToInt32(txtStock.Text);
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                Class1 conexion = new Class1();
                 string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + libroObj.FechaPublic + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
+                MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();

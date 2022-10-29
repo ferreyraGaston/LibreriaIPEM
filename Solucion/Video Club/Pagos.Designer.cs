@@ -29,20 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.textDni = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textApellido = new System.Windows.Forms.TextBox();
-            this.textNombre = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btn_pagar = new System.Windows.Forms.Button();
-            this.pnl_opciones = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.dgPagos = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnUsRefrescar = new System.Windows.Forms.Button();
@@ -51,12 +43,20 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.txtPagos = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textApellido = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_pagar = new System.Windows.Forms.Button();
+            this.pnl_opciones = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.pnl_opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPagos)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.pnl_opciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -90,6 +90,132 @@
             this.panel2.Size = new System.Drawing.Size(879, 615);
             this.panel2.TabIndex = 13;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // dgPagos
+            // 
+            this.dgPagos.AllowUserToAddRows = false;
+            this.dgPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgPagos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgPagos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.dgPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPagos.EnableHeadersVisualStyles = false;
+            this.dgPagos.Location = new System.Drawing.Point(12, 81);
+            this.dgPagos.Name = "dgPagos";
+            this.dgPagos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPagos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgPagos.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgPagos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgPagos.Size = new System.Drawing.Size(544, 511);
+            this.dgPagos.TabIndex = 41;
+            this.dgPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPagos_CellContentClick);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btnUsRefrescar);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Controls.Add(this.btnUsBuscar);
+            this.panel12.Controls.Add(this.panel14);
+            this.panel12.Controls.Add(this.panel15);
+            this.panel12.Location = new System.Drawing.Point(147, 14);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(409, 61);
+            this.panel12.TabIndex = 40;
+            // 
+            // btnUsRefrescar
+            // 
+            this.btnUsRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnUsRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnUsRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.btnUsRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsRefrescar.ForeColor = System.Drawing.Color.White;
+            this.btnUsRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsRefrescar.Location = new System.Drawing.Point(309, 12);
+            this.btnUsRefrescar.Name = "btnUsRefrescar";
+            this.btnUsRefrescar.Size = new System.Drawing.Size(95, 36);
+            this.btnUsRefrescar.TabIndex = 22;
+            this.btnUsRefrescar.Text = "Refrescar";
+            this.btnUsRefrescar.UseVisualStyleBackColor = false;
+            this.btnUsRefrescar.Click += new System.EventHandler(this.btnUsRefrescar_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.panel13.ForeColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(299, 12);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(10, 36);
+            this.panel13.TabIndex = 23;
+            // 
+            // btnUsBuscar
+            // 
+            this.btnUsBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnUsBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.btnUsBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.btnUsBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnUsBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsBuscar.Location = new System.Drawing.Point(188, 12);
+            this.btnUsBuscar.Name = "btnUsBuscar";
+            this.btnUsBuscar.Size = new System.Drawing.Size(89, 36);
+            this.btnUsBuscar.TabIndex = 20;
+            this.btnUsBuscar.Text = "Buscar";
+            this.btnUsBuscar.UseVisualStyleBackColor = false;
+            this.btnUsBuscar.Click += new System.EventHandler(this.btnUsBuscar_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.panel14.ForeColor = System.Drawing.Color.White;
+            this.panel14.Location = new System.Drawing.Point(178, 12);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(10, 36);
+            this.panel14.TabIndex = 21;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.txtPagos);
+            this.panel15.Location = new System.Drawing.Point(3, 10);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(7);
+            this.panel15.Size = new System.Drawing.Size(168, 43);
+            this.panel15.TabIndex = 1;
+            // 
+            // txtPagos
+            // 
+            this.txtPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPagos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPagos.Location = new System.Drawing.Point(7, 7);
+            this.txtPagos.Name = "txtPagos";
+            this.txtPagos.Size = new System.Drawing.Size(154, 22);
+            this.txtPagos.TabIndex = 0;
             // 
             // label6
             // 
@@ -184,131 +310,6 @@
             this.panel6.Size = new System.Drawing.Size(10, 32);
             this.panel6.TabIndex = 10;
             // 
-            // dgPagos
-            // 
-            this.dgPagos.AllowUserToAddRows = false;
-            this.dgPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgPagos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgPagos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.dgPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(2)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPagos.EnableHeadersVisualStyles = false;
-            this.dgPagos.Location = new System.Drawing.Point(12, 81);
-            this.dgPagos.Name = "dgPagos";
-            this.dgPagos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPagos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgPagos.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgPagos.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPagos.Size = new System.Drawing.Size(544, 511);
-            this.dgPagos.TabIndex = 41;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btnUsRefrescar);
-            this.panel12.Controls.Add(this.panel13);
-            this.panel12.Controls.Add(this.btnUsBuscar);
-            this.panel12.Controls.Add(this.panel14);
-            this.panel12.Controls.Add(this.panel15);
-            this.panel12.Location = new System.Drawing.Point(147, 14);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(409, 61);
-            this.panel12.TabIndex = 40;
-            // 
-            // btnUsRefrescar
-            // 
-            this.btnUsRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.btnUsRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.btnUsRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.btnUsRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsRefrescar.ForeColor = System.Drawing.Color.White;
-            this.btnUsRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsRefrescar.Location = new System.Drawing.Point(309, 12);
-            this.btnUsRefrescar.Name = "btnUsRefrescar";
-            this.btnUsRefrescar.Size = new System.Drawing.Size(95, 36);
-            this.btnUsRefrescar.TabIndex = 22;
-            this.btnUsRefrescar.Text = "Refrescar";
-            this.btnUsRefrescar.UseVisualStyleBackColor = false;
-            this.btnUsRefrescar.Click += new System.EventHandler(this.btnUsRefrescar_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.panel13.ForeColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(299, 12);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(10, 36);
-            this.panel13.TabIndex = 23;
-            // 
-            // btnUsBuscar
-            // 
-            this.btnUsBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.btnUsBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.btnUsBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.btnUsBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnUsBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsBuscar.Location = new System.Drawing.Point(188, 12);
-            this.btnUsBuscar.Name = "btnUsBuscar";
-            this.btnUsBuscar.Size = new System.Drawing.Size(89, 36);
-            this.btnUsBuscar.TabIndex = 20;
-            this.btnUsBuscar.Text = "Buscar";
-            this.btnUsBuscar.UseVisualStyleBackColor = false;
-            this.btnUsBuscar.Click += new System.EventHandler(this.btnUsBuscar_Click);
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.panel14.ForeColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(178, 12);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 36);
-            this.panel14.TabIndex = 21;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.txtPagos);
-            this.panel15.Location = new System.Drawing.Point(3, 10);
-            this.panel15.Name = "panel15";
-            this.panel15.Padding = new System.Windows.Forms.Padding(7);
-            this.panel15.Size = new System.Drawing.Size(168, 43);
-            this.panel15.TabIndex = 1;
-            // 
-            // txtPagos
-            // 
-            this.txtPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPagos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagos.Location = new System.Drawing.Point(7, 7);
-            this.txtPagos.Name = "txtPagos";
-            this.txtPagos.Size = new System.Drawing.Size(154, 22);
-            this.txtPagos.TabIndex = 0;
-            // 
             // Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,11 +324,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.pnl_opciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgPagos)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.pnl_opciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

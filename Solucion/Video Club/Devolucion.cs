@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using CapaDato;
+using Entidades;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
@@ -25,11 +26,11 @@ namespace Video_Club
 
         void CargarTablaPrestamo()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where condicion=0;";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -38,11 +39,11 @@ namespace Video_Club
         }
         private void btnDeBuscar_Click(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.idPrestamo ='" + txtDevolver.Text + "' || usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || libros.titulo LIKE '%" + txtDevolver.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -59,16 +60,16 @@ namespace Video_Club
             double difDias = tspan.Days;  // mostramos la diferencias de dias
             if(difDias > 0) {
                 difDias = difDias * 10;
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                Class1 conexion = new Class1();
                 string sql = "update libros set stock='" + prestamoObj.Stock + "', id_estado=1  where idLibros='" + prestamoObj.IdLibro + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
+                MySqlConnection con = new MySqlConnection(conexion.Cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.ExecuteNonQuery();
                 con.Close();
 
                 string sql2 = "update prestamo set mora='" + difDias + "',fechaDevolucion='" + prestamoObj.FechaDevolucion + "', condicion=1  where idPrestamo='" + prestamoObj.IdPrestamo + "';";
-                MySqlConnection con2 = new MySqlConnection(cadena);
+                MySqlConnection con2 = new MySqlConnection(conexion.Cadena);
                 con2.Open();
                 MySqlCommand comando2 = new MySqlCommand(sql2, con2);
                 comando2.ExecuteNonQuery();
@@ -77,7 +78,7 @@ namespace Video_Club
                 
 
                 string sql3 = "update usuario set estadoUsuario=1  where id_usuario='" + prestamoObj.IdUsuario + "';";
-                MySqlConnection con3 = new MySqlConnection(cadena);
+                MySqlConnection con3 = new MySqlConnection(conexion.Cadena);
                 con3.Open();
                 MySqlCommand comando3 = new MySqlCommand(sql3, con3);
                 comando3.ExecuteNonQuery();
@@ -87,19 +88,19 @@ namespace Video_Club
                 Dialogo FormDialog = new Dialogo();
                 FormDialog.ShowDialog();
             } 
-            else { 
+            else {
 
-            //prestamoObj.Condicion = Convert.ToBoolean(0);
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            string sql = "update libros set stock='" + prestamoObj.Stock + "', id_estado=1  where idLibros='" + prestamoObj.IdLibro + "';";
-            MySqlConnection con = new MySqlConnection(cadena);
+                //prestamoObj.Condicion = Convert.ToBoolean(0);
+                Class1 conexion = new Class1();
+                string sql = "update libros set stock='" + prestamoObj.Stock + "', id_estado=1  where idLibros='" + prestamoObj.IdLibro + "';";
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand(sql, con);
             comando.ExecuteNonQuery();
             con.Close();
 
             string sql2 = "update prestamo set mora='" + difDias + "',fechaDevolucion='" + prestamoObj.FechaDevolucion + "', condicion=1  where idPrestamo='" + prestamoObj.IdPrestamo + "';";
-            MySqlConnection con2 = new MySqlConnection(cadena);
+            MySqlConnection con2 = new MySqlConnection(conexion.Cadena);
             con2.Open();
             MySqlCommand comando2 = new MySqlCommand(sql2, con2);
             comando2.ExecuteNonQuery();

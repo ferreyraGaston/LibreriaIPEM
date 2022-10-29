@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using CapaDato;
+using Entidades;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -26,11 +27,11 @@ namespace Video_Club
         }
         void CargarTablaLibro()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where id_estado=1";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -39,11 +40,11 @@ namespace Video_Club
         }
         void CargarTablaPrestamo()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select idPrestamo as ID,NombreUsuario as Nombre,ApellidoUsuario as Apellido,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros;";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);

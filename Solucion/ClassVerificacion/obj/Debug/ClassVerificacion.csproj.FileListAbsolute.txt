@@ -1,0 +1,6 @@
+D:\Desarollo C#\IPEM-134\Solucion\ClassVerificacion\bin\Debug\ClassVerificacion.dll
+D:\Desarollo C#\IPEM-134\Solucion\ClassVerificacion\bin\Debug\ClassVerificacion.pdb
+D:\Desarollo C#\IPEM-134\Solucion\ClassVerificacion\obj\Debug\ClassVerificacion.csproj.AssemblyReference.cache
+D:\Desarollo C#\IPEM-134\Solucion\ClassVerificacion\obj\Debug\ClassVerificacion.csproj.CoreCompileInputs.cache
+D:\Desarollo C#\IPEM-134\Solucion\ClassVerificacion\obj\Debug\ClassVerificacion.dll
+D:\Desarollo C#\IPEM-134\Solucion\ClassVerificacion\obj\Debug\ClassVerificacion.pdb

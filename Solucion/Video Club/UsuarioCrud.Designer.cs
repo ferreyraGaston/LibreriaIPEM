@@ -237,6 +237,7 @@
             this.textDni.Name = "textDni";
             this.textDni.Size = new System.Drawing.Size(224, 29);
             this.textDni.TabIndex = 39;
+            
             this.textDni.Validating += new System.ComponentModel.CancelEventHandler(this.textDni_Validating);
             // 
             // label6
@@ -270,6 +271,7 @@
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(219, 29);
             this.textTelefono.TabIndex = 36;
+            
             this.textTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.textTelefono_Validating);
             // 
             // textEmail

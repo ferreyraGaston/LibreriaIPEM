@@ -79,7 +79,6 @@ namespace Video_Club
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1300, 35);
             this.BarraTitulo.TabIndex = 1;
-            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // PicRestaurar
@@ -442,7 +441,7 @@ namespace Video_Club
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMin)).EndInit();

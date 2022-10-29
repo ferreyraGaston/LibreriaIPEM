@@ -44,10 +44,7 @@ namespace Video_Club
             PicRestaurar.Visible = false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -119,29 +116,9 @@ namespace Video_Club
             AbrirFormEnPanel(new inicio());
         }
 
-        private void btnConexion_Click(object sender, EventArgs e)
-        {
-            string cadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= D:\\BD Toldito\\Prueba\\BD\\BD_Bibloteca_V1.mdb";
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
+       
 
-            try
-            {
-                conexion.Open();
-                MessageBox.Show("Conexión Exitosa");
-                // btnSalir.Visible = true;
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Conexión fallida");
-            }
-            conexion.Close();
-        }
-
-        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btn_Prestamo_Click_1(object sender, EventArgs e)
         {

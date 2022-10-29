@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using CapaDatos;
+using CapaDato;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
 using Entidades;
-using CapaDatos;
+
 
 namespace Video_Club
 {
@@ -33,13 +33,13 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-        Conexion conexion = new Conexion();
+
+            Class1 conexion = new Class1();
         
-         string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-        MySqlConnection con = new MySqlConnection(cadena);
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -118,11 +118,12 @@ namespace Video_Club
         {
             rbNoDisponible.Checked = false;
             rbDisponible.Checked = false;
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+           
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.id_usuario ='" + txtBuscar.Text + "' || usuario.NombreUsuario LIKE '%" + txtBuscar.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtBuscar.Text + "%' || usuario.DniUsuario LIKE '%" + txtBuscar.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -142,11 +143,11 @@ namespace Video_Club
         private void rbDisponible_CheckedChanged(object sender, EventArgs e)
         {
 
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.estadoUsuario ='0';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -157,11 +158,11 @@ namespace Video_Club
 
         private void rbNoDisponible_CheckedChanged(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+            Class1 conexion = new Class1();
+            MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.estadoUsuario ='1';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
