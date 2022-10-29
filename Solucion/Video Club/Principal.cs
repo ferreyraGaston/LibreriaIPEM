@@ -152,5 +152,10 @@ namespace Video_Club
         {
             AbrirFormEnPanel(new Devolucion());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

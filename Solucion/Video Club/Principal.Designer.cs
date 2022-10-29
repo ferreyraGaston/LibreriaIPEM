@@ -55,6 +55,8 @@ namespace Video_Club
             this.btn_ventas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelSalir = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMin)).BeginInit();
@@ -156,6 +158,8 @@ namespace Video_Club
             // 
             // Panel_SubMenu
             // 
+            this.Panel_SubMenu.Controls.Add(this.panel6);
+            this.Panel_SubMenu.Controls.Add(this.button1);
             this.Panel_SubMenu.Controls.Add(this.panel9);
             this.Panel_SubMenu.Controls.Add(this.panel8);
             this.Panel_SubMenu.Controls.Add(this.btn_RepPagos);
@@ -164,14 +168,14 @@ namespace Video_Club
             this.Panel_SubMenu.Controls.Add(this.btn_RepVentas);
             this.Panel_SubMenu.Location = new System.Drawing.Point(45, 426);
             this.Panel_SubMenu.Name = "Panel_SubMenu";
-            this.Panel_SubMenu.Size = new System.Drawing.Size(175, 145);
+            this.Panel_SubMenu.Size = new System.Drawing.Size(175, 177);
             this.Panel_SubMenu.TabIndex = 0;
             this.Panel_SubMenu.Visible = false;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.panel9.Location = new System.Drawing.Point(3, 97);
+            this.panel9.Location = new System.Drawing.Point(3, 133);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(10, 32);
             this.panel9.TabIndex = 7;
@@ -179,7 +183,7 @@ namespace Video_Club
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.panel8.Location = new System.Drawing.Point(3, 50);
+            this.panel8.Location = new System.Drawing.Point(3, 91);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(10, 32);
             this.panel8.TabIndex = 7;
@@ -193,7 +197,7 @@ namespace Video_Club
             this.btn_RepPagos.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RepPagos.ForeColor = System.Drawing.Color.White;
             this.btn_RepPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RepPagos.Location = new System.Drawing.Point(13, 97);
+            this.btn_RepPagos.Location = new System.Drawing.Point(13, 133);
             this.btn_RepPagos.Name = "btn_RepPagos";
             this.btn_RepPagos.Size = new System.Drawing.Size(162, 32);
             this.btn_RepPagos.TabIndex = 6;
@@ -218,7 +222,7 @@ namespace Video_Club
             this.btn_RepALquiler.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RepALquiler.ForeColor = System.Drawing.Color.White;
             this.btn_RepALquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RepALquiler.Location = new System.Drawing.Point(13, 50);
+            this.btn_RepALquiler.Location = new System.Drawing.Point(13, 91);
             this.btn_RepALquiler.Name = "btn_RepALquiler";
             this.btn_RepALquiler.Size = new System.Drawing.Size(162, 32);
             this.btn_RepALquiler.TabIndex = 6;
@@ -399,6 +403,32 @@ namespace Video_Club
             this.PanelSalir.Size = new System.Drawing.Size(1079, 615);
             this.PanelSalir.TabIndex = 3;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.panel6.Location = new System.Drawing.Point(3, 46);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 32);
+            this.panel6.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Broadway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(13, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 32);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Pagos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,6 +482,8 @@ namespace Video_Club
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btn_RepALquiler;
         private System.Windows.Forms.Button btn_RepVentas;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button1;
     }
 }
 
