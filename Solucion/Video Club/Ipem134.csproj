@@ -415,10 +415,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaDato\CapaDato.csproj">
-      <Project>{35dcf986-f79e-4ae5-ba04-30d875d46ac1}</Project>
-      <Name>CapaDato</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ClassVerificacion\ClassVerificacion.csproj">
       <Project>{a85c49c3-f0fd-48e8-b599-8fa5099dd62b}</Project>
       <Name>ClassVerificacion</Name>
@@ -439,6 +435,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

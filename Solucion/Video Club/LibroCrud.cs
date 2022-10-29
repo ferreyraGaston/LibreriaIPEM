@@ -1,4 +1,4 @@
-﻿using CapaDato;
+﻿using CapaConexion;
 using Entidades;
 using MySql.Data.MySqlClient;
 using System;

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassVerificacion", "ClassVerificacion\ClassVerificacion.csproj", "{A85C49C3-F0FD-48E8-B599-8FA5099DD62B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDato", "CapaDato\CapaDato.csproj", "{35DCF986-F79E-4AE5-BA04-30D875D46AC1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{A85C49C3-F0FD-48E8-B599-8FA5099DD62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A85C49C3-F0FD-48E8-B599-8FA5099DD62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A85C49C3-F0FD-48E8-B599-8FA5099DD62B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35DCF986-F79E-4AE5-BA04-30D875D46AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35DCF986-F79E-4AE5-BA04-30D875D46AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35DCF986-F79E-4AE5-BA04-30D875D46AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35DCF986-F79E-4AE5-BA04-30D875D46AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

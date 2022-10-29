@@ -1,4 +1,4 @@
-﻿using CapaDato;
+﻿
 using Entidades;
 using MySql.Data.MySqlClient;
 using System;
@@ -24,10 +24,10 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
-            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO,mora as SALDO  from usuario INNER JOIN prestamo On usuario.id_usuario = prestamo.idUsuario  where estadoUsuario=1";
+            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO, mora  from usuario INNER JOIN prestamo On usuario.id_usuario = prestamo.idUsuario  where estadoUsuario=1";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -37,7 +37,7 @@ namespace Video_Club
         }
         private void btnUsBuscar_Click(object sender, EventArgs e)
         {
-            Class1 conexion = new Class1();
+            Conexion conexion = new Conexion();
             MySqlConnection con = new MySqlConnection(conexion.Cadena);
             con.Open();
             string sql = "select * from usuario where usuario.id_usuario ='" + txtPagos.Text + "' || usuario.NombreUsuario LIKE '%" + txtPagos.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtPagos.Text + "%' || usuario.DniUsuario LIKE '%" + txtPagos.Text + "%';";
@@ -72,6 +72,11 @@ namespace Video_Club
             panel6.Visible = false;
 
             dgPagos.Visible = false;
+        }
+
+        private void btn_pagar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using CapaDato;
+﻿
 using Entidades;
 using MySql.Data.MySqlClient;
 using System;
@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaDato;
 namespace Video_Club
 {
     public partial class Devolucion : Form
