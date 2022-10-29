@@ -310,6 +310,7 @@ namespace Video_Club
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgPrestamo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgPrestamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPrestamo.Enabled = false;
             this.dgPrestamo.EnableHeadersVisualStyles = false;
             this.dgPrestamo.Location = new System.Drawing.Point(430, 99);
             this.dgPrestamo.Name = "dgPrestamo";
