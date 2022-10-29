@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,14 @@ namespace Entidades
 {
     public class Conexion
     {
-        static private string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+
+        protected MySqlConnection conexion;
+        protected string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+
+        public Conexion(string cadena)
+        {
+            this.cadena = cadena;
+        }
 
         public string Cadena { get => cadena; set => cadena = value; }
     }

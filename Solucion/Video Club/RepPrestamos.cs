@@ -23,11 +23,12 @@ namespace Video_Club
         void CargarTablaPrestamo()
         {
 
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros;";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -44,11 +45,12 @@ namespace Video_Club
             rbFechSalida.Checked = false;
             rbFechEntrega.Checked = false;
             rbFechDevol.Checked = false;
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.idPrestamo ='" + txtDevolver.Text + "' || usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || libros.titulo LIKE '%" + txtDevolver.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -71,11 +73,12 @@ namespace Video_Club
 
         private void rbFechSalida_CheckedChanged(object sender, EventArgs e)
         {
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaSalida BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -85,11 +88,12 @@ namespace Video_Club
 
         private void rbFechEntrega_CheckedChanged(object sender, EventArgs e)
         {
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaEntrega BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -99,11 +103,12 @@ namespace Video_Club
 
         private void rbFechDevol_CheckedChanged(object sender, EventArgs e)
         {
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaDevolucion BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);

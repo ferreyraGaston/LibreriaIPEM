@@ -273,6 +273,7 @@ namespace Video_Club
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1098, 595);
             this.panel7.TabIndex = 13;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // dtFechaEntrega
             // 

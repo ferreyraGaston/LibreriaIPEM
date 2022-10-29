@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+
 namespace Video_Club
 {
     public partial class Libros : Form
@@ -71,6 +73,7 @@ namespace Video_Club
             panel7.Visible = false;
             panel3.Visible = false;
             dgv_detalle.Visible = false;
+            groupBox1.Visible = false;
             AbrirFormEnPanel(new LibroCrud());
         }
 
@@ -174,6 +177,7 @@ namespace Video_Club
 
         private void btnReg_Click(object sender, EventArgs e)
         {
+            groupBox1.Visible = false;
             btnReg.Visible = false;
             panel7.Visible = false;
             panel3.Visible = false;

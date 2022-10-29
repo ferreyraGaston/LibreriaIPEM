@@ -24,11 +24,12 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select id_usuario as ID,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO, mora  from usuario INNER JOIN prestamo On usuario.id_usuario = prestamo.idUsuario  where estadoUsuario=1";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            string sql = "select idPrestamo as ID,titulo as TITULO, NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO, mora as SALDO  from prestamo INNER JOIN usuario On prestamo.idUsuario=usuario.id_usuario INNER JOIN libros On prestamo.idLibro=libros.idLibros where estadoUsuario=1 and prestamo.mora>0";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -37,11 +38,12 @@ namespace Video_Club
         }
         private void btnUsBuscar_Click(object sender, EventArgs e)
         {
-            Conexion conexion = new Conexion();
-            MySqlConnection con = new MySqlConnection(conexion.Cadena);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select * from usuario where usuario.id_usuario ='" + txtPagos.Text + "' || usuario.NombreUsuario LIKE '%" + txtPagos.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtPagos.Text + "%' || usuario.DniUsuario LIKE '%" + txtPagos.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexion.Cadena);
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
@@ -59,28 +61,68 @@ namespace Video_Club
         private void dgPagos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             UsuarioClass usuarioObj = new UsuarioClass();
+            PrestamoClass prestamoObj = new PrestamoClass();
             posicion = dgPagos.CurrentRow.Index;
-            usuarioObj.Id1 = int.Parse(dgPagos[0, posicion].Value.ToString());
-            usuarioObj.Nombre1 = dgPagos[1, posicion].Value.ToString();
-            usuarioObj.Apellido1 = dgPagos[2, posicion].Value.ToString();
-            usuarioObj.Dni1 = int.Parse(dgPagos[3, posicion].Value.ToString());
-
-            usuarioObj.Telefono1 = dgPagos[4, posicion].Value.ToString();
+            prestamoObj.IdPrestamo = int.Parse(dgPagos[0, posicion].Value.ToString());
+            usuarioObj.Nombre1 = dgPagos[2, posicion].Value.ToString();
+            usuarioObj.Apellido1 = dgPagos[3, posicion].Value.ToString();
+            usuarioObj.Dni1 = int.Parse(dgPagos[4, posicion].Value.ToString());
+            prestamoObj.Mora = double.Parse(dgPagos[7, posicion].Value.ToString());
             usuarioObj.Estado = false;
-            //MessageBox.Show("nombre "+ usuarioObj.Nombre1);
-            
-            panel6.Visible = false;
+            textNombre.Text = usuarioObj.Nombre1;
+            textApellido.Text = usuarioObj.Apellido1;
+            textDni.Text = Convert.ToString(usuarioObj.Dni1);
 
-            dgPagos.Visible = false;
+
+
         }
 
         private void btn_pagar_Click(object sender, EventArgs e)
         {
+            BorrarError();
+            if (ValidarCampos())
+            {
+                PrestamoClass prestamoObj = new PrestamoClass();
+                //prestamoObj.Condicion = Convert.ToBoolean(0);
+                //Conexion conexion = new Conexion();
+                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+                string sql = "update prestamo set mora='0' where idPrestamo='" + prestamoObj.IdPrestamo + "';";
+                MySqlConnection con = new MySqlConnection(cadena);
+                con.Open();
+                MySqlCommand comando = new MySqlCommand(sql, con);
+                comando.ExecuteNonQuery();
+                con.Close();
+            }
 
+            CargarTablaUsuario();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private bool ValidarCampos()
         {
+            bool validarOk = true;
+            if (textNombre.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textNombre, "Seleccionar el Usuario");
+            }
+            if (textApellido.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textApellido, "Seleccionar el Libro");
+            }
+            if (textDni.Text == "")
+            {
+                validarOk = false;
+                errorProvider1.SetError(textDni, "Seleccionar el Libro");
+            }
+            return validarOk;
+        }
+
+        private void BorrarError()
+        {
+            errorProvider1.SetError(textNombre, "");
+            errorProvider1.SetError(textApellido, "");
+            errorProvider1.SetError(textDni, "");
 
         }
     }
