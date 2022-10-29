@@ -13,13 +13,16 @@ using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
 using Entidades;
+using CapaDatos;
 
 namespace Video_Club
 {
+
     public partial class Usuario : Form
     {
 
         int posicion = 0;
+        
 
         public Usuario()
         {
@@ -30,8 +33,10 @@ namespace Video_Club
         }
         void CargarTablaUsuario()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
+        Conexion conexion = new Conexion();
+        
+         string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+        MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             string sql = "select * from usuario";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
@@ -136,6 +141,7 @@ namespace Video_Club
 
         private void rbDisponible_CheckedChanged(object sender, EventArgs e)
         {
+
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();

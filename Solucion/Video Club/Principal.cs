@@ -155,7 +155,7 @@ namespace Video_Club
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanel(new Pagos());
         }
     }
 }

@@ -99,3 +99,4 @@ D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaCon.reso
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Conexion.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.PruebaNoCon.resources
 D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.DialogoError.resources
+D:\Desarollo C#\IPEM-134\Solucion\Video Club\obj\Debug\Video_Club.Pagos.resources

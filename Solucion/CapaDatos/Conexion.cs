@@ -4,22 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Data;
-using System.Data.OleDb;
-
-
-
 namespace CapaDatos
 {
     public class Conexion
     {
-        public void conectar()
-        {
-            string cadena = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= D:\\BD Toldito\\Prueba\\BD\\BD_Bibloteca_V1.mdb";
-            OleDbConnection con = new OleDbConnection(cadena);
-            con.Open();
-        }
-    }
+        private string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
 
-   
+        public string Cadena { get => cadena; set => cadena = value; }
+    }
 }
