@@ -71,7 +71,7 @@ namespace CapaDeDatos
             }
         }
 
-        public string Insertatar(LibroClass obj)
+        public string Insertar(LibroClass obj)
         {
             string respuesta = "";
             MySqlConnection conexion = new MySqlConnection();
@@ -140,6 +140,38 @@ namespace CapaDeDatos
             return respuesta;
         }
 
-
+        public string Eliminar(int id)
+        {
+            string respuesta = "";
+            MySqlConnection conexion = new MySqlConnection();
+            try
+            {
+                conexion = Conexion.crearInstancia().CrearConexion();
+                string sql = "delete from libros where idLibros='" + id + "';";
+                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                comando.CommandType = CommandType.StoredProcedure; // nos conectamos con el procedimiento almacenado
+                conexion.Open();
+                if (comando.ExecuteNonQuery() == 1)
+                {
+                    respuesta = "Ok";
+                }
+                else
+                {
+                    respuesta = "No Ok";
+                }
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message; //mostramos un mensaje con el error establecido
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+            return respuesta;
+        }
     }
 }
