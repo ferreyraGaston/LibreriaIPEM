@@ -275,7 +275,6 @@ namespace Video_Club
             this.dgv_detalle.Size = new System.Drawing.Size(1054, 389);
             this.dgv_detalle.TabIndex = 3;
             this.dgv_detalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_detalle_CellContentClick);
-            this.dgv_detalle.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_detalle_CellFormatting);
             // 
             // lbl_titulo
             // 

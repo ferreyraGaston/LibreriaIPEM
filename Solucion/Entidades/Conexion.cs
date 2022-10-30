@@ -10,8 +10,8 @@ namespace Entidades
     public class Conexion
     {
 
-        protected MySqlConnection conexion;
-        protected string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+        public MySqlConnection conexion;
+        public string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
 
         public Conexion(string cadena)
         {

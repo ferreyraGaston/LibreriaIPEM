@@ -415,6 +415,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj">
+      <Project>{6cb70c30-3dd9-4f33-a0d3-5e281f45c0ae}</Project>
+      <Name>CapaDeDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaDeNegocios\CapaDeNegocios.csproj">
+      <Project>{771235c0-77b9-4ef7-831f-5784f01053ae}</Project>
+      <Name>CapaDeNegocios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{a948684f-bb1d-4f9f-949d-5274e355294e}</Project>
       <Name>Entidades</Name>

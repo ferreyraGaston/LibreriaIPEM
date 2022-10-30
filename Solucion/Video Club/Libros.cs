@@ -76,30 +76,6 @@ namespace Video_Club
             groupBox1.Visible = false;
             AbrirFormEnPanel(new LibroCrud());
         }
-
-        private void dgv_detalle_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dgv_detalle.Columns[e.ColumnIndex].Name == "Estado")
-            {
-                //if (e.Value == "No Disponible")
-                //{
-                //    e.CellStyle.ForeColor = Color.Black;
-                //    e.CellStyle.BackColor = Color.Red;
-                //}
-                //if (e.Value == "Disponible")
-                //{
-                //    e.CellStyle.ForeColor = Color.Black;
-                //    e.CellStyle.BackColor = Color.Green;
-                //}
-
-                //if (e.Value == "Reservado")
-                //{
-                //    e.CellStyle.ForeColor = Color.Black;
-                //    e.CellStyle.BackColor = Color.Green;
-                //}
-            }
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             rbReservado.Checked = false;
