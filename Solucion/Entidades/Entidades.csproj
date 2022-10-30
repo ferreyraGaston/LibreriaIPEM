@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
     <Compile Include="LibroClass.cs" />
     <Compile Include="PrestamoClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
