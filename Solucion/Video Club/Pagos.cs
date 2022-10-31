@@ -22,6 +22,7 @@ namespace Video_Club
         {
             InitializeComponent();
             CargarTablaUsuario();
+            dgPagos.Columns[2].Visible = false;
         }
         void CargarTablaUsuario()
         {
@@ -43,7 +44,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select * from usuario where usuario.id_usuario ='" + txtPagos.Text + "' || usuario.NombreUsuario LIKE '%" + txtPagos.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtPagos.Text + "%' || usuario.DniUsuario LIKE '%" + txtPagos.Text + "%';";
+            string sql = "select idPrestamo as ID,titulo as TITULO,id_usuario as ID_USER, NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO, mora as SALDO from prestamo INNER JOIN usuario On prestamo.idUsuario=usuario.id_usuario INNER JOIN libros On prestamo.idLibro=libros.idLibros where estadoUsuario=1 and prestamo.mora>0 and prestamo.idPrestamo ='" + txtPagos.Text + "' || estadoUsuario=1 and prestamo.mora>0 and usuario.NombreUsuario LIKE '%" + txtPagos.Text + "%' || estadoUsuario=1 and prestamo.mora>0 and usuario.ApellidoUsuario LIKE '%" + txtPagos.Text + "%' || estadoUsuario=1 and prestamo.mora>0 and usuario.DniUsuario LIKE '%" + txtPagos.Text + "%';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
