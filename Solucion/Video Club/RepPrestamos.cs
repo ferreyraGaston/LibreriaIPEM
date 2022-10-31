@@ -19,6 +19,8 @@ namespace Video_Club
         {
             InitializeComponent();
             CargarTablaPrestamo();
+            dgDevolucion.Columns[1].Visible = false;
+            dgDevolucion.Columns[4].Visible = false;
         }
         void CargarTablaPrestamo()
         {

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace CapaDeNegocios
 {
-    internal class NegocioLibro
+    public class NegocioLibro
     {
 
         public static DataTable Listar()

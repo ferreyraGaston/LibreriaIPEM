@@ -23,24 +23,15 @@ namespace CapaDeDatos
             this.Servidor = "localhost";
             this.Usuario = "root";
             this.Clave = "13231414";
-            this.Seguridad= true;  
+            this.Seguridad= true;
         }
-
+        //"Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
         public MySqlConnection CrearConexion()
         {
             MySqlConnection cadena= new MySqlConnection();
             try
             {
-                cadena.ConnectionString = "Server=" + this.Servidor + "; Database=" + this.Base + ";";
-                //validamos el tipo de seguridad
-                if(this.Seguridad)
-                {
-                    cadena.ConnectionString = cadena.ConnectionString + "Integrated Security= SSPI";
-                }
-                else
-                {
-                    cadena.ConnectionString = cadena.ConnectionString + "User Id=" +this.Usuario+";Password="+this.Clave;
-                }               
+                cadena.ConnectionString = "Server=" + this.Servidor + "; Database=" + this.Base + "; Uid=" + this.Usuario + ";Pwd=" + this.Clave;
             }
             catch(Exception ex)
             {

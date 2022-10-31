@@ -22,6 +22,8 @@ namespace Video_Club
         {
             InitializeComponent();
             CargarTablaPrestamo();
+            dgDevolucion.Columns[1].Visible= false;
+            dgDevolucion.Columns[4].Visible = false;
         }
 
         void CargarTablaPrestamo()
@@ -41,18 +43,20 @@ namespace Video_Club
         }
         private void btnDeBuscar_Click(object sender, EventArgs e)
         {
-            //Conexion conexion = new Conexion();
 
+            if (txtDevolver.Text != "")
+            { 
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.idPrestamo ='" + txtDevolver.Text + "' || usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || libros.titulo LIKE '%" + txtDevolver.Text + "%';";
+            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.condicion=0 AND prestamo.idPrestamo ='" + txtDevolver.Text + "' || prestamo.condicion=0 AND usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || prestamo.condicion=0 AND usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || prestamo.condicion=0 AND libros.titulo LIKE '%" + txtDevolver.Text + "%';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
             da.Fill(dt);
             dgDevolucion.DataSource = dt;
             dgDevolucion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
         }
         private void btn_registrar_Click(object sender, EventArgs e)
         {

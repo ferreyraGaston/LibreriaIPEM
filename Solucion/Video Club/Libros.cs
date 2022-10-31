@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using CapaDeNegocios;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
@@ -24,18 +25,30 @@ namespace Video_Club
             btnReg.Enabled = true;
             btnReg.BackColor = Color.FromArgb(8, 58, 169);
         }
-        void CargarTablaLibro()
+        private void CargarTablaLibro()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            //MySqlConnection con = new MySqlConnection(cadena);
+            //con.Open();
+            //string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
+            //MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
+            //DataTable dt = new DataTable();
+            //con.Close();
+            //da.Fill(dt);
+            //dgv_detalle.DataSource = dt;
+            //dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try 
+            {
+                // DataSource es con quien se va a conectar
+                dgv_detalle.DataSource = NegocioLibro.Listar();
+            }
+            catch(Exception ex)
+            {
+                //dgv_detalle.DataSource = NegocioLibro.Listar();
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                PruebaNoCon pruebaNoCon = new PruebaNoCon();
+                pruebaNoCon.ShowDialog();
+            }
 
         }
         private void AbrirFormEnPanel(object formhija)
