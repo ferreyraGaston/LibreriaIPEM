@@ -54,9 +54,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnl_opciones.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_opciones
@@ -187,6 +190,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.textTipoUsuario);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.textDni);
@@ -212,7 +216,7 @@
             this.textTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTipoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textTipoUsuario.Location = new System.Drawing.Point(400, 199);
+            this.textTipoUsuario.Location = new System.Drawing.Point(396, 247);
             this.textTipoUsuario.Name = "textTipoUsuario";
             this.textTipoUsuario.Size = new System.Drawing.Size(183, 29);
             this.textTipoUsuario.TabIndex = 41;
@@ -222,7 +226,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label9.Location = new System.Drawing.Point(397, 171);
+            this.label9.Location = new System.Drawing.Point(393, 219);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(188, 24);
             this.label9.TabIndex = 40;
@@ -233,11 +237,10 @@
             this.textDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textDni.Location = new System.Drawing.Point(275, 122);
+            this.textDni.Location = new System.Drawing.Point(271, 170);
             this.textDni.Name = "textDni";
             this.textDni.Size = new System.Drawing.Size(224, 29);
             this.textDni.TabIndex = 39;
-            
             this.textDni.Validating += new System.ComponentModel.CancelEventHandler(this.textDni_Validating);
             // 
             // label6
@@ -245,7 +248,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label6.Location = new System.Drawing.Point(272, 95);
+            this.label6.Location = new System.Drawing.Point(268, 143);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 24);
             this.label6.TabIndex = 38;
@@ -256,7 +259,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label5.Location = new System.Drawing.Point(22, 95);
+            this.label5.Location = new System.Drawing.Point(18, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 24);
             this.label5.TabIndex = 37;
@@ -267,11 +270,10 @@
             this.textTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textTelefono.Location = new System.Drawing.Point(25, 122);
+            this.textTelefono.Location = new System.Drawing.Point(21, 170);
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(219, 29);
             this.textTelefono.TabIndex = 36;
-            
             this.textTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.textTelefono_Validating);
             // 
             // textEmail
@@ -279,7 +281,7 @@
             this.textEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textEmail.Location = new System.Drawing.Point(25, 279);
+            this.textEmail.Location = new System.Drawing.Point(21, 327);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(474, 29);
             this.textEmail.TabIndex = 32;
@@ -289,7 +291,7 @@
             this.textDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textDireccion.Location = new System.Drawing.Point(25, 199);
+            this.textDireccion.Location = new System.Drawing.Point(21, 247);
             this.textDireccion.Name = "textDireccion";
             this.textDireccion.Size = new System.Drawing.Size(351, 29);
             this.textDireccion.TabIndex = 35;
@@ -299,7 +301,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label4.Location = new System.Drawing.Point(22, 246);
+            this.label4.Location = new System.Drawing.Point(18, 294);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 24);
             this.label4.TabIndex = 31;
@@ -310,7 +312,7 @@
             this.textApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textApellido.Location = new System.Drawing.Point(275, 49);
+            this.textApellido.Location = new System.Drawing.Point(271, 97);
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(224, 29);
             this.textApellido.TabIndex = 34;
@@ -321,7 +323,7 @@
             this.textNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.textNombre.Location = new System.Drawing.Point(20, 49);
+            this.textNombre.Location = new System.Drawing.Point(16, 97);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(224, 29);
             this.textNombre.TabIndex = 33;
@@ -332,7 +334,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label10.Location = new System.Drawing.Point(22, 171);
+            this.label10.Location = new System.Drawing.Point(18, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 24);
             this.label10.TabIndex = 30;
@@ -344,7 +346,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label11.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label11.Location = new System.Drawing.Point(272, 22);
+            this.label11.Location = new System.Drawing.Point(268, 70);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 24);
             this.label11.TabIndex = 29;
@@ -355,7 +357,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label12.Location = new System.Drawing.Point(21, 22);
+            this.label12.Location = new System.Drawing.Point(17, 70);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 24);
             this.label12.TabIndex = 28;
@@ -364,6 +366,28 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 46);
+            this.panel1.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 24);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Ingreso de Usuario";
             // 
             // UsuarioCrud
             // 
@@ -379,6 +403,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -410,5 +436,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

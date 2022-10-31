@@ -37,12 +37,14 @@ namespace Video_Club
             da.Fill(dt);
             dgv_detalle.DataSource = dt;
             dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //try 
+
+
+            //try
             //{
             //    // DataSource es con quien se va a conectar
             //    dgv_detalle.DataSource = NegocioLibro.Listar();
             //}
-            //catch(Exception ex)
+            //catch (Exception ex)
             //{
             //    //dgv_detalle.DataSource = NegocioLibro.Listar();
             //    MessageBox.Show(ex.Message + ex.StackTrace);
@@ -177,9 +179,5 @@ namespace Video_Club
             AbrirFormEnPanel(new LibroCrud());
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

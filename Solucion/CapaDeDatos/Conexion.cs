@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,46 +11,41 @@ namespace CapaDeDatos
 {
     public class Conexion
     {
-        private string Base;
-        private string Servidor;
-        private string Usuario;
-        private string Clave;
-        private bool Seguridad;// tipo de conexion true=windows , false= Mysql
-        private static Conexion con=null;
+
+        protected string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+        protected MySqlConnection conexion; // protected lo de la misma clases y los que estan hederados
 
         public Conexion()
         {
-            this.Base = "libreria_bd";
-            this.Servidor = "localhost";
-            this.Usuario = "root";
-            this.Clave = "13231414";
-            this.Seguridad= true;
+
+          conexion = new MySqlConnection(cadena);
+
         }
-        //"Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-        public MySqlConnection CrearConexion()
+        public void Abrirconexion()
         {
-            MySqlConnection cadena= new MySqlConnection();
             try
             {
-                cadena.ConnectionString = "Server=" + this.Servidor + "; Database=" + this.Base + "; Uid=" + this.Usuario + ";Pwd=" + this.Clave;
+                if (conexion.State == ConnectionState.Broken || conexion.State ==ConnectionState.Closed)
+                    conexion.Open();
             }
-            catch(Exception ex)
+            catch (Exception e)
             {
-                cadena = null;
-                throw ex; //mostramos un mensaje con el error establecido
+                throw new Exception("Error al tratar de abrir la conexión", e);
             }
-            return cadena;
         }
-        // generar una instancia al constructor de esta clase
-
-        public static Conexion crearInstancia()
+        public void Cerrarconexion()
         {
-            if(con == null)
+            try
             {
-                con = new Conexion();
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
             }
-            return con;
+            catch (Exception e)
+            {
+                throw new Exception("Error al tratar de cerrar la conexión", e);
+            }
         }
-
     }
+
 }
+

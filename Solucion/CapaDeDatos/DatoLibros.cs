@@ -8,173 +8,69 @@ using System.Threading.Tasks;
 using Entidades;
 using MySqlX.XDevAPI.Relational;
 using System.Net.NetworkInformation;
+using System.Data.OleDb;
 
 namespace CapaDeDatos
 {
-    public class DatoLibros
+    public class DatoLibros : Conexion
     {
 
-        public DataTable Listar()
+        public int abmLibros(string accion, LibroClass libroObj)
         {
-            MySqlDataReader resultado;  //nos permite leer una secuencia de tabla de Mysql
-            DataTable tabla= new DataTable();
-            MySqlConnection conexion = new MySqlConnection();
+            int resultado = -1;
+            string orden = string.Empty; // no crea ningun objeto en la memoria mientras que "" crea un nuevo objeto de cadena
+            if (accion == "Alta")
+                orden = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "');";
+            if (accion == "Modificar")
+                orden = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + libroObj.FechaPublic + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
+            // falta la orden de borrar
+            MySqlCommand cmd = new MySqlCommand(orden, conexion);
             try
             {
-                conexion= Conexion.crearInstancia().CrearConexion();
-                //string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
-                string sql = "select * from libros";
-                MySqlCommand comando=new MySqlCommand(sql, conexion);
-                comando.CommandType = CommandType.StoredProcedure; // nos conectamos con el procedimiento almacenado
-                conexion.Open();
-                resultado = comando.ExecuteReader();
-                tabla.Load(resultado);
-                return tabla;   
+                Abrirconexion();
+                resultado = cmd.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception e)
             {
-                throw ex; //mostramos un mensaje con el error establecido
-     
+                throw new Exception("Errror al tratar de guardar,borrar o modificar de Profesionales",e);
             }
             finally
             {
-                if(conexion.State==ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
+                Cerrarconexion();
+                cmd.Dispose();
             }
+            return resultado;
         }
 
-        public DataTable Buscar(String valor)
+
+        public DataSet listadoProfesionales(string cual)
         {
-            MySqlDataReader resultado;  //nos permite leer una secuencia de tabla de Mysql
-            DataTable tabla = new DataTable();
-            MySqlConnection conexion = new MySqlConnection();
+            string orden = string.Empty;
+            if (cual != "Todos")
+                orden = "select * from Profesionales where CodProf = " + int.Parse(cual) + ";";
+            else
+                orden = "select * from Profesionales;";
+            MySqlCommand cmd = new MySqlCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            MySqlDataAdapter da = new MySqlDataAdapter();
             try
             {
-                conexion = Conexion.crearInstancia().CrearConexion();
-                string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where libros.idLibros ='" + valor + "' || libros.titulo LIKE '%" + valor + "%'|| autor.nombreAutor LIKE '%" + valor + "%' || idioma.Idioma LIKE '%" + valor + "%' || categoria.Categoria LIKE '%" + valor + "%' || editorial.Editorial LIKE '%" + valor + "%';";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.CommandType = CommandType.StoredProcedure; // nos conectamos con el procedimiento almacenado
-                conexion.Open();
-                resultado = comando.ExecuteReader();
-                tabla.Load(resultado);
-                return tabla;
+                Abrirconexion();
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw ex; //mostramos un mensaje con el error establecido
+                throw new Exception("Error al listar profesionales", e);
             }
             finally
             {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
+                Cerrarconexion();
+                cmd.Dispose();
             }
+            return ds;
         }
 
-        public string Insertar(LibroClass obj)
-        {
-            string respuesta = "";
-            MySqlConnection conexion = new MySqlConnection();
-            try
-            {
-                conexion = Conexion.crearInstancia().CrearConexion();
-                string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + obj.Titulo + "','" + obj.Autor + "','" + obj.Editor + "','" + obj.FechaPublic + "','" + obj.Edicion + "','" + obj.Categoria + "','" + obj.Idioma + "','" + obj.Pagina + "','" + obj.Estado + "','" + obj.Notas + "','" + obj.Stock + "','" + obj.CondicionLib + "')";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.CommandType = CommandType.StoredProcedure; // nos conectamos con el procedimiento almacenado
-                conexion.Open();
-                if(comando.ExecuteNonQuery() == 1)
-                    {
-                        respuesta = "Ok";
-                    }
-                    else
-                    {
-                        respuesta = "No Ok";
-                    }
-             }
-            catch (Exception ex)
-            {
-                respuesta= ex.Message; //mostramos un mensaje con el error establecido
-            }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
-            return respuesta;
-        }
-
-
-        public string Actualizar(LibroClass obj)
-        {
-            string respuesta = "";
-            MySqlConnection conexion = new MySqlConnection();
-            try
-            {
-                conexion = Conexion.crearInstancia().CrearConexion();
-                string sql = "update libros set titulo='" + obj.Titulo + "',id_autor='" + obj.Autor + "',id_editor='" + obj.Editor + "',fechaPublic='" + obj.FechaPublic + "' ,edicion='" + obj.Edicion + "',id_categoria='" + obj.Categoria + "',id_idioma='" + obj.Idioma + "',pagina='" + obj.Pagina + "',id_estado='" + obj.Estado + "',notas='" + obj.Notas + "',stock='" + obj.Stock + "',condicionLibro='" + obj.CondicionLib + "' where idLibros='" + obj.Id + "';";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.CommandType = CommandType.StoredProcedure; // nos conectamos con el procedimiento almacenado
-                conexion.Open();
-                if (comando.ExecuteNonQuery() == 1)
-                {
-                    respuesta = "Ok";
-                }
-                else
-                {
-                    respuesta = "No Ok";
-                }
-            }
-            catch (Exception ex)
-            {
-                respuesta = ex.Message; //mostramos un mensaje con el error establecido
-            }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
-            return respuesta;
-        }
-
-        public string Eliminar(int id)
-        {
-            string respuesta = "";
-            MySqlConnection conexion = new MySqlConnection();
-            try
-            {
-                conexion = Conexion.crearInstancia().CrearConexion();
-                string sql = "delete from libros where idLibros='" + id + "';";
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
-                comando.CommandType = CommandType.StoredProcedure; // nos conectamos con el procedimiento almacenado
-                conexion.Open();
-                if (comando.ExecuteNonQuery() == 1)
-                {
-                    respuesta = "Ok";
-                }
-                else
-                {
-                    respuesta = "No Ok";
-                }
-            }
-            catch (Exception ex)
-            {
-                respuesta = ex.Message; //mostramos un mensaje con el error establecido
-            }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
-            return respuesta;
-        }
     }
 }
