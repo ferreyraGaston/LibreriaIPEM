@@ -127,13 +127,22 @@ namespace Video_Club
         private void dgDevolucion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             PrestamoClass prestamoObj = new PrestamoClass();
+            UsuarioClass usuarioObj = new UsuarioClass();
+            LibroClass libroObj = new LibroClass();
             posicion = dgDevolucion.CurrentRow.Index;
             prestamoObj.IdPrestamo = int.Parse(dgDevolucion[0, posicion].Value.ToString());
             prestamoObj.IdUsuario = int.Parse(dgDevolucion[1, posicion].Value.ToString());
+            usuarioObj.Nombre1 = dgDevolucion[2, posicion].Value.ToString();
+            usuarioObj.Apellido1 = dgDevolucion[3, posicion].Value.ToString();
             prestamoObj.IdLibro = int.Parse(dgDevolucion[4, posicion].Value.ToString());
+            libroObj.Titulo = dgDevolucion[5, posicion].Value.ToString();
             prestamoObj.FechaEntrega = dgDevolucion[7, posicion].Value.ToString();
             prestamoObj.Stock = int.Parse(dgDevolucion[9, posicion].Value.ToString()) + 1;
-          
+
+            textNombre.Text = usuarioObj.Nombre1;
+            textApellido.Text = usuarioObj.Apellido1;
+            textDni.Text = libroObj.Titulo;
+
         }
 
         private void btnDeRefrescar_Click(object sender, EventArgs e)
