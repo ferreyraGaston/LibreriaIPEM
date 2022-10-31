@@ -73,8 +73,15 @@ namespace Video_Club
             textApellido.Text = usuarioObj.Apellido1;
             textDni.Text = Convert.ToString(usuarioObj.Dni1);
 
-
-
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string sql = "select COUNT(DniUsuario) as cont from prestamo INNER JOIN usuario On prestamo.idUsuario=usuario.id_usuario where estadoUsuario=1 and prestamo.mora>0 and DniUsuario='" + usuarioObj.Dni1 + "';";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            MySqlCommand contar = new MySqlCommand(sql, con);
+            int contador = int.Parse(contar.ExecuteScalar()+"");
+            txtContador.Text = contador.ToString();
+            con.Close();
         }
 
         private void btn_pagar_Click(object sender, EventArgs e)

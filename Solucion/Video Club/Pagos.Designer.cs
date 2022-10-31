@@ -51,6 +51,8 @@
             this.btn_pagar = new System.Windows.Forms.Button();
             this.pnl_opciones = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtContador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPagos)).BeginInit();
@@ -76,6 +78,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.txtContador);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgPagos);
             this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.textDni);
@@ -308,6 +312,27 @@
             this.panel6.Size = new System.Drawing.Size(10, 32);
             this.panel6.TabIndex = 10;
             // 
+            // txtContador
+            // 
+            this.txtContador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.txtContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
+            this.txtContador.Location = new System.Drawing.Point(649, 352);
+            this.txtContador.Name = "txtContador";
+            this.txtContador.Size = new System.Drawing.Size(224, 29);
+            this.txtContador.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
+            this.label1.Location = new System.Drawing.Point(650, 325);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 24);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Contador";
+            // 
             // Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,5 +377,7 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox txtPagos;
+        private System.Windows.Forms.TextBox txtContador;
+        private System.Windows.Forms.Label label1;
     }
 }
