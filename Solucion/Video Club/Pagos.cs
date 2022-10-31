@@ -17,6 +17,7 @@ namespace Video_Club
     public partial class Pagos : Form
     {
         int posicion=0;
+        int contador = 0;
         public Pagos()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,titulo as TITULO, NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO, mora as SALDO  from prestamo INNER JOIN usuario On prestamo.idUsuario=usuario.id_usuario INNER JOIN libros On prestamo.idLibro=libros.idLibros where estadoUsuario=1 and prestamo.mora>0";
+            string sql = "select idPrestamo as ID,titulo as TITULO,id_usuario as ID_USER, NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,DniUsuario as DNI,telefono as TELEFONO, estadoUsuario as ESTADO, mora as SALDO  from prestamo INNER JOIN usuario On prestamo.idUsuario=usuario.id_usuario INNER JOIN libros On prestamo.idLibro=libros.idLibros where estadoUsuario=1 and prestamo.mora>0";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -64,10 +65,11 @@ namespace Video_Club
             PrestamoClass prestamoObj = new PrestamoClass();
             posicion = dgPagos.CurrentRow.Index;
             prestamoObj.IdPrestamo = int.Parse(dgPagos[0, posicion].Value.ToString());
-            usuarioObj.Nombre1 = dgPagos[2, posicion].Value.ToString();
-            usuarioObj.Apellido1 = dgPagos[3, posicion].Value.ToString();
-            usuarioObj.Dni1 = int.Parse(dgPagos[4, posicion].Value.ToString());
-            prestamoObj.Mora = double.Parse(dgPagos[7, posicion].Value.ToString());
+            usuarioObj.Id1= int.Parse(dgPagos[2, posicion].Value.ToString());
+            usuarioObj.Nombre1 = dgPagos[3, posicion].Value.ToString();
+            usuarioObj.Apellido1 = dgPagos[4, posicion].Value.ToString();
+            usuarioObj.Dni1 = int.Parse(dgPagos[5, posicion].Value.ToString());
+            prestamoObj.Mora = double.Parse(dgPagos[8, posicion].Value.ToString());
             usuarioObj.Estado = false;
             textNombre.Text = usuarioObj.Nombre1;
             textApellido.Text = usuarioObj.Apellido1;
@@ -79,7 +81,7 @@ namespace Video_Club
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
             MySqlCommand contar = new MySqlCommand(sql, con);
-            int contador = int.Parse(contar.ExecuteScalar()+"");
+            contador = int.Parse(contar.ExecuteScalar()+"");
             txtContador.Text = contador.ToString();
             con.Close();
         }
@@ -87,21 +89,31 @@ namespace Video_Club
         private void btn_pagar_Click(object sender, EventArgs e)
         {
             BorrarError();
-            if (ValidarCampos())
+            UsuarioClass usuarioObj = new UsuarioClass();
+            PrestamoClass prestamoObj = new PrestamoClass();
+            //prestamoObj.Condicion = Convert.ToBoolean(0);
+            //Conexion conexion = new Conexion();
+            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
+            string sql = "update prestamo set mora='0' where idPrestamo='" + prestamoObj.IdPrestamo + "';";
+            MySqlConnection con = new MySqlConnection(cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand(sql, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+            if (contador == 1)
             {
-                PrestamoClass prestamoObj = new PrestamoClass();
-                //prestamoObj.Condicion = Convert.ToBoolean(0);
-                //Conexion conexion = new Conexion();
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "update prestamo set mora='0' where idPrestamo='" + prestamoObj.IdPrestamo + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
-                con.Open();
-                MySqlCommand comando = new MySqlCommand(sql, con);
-                comando.ExecuteNonQuery();
-                con.Close();
+                    string sql2 = "update usuario set estadoUsuario='0' where id_usuario='" + usuarioObj.Id1 + "';";
+                    MySqlConnection con2 = new MySqlConnection(cadena);
+                    con2.Open();
+                    MySqlCommand comando2 = new MySqlCommand(sql2, con2);
+                    comando2.ExecuteNonQuery();
+                    con2.Close();
             }
-
+            limpiar();
             CargarTablaUsuario();
+            Dialogo FormDialog = new Dialogo();
+            FormDialog.ShowDialog();
+            
         }
 
         private bool ValidarCampos()
@@ -124,7 +136,13 @@ namespace Video_Club
             }
             return validarOk;
         }
-
+        void limpiar()
+        {
+            textNombre.Text = "";
+            textApellido.Text = "";
+            textDni.Text = "";
+            txtContador.Text = "";
+        }
         private void BorrarError()
         {
             errorProvider1.SetError(textNombre, "");
