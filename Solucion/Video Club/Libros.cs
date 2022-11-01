@@ -29,7 +29,9 @@ namespace Video_Club
         }
         private void CargarTablaLibro()
         {
-            dgv_detalle.Columns.Clear();
+            try
+            {
+                dgv_detalle.Columns.Clear();
             cargarColumnas();
             NegocioLibro objetoLibro = new NegocioLibro();
 
@@ -47,7 +49,12 @@ namespace Video_Club
             {
                // MessageBox.Show("no hay datos cargado en la base de datos Libros");
             }
-
+            }
+            catch
+            {
+                DialogoError FormDialog = new DialogoError();
+                FormDialog.ShowDialog();
+            }
         }
 
         private void CargarTablaLibroBuscar(string cual)
