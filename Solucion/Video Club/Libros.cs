@@ -12,6 +12,7 @@ using Entidades;
 using CapaDeNegocios;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using CapaDeDatos;
 
 namespace Video_Club
 {
@@ -21,36 +22,73 @@ namespace Video_Club
         public Libros()
         {
             InitializeComponent();
+      
             CargarTablaLibro();
             btnReg.Enabled = true;
             btnReg.BackColor = Color.FromArgb(8, 58, 169);
         }
         private void CargarTablaLibro()
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros as ID,titulo as TITULO,nombreAutor as AUTOR,Editorial as EDITORIAL,fechaPublic as FECHA,edicion as EDICION,Categoria as CATEGORIA,Idioma as IDIOMA,pagina as PAGINA,Estado as ESTADO,notas as NOTA,stock as STOCK,condicionLibro as CONDICIÓN from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_detalle.Columns.Clear();
+            cargarColumnas();
+            NegocioLibro objetoLibro = new NegocioLibro();
 
+            dgv_detalle.Rows.Clear();
+            DataSet ds = new DataSet();
+            ds = objetoLibro.listadoLibro("Todos");
+            if(ds.Tables[0].Rows.Count > 0)
+            {
+                foreach(DataRow dr in ds.Tables[0].Rows)
+                {
+                    dgv_detalle.Rows.Add(dr[0].ToString(), dr[1], dr[2], dr[3], dr[4], dr[5].ToString(), dr[6], dr[7], dr[8], dr[9].ToString(), dr[10], dr[11].ToString(), dr[12].ToString());
+                }
+            }
+            else
+            {
+               // MessageBox.Show("no hay datos cargado en la base de datos Libros");
+            }
 
-            //try
-            //{
-            //    // DataSource es con quien se va a conectar
-            //    dgv_detalle.DataSource = NegocioLibro.Listar();
-            //}
-            //catch (Exception ex)
-            //{
-            //    //dgv_detalle.DataSource = NegocioLibro.Listar();
-            //    MessageBox.Show(ex.Message + ex.StackTrace);
-            //    PruebaNoCon pruebaNoCon = new PruebaNoCon();
-            //    pruebaNoCon.ShowDialog();
-            //}
+        }
+
+        private void CargarTablaLibroBuscar(string cual)
+        {
+            dgv_detalle.Columns.Clear();
+            cargarColumnas();
+            NegocioLibro objetoLibro = new NegocioLibro();
+
+            dgv_detalle.Rows.Clear();
+            DataSet ds = new DataSet();
+            ds = objetoLibro.listadoLibro(cual);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dgv_detalle.Rows.Add(dr[0].ToString(), dr[1], dr[2], dr[3], dr[4], dr[5].ToString(), dr[6], dr[7], dr[8], dr[9].ToString(), dr[10], dr[11].ToString(), dr[12].ToString());
+                }
+            }
+            else
+            {
+               // MessageBox.Show("no hay datos cargado en la base de datos Libros");
+            }
+
+        }
+
+        private void cargarColumnas()
+        {
+            dgv_detalle.Columns.Add("0","ID");
+            dgv_detalle.Columns.Add("1", "TITULO");
+            dgv_detalle.Columns.Add("2", "AUTOR");
+            dgv_detalle.Columns.Add("3", "EDITORIAL");
+            dgv_detalle.Columns.Add("4", "FECHA P");
+            dgv_detalle.Columns.Add("5", "TIPO");
+            dgv_detalle.Columns.Add("6", "CATEGORÍA");
+            dgv_detalle.Columns.Add("7", "IDIOMA");
+            dgv_detalle.Columns.Add("8", "PAGINAS");
+            dgv_detalle.Columns.Add("9", "ESTADO");
+            dgv_detalle.Columns.Add("10", "DETALLE");
+            dgv_detalle.Columns.Add("11", "STOCK");
+            dgv_detalle.Columns.Add("12", "CONDICION");
+
 
         }
         private void AbrirFormEnPanel(object formhija)
@@ -73,7 +111,7 @@ namespace Video_Club
             libroObj.Titulo = dgv_detalle[1, posicion].Value.ToString();
             libroObj.AutorCo = dgv_detalle[2, posicion].Value.ToString();
             libroObj.EditorCo = dgv_detalle[3, posicion].Value.ToString();
-            libroObj.FechaPublic = dgv_detalle[4, posicion].Value.ToString();
+            libroObj.FechaPublic1 =DateTime.Parse(dgv_detalle[4, posicion].Value.ToString());
             libroObj.Edicion = dgv_detalle[5, posicion].Value.ToString();
             libroObj.CategoriaCo = dgv_detalle[6, posicion].Value.ToString();
             libroObj.IdiomaCo = dgv_detalle[7, posicion].Value.ToString();
@@ -93,19 +131,16 @@ namespace Video_Club
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if(txtBuscar.Text!="")
+            { 
             rbReservado.Checked = false;
             rbNoDisponible.Checked = false;
             rbDisponible.Checked = false;
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where libros.idLibros ='" + txtBuscar.Text + "' || libros.titulo LIKE '%" + txtBuscar.Text + "%'|| autor.nombreAutor LIKE '%" + txtBuscar.Text + "%' || idioma.Idioma LIKE '%" + txtBuscar.Text + "%' || categoria.Categoria LIKE '%" + txtBuscar.Text + "%' || editorial.Editorial LIKE '%" + txtBuscar.Text + "%';";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_detalle.Columns.Clear();
+            cargarColumnas();
+            CargarTablaLibroBuscar(txtBuscar.Text);
+            txtBuscar.Text = "";
+            }
             txtBuscar.Text = "";
             
         }
@@ -123,51 +158,25 @@ namespace Video_Club
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where  estado.idEstado ='3' ;";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            CargarTablaLibroBuscar("reserva");
             txtBuscar.Text = "";
         }
 
         private void rbNoDisponible_CheckedChanged(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where  estado.idEstado ='2' ;";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            CargarTablaLibroBuscar("nodisponible");
             txtBuscar.Text = "";
         }
 
         private void rbDisponible_CheckedChanged(object sender, EventArgs e)
         {
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where  estado.idEstado ='1' ;";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
-            DataTable dt = new DataTable();
-            con.Close();
-            da.Fill(dt);
-            dgv_detalle.DataSource = dt;
-            dgv_detalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            CargarTablaLibroBuscar("disponible");
             txtBuscar.Text = "";
         }
 
         private void btnReg_Click(object sender, EventArgs e)
         {
+            panel8.Visible = false;
             groupBox1.Visible = false;
             btnReg.Visible = false;
             panel7.Visible = false;

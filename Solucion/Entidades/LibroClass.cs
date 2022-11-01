@@ -12,8 +12,8 @@ namespace Entidades
         static private string titulo;
         static private int autor;
         static private int editor;
-        //static private DateTime fechaPublic;
-        static private string fechaPublic;
+        static private DateTime fechaPublic=new DateTime(1800,02,10);
+        //static private string fechaPublic;
         static private string edicion;
         static private int categoria;
         static private int idioma;
@@ -30,7 +30,8 @@ namespace Entidades
         static private string idiomaCo;
         static private string estadoCo;
 
-        public string FechaPublic { get => fechaPublic; set => fechaPublic = value; }
+        public DateTime FechaPublic1 { get => fechaPublic; set => fechaPublic = value; }
+        //public string FechaPublic { get => FechaPublic1; set => FechaPublic1 = value; }
         public string AutorCo { get => autorCo; set => autorCo = value; }
         public string EditorCo { get => editorCo; set => editorCo = value; }
         public string CategoriaCo { get => categoriaCo; set => categoriaCo = value; }

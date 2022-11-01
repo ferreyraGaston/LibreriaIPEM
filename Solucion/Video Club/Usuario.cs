@@ -78,7 +78,8 @@ namespace Video_Club
             AbrirFormEnPanel(new UsuarioCrud());
         }
         private void btn_registrar_Click_1(object sender, EventArgs e)
-        {     
+        {
+            panel1.Visible = false;
             btn_registrar.Visible=false;
             panel6.Visible = false;
             panel3.Visible = false;

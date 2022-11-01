@@ -47,7 +47,6 @@ namespace Video_Club
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgv_detalle = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -55,22 +54,22 @@ namespace Video_Club
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.btnReg);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.dgv_detalle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 32);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1084, 548);
+            this.panel2.Size = new System.Drawing.Size(1084, 580);
             this.panel2.TabIndex = 2;
             // 
             // btnReg
@@ -96,7 +95,7 @@ namespace Video_Club
             this.groupBox1.Controls.Add(this.rbReservado);
             this.groupBox1.Controls.Add(this.rbNoDisponible);
             this.groupBox1.Controls.Add(this.rbDisponible);
-            this.groupBox1.Location = new System.Drawing.Point(18, 28);
+            this.groupBox1.Location = new System.Drawing.Point(18, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(447, 51);
             this.groupBox1.TabIndex = 21;
@@ -151,7 +150,7 @@ namespace Video_Club
             this.panel3.Controls.Add(this.btnBuscar);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(578, 6);
+            this.panel3.Location = new System.Drawing.Point(575, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(497, 73);
             this.panel3.TabIndex = 19;
@@ -254,7 +253,7 @@ namespace Video_Club
             this.dgv_detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_detalle.EnableHeadersVisualStyles = false;
-            this.dgv_detalle.Location = new System.Drawing.Point(18, 90);
+            this.dgv_detalle.Location = new System.Drawing.Point(18, 165);
             this.dgv_detalle.Name = "dgv_detalle";
             this.dgv_detalle.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -273,19 +272,9 @@ namespace Video_Club
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_detalle.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_detalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_detalle.Size = new System.Drawing.Size(1054, 389);
+            this.dgv_detalle.Size = new System.Drawing.Size(1054, 314);
             this.dgv_detalle.TabIndex = 3;
             this.dgv_detalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_detalle_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 32);
-            this.panel1.TabIndex = 1;
             // 
             // panel8
             // 
@@ -316,7 +305,6 @@ namespace Video_Club
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1084, 580);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Libros";
             this.Text = "ventas";
@@ -327,7 +315,6 @@ namespace Video_Club
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
@@ -337,7 +324,6 @@ namespace Video_Club
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv_detalle;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;

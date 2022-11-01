@@ -183,7 +183,7 @@ namespace Video_Club
                 libroObj.Titulo = txtTitulo.Text;
                 libroObj.Autor = Convert.ToInt32(cboAutor.SelectedIndex) + 1;
                 libroObj.Editor = Convert.ToInt32(cboEditor.SelectedIndex) + 1;
-                libroObj.FechaPublic = dtFecha.Text;
+                libroObj.FechaPublic1 = dtFecha.Value;
                 libroObj.Edicion = txtEdicion.Text;
                 libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedIndex) + 1;
                 libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedIndex) + 1;
@@ -196,7 +196,7 @@ namespace Video_Club
                 //Conexion conexion = new Conexion();
 
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + libroObj.FechaPublic + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
+                string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + (libroObj.FechaPublic1).ToString("yyyy,MM,dd") + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
@@ -296,7 +296,7 @@ namespace Video_Club
                 libroObj.Titulo = txtTitulo.Text;
                 libroObj.Autor = Convert.ToInt32(cboAutor.SelectedIndex) + 1;
                 libroObj.Editor = Convert.ToInt32(cboEditor.SelectedIndex) + 1;
-                libroObj.FechaPublic = dtFecha.Text;
+                libroObj.FechaPublic1 = dtFecha.Value;
                 libroObj.Edicion = txtEdicion.Text;
                 libroObj.Categoria = Convert.ToInt32(cboCategoria.SelectedIndex) + 1;
                 libroObj.Idioma = Convert.ToInt32(cboIdioma.SelectedIndex) + 1;
@@ -307,9 +307,11 @@ namespace Video_Club
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
                 //Conexion conexion = new Conexion();
+                MessageBox.Show("txtEdicion.Text " + dtFecha.Value);
+                MessageBox.Show("libroObj.FechaPublic1 " + libroObj.FechaPublic1);
 
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + libroObj.FechaPublic + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
+                string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + (libroObj.FechaPublic1).ToString("yyyy,MM,dd") + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);
