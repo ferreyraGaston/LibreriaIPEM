@@ -48,13 +48,11 @@ namespace Video_Club
 
             }else
             {
-
                 cboAutor.Text = "";
                 cboEditor.Text = "";
                 cboCategoria.Text = "";
                 cboIdioma.Text = "";
                 cboEstado.Text = "";
-
                 txtTitulo.Text = "";
                 txtEdicion.Text = "";
                 txtPagina.Text = "";
@@ -62,9 +60,6 @@ namespace Video_Club
                 txtStock.Text = "";
                 txtCondicion.Text = "";
             }
-
-
-
         }
         private void AbrirFormEnPanel(object formhija)
         {

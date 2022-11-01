@@ -52,6 +52,7 @@ namespace Video_Club
 
         private void CargarTablaLibroBuscar(string cual)
         {
+            try { 
             dgv_detalle.Columns.Clear();
             cargarColumnas();
             NegocioLibro objetoLibro = new NegocioLibro();
@@ -69,6 +70,12 @@ namespace Video_Club
             else
             {
                // MessageBox.Show("no hay datos cargado en la base de datos Libros");
+            }
+            }
+            catch
+            {
+                DialogoError FormDialog = new DialogoError();
+                FormDialog.ShowDialog();
             }
 
         }
@@ -144,7 +151,6 @@ namespace Video_Club
             txtBuscar.Text = "";
             
         }
-
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             rbReservado.Checked = false;
@@ -154,7 +160,6 @@ namespace Video_Club
             txtBuscar.Text = "";
             
         }
-
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
