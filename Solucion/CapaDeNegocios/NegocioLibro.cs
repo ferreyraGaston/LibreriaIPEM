@@ -10,66 +10,18 @@ using System.Runtime.InteropServices;
 
 namespace CapaDeNegocios
 {
-    public class NegocioLibro
+    public class NegocioLibro : DatoLibros
     {
+        DatoLibros datosLibros= new DatoLibros();
 
-        public static DataTable Listar()
+        public int abmLibros(string accion, LibroClass libroObj)
         {
-            DatoLibros datos=new DatoLibros();
-            return datos.Listar();
+            return datosLibros.abmLibros(accion, libroObj); 
         }
 
-        public static DataTable Buscar(string valor)
+        public DataSet listadoLibro(string cual)
         {
-            DatoLibros datos = new DatoLibros();
-            return datos.Buscar(valor); 
-        }
-
-        public static string Insertar(string titulo, int autor, int editor, string fechaPublic, string edicion, int categoria, int idioma, int pagina, int estado, string notas, int stock, int condicionLib)
-        {
-            DatoLibros datos = new DatoLibros();
-            LibroClass obj = new LibroClass();
-            obj.Titulo= titulo; 
-            obj.Autor= autor;
-            obj.Editor= editor;
-            obj.FechaPublic= fechaPublic;
-            obj.Edicion= edicion;
-            obj.Categoria= categoria;
-            obj.Idioma= idioma;
-            obj.Pagina= pagina;
-            obj.Estado= estado;
-            obj.Notas= notas;
-            obj.Stock= stock;
-            obj.CondicionLib= condicionLib;
-
-            return datos.Insertar(obj); // insertar el que esta en DatoLibros
-        }
-
-        public static string Actualizar(int id, string titulo, int autor, int editor, string fechaPublic, string edicion, int categoria, int idioma, int pagina, int estado, string notas, int stock, int condicionLib)
-        {
-            DatoLibros datos = new DatoLibros();
-            LibroClass obj = new LibroClass();
-            obj.Id = id;
-            obj.Titulo = titulo;
-            obj.Autor = autor;
-            obj.Editor = editor;
-            obj.FechaPublic = fechaPublic;
-            obj.Edicion = edicion;
-            obj.Categoria = categoria;
-            obj.Idioma = idioma;
-            obj.Pagina = pagina;
-            obj.Estado = estado;
-            obj.Notas = notas;
-            obj.Stock = stock;
-            obj.CondicionLib = condicionLib;
-
-            return datos.Actualizar(obj); // insertar el que esta en DatoLibros
-        }
-
-        public static string Eliminar(int id)
-        {
-            DatoLibros datos = new DatoLibros();
-            return datos.Eliminar(id);
+            return datosLibros.listadoLibro(cual);
         }
 
     }
