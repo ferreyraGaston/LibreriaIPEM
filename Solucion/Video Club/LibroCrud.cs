@@ -238,10 +238,10 @@ namespace Video_Club
                 btn_modificar.Enabled = true;
                 btn_agregar.Enabled = false;
                 btn_nuevo.Enabled = false;
-                btn_eliminar.BackColor = Color.FromArgb(169, 16, 121);
-                btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
-                btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
-                btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
+                //btn_eliminar.BackColor = Color.FromArgb(169, 16, 121);
+                //btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
+                //btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
+                //btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
                 txtTitulo.Focus();
             }
             else
@@ -250,10 +250,10 @@ namespace Video_Club
                 btn_modificar.Enabled = false;
                 btn_agregar.Enabled = true;
                 btn_nuevo.Enabled = true;
-                btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-                btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-                btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-                btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+                //btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
+                //btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
+                //btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
+                //btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
 
                 txtTitulo.Focus();
             }

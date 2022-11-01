@@ -102,8 +102,6 @@ namespace Video_Club
             dgv_detalle.Columns.Add("10", "DETALLE");
             dgv_detalle.Columns.Add("11", "STOCK");
             dgv_detalle.Columns.Add("12", "CONDICION");
-
-
         }
         private void AbrirFormEnPanel(object formhija)
         {
