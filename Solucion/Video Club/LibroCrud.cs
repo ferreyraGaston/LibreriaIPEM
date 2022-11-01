@@ -1,4 +1,5 @@
 ﻿
+using CapaDeNegocios;
 using Entidades;
 using MySql.Data.MySqlClient;
 using System;
@@ -193,19 +194,26 @@ namespace Video_Club
                 libroObj.Stock = Convert.ToInt32(txtStock.Text);
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-                //Conexion conexion = new Conexion();
+                int nGrabados = -1;
+                //llamo al método que carga los datos del objeto
+                NegocioLibro objetoLibro = new NegocioLibro();
+                LibroClass objEntProf=new LibroClass(); 
+                nGrabados = objetoLibro.abmLibros("Alta", objEntProf); //invoco a la capa de negocio
+                if (nGrabados == -1)
+                {
+                    //lblMensaje.Text = " No pudo grabar profesionales en el sistema";
+                    DialogoError FormDialog = new DialogoError();
+                    FormDialog.ShowDialog();
+                }
+                else
+                {
+                    // lblMensaje.Text = " Se grabó con éxito profesionales.";
+                    Dialogo FormDialog = new Dialogo();
+                    FormDialog.ShowDialog();
+                }
 
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "INSERT INTO libros(titulo,id_autor,id_editor,fechaPublic,edicion,id_categoria,id_idioma,pagina,id_estado,notas,stock,condicionLibro) VALUES('" + libroObj.Titulo + "','" + libroObj.Autor + "','" + libroObj.Editor + "','" + (libroObj.FechaPublic1).ToString("yyyy,MM,dd") + "','" + libroObj.Edicion + "','" + libroObj.Categoria + "','" + libroObj.Idioma + "','" + libroObj.Pagina + "','" + libroObj.Estado + "','" + libroObj.Notas + "','" + libroObj.Stock + "','" + libroObj.CondicionLib + "')";
-                MySqlConnection con = new MySqlConnection(cadena);
-                con.Open();
-                MySqlCommand comando = new MySqlCommand(sql, con);
-                comando.ExecuteNonQuery();
-                //MessageBox.Show("Los datos se ingresaron exitosamente");
-                con.Close();
                 limpiar();
-                Dialogo FormDialog = new Dialogo();
-                FormDialog.ShowDialog();
+        
             }
             
         }
@@ -260,18 +268,23 @@ namespace Video_Club
             LibroClass libroObj = new LibroClass();
             if (MessageBox.Show("el Id: " + libroObj.Id, "Estas Seguro que deseas Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //Conexion conexion = new Conexion();
-
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "delete from libros where idLibros='" + libroObj.Id + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
-                con.Open();
-                MySqlCommand comando = new MySqlCommand(sql, con);
-                comando.ExecuteNonQuery();
-                //MessageBox.Show("Los datos se elimino exitosamente");
-                con.Close();
-                Dialogo FormDialog = new Dialogo();
-                FormDialog.ShowDialog();
+                int nGrabados = -1;
+                //llamo al método que carga los datos del objeto
+                NegocioLibro objetoLibro = new NegocioLibro();
+                LibroClass objEntProf = new LibroClass();
+                nGrabados = objetoLibro.abmLibros("Eliminar", objEntProf); //invoco a la capa de negocio
+                if (nGrabados == -1)
+                {
+                    //lblMensaje.Text = " No pudo grabar profesionales en el sistema";
+                    DialogoError FormDialog = new DialogoError();
+                    FormDialog.ShowDialog();
+                }
+                else
+                {
+                    // lblMensaje.Text = " Se grabó con éxito profesionales.";
+                    Dialogo FormDialog = new Dialogo();
+                    FormDialog.ShowDialog();
+                }
             }
 
             limpiar();
@@ -306,18 +319,24 @@ namespace Video_Club
                 libroObj.Stock = Convert.ToInt32(txtStock.Text);
                 libroObj.CondicionLib = Convert.ToInt32(txtCondicion.Text);
 
-                //Conexion conexion = new Conexion();
-                MessageBox.Show("txtEdicion.Text " + dtFecha.Value);
-                MessageBox.Show("libroObj.FechaPublic1 " + libroObj.FechaPublic1);
+                int nGrabados = -1;
+                //llamo al método que carga los datos del objeto
+                NegocioLibro objetoLibro = new NegocioLibro();
+                LibroClass objEntProf = new LibroClass();
+                nGrabados = objetoLibro.abmLibros("Modificar", objEntProf); //invoco a la capa de negocio
+                if (nGrabados == -1)
+                {
+                    //lblMensaje.Text = " No pudo grabar profesionales en el sistema";
+                    DialogoError FormDialog = new DialogoError();
+                    FormDialog.ShowDialog();
+                }
+                else
+                {
+                    // lblMensaje.Text = " Se grabó con éxito profesionales.";
+                    Dialogo FormDialog = new Dialogo();
+                    FormDialog.ShowDialog();
+                }
 
-                string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "update libros set titulo='" + libroObj.Titulo + "',id_autor='" + libroObj.Autor + "',id_editor='" + libroObj.Editor + "',fechaPublic='" + (libroObj.FechaPublic1).ToString("yyyy,MM,dd") + "' ,edicion='" + libroObj.Edicion + "',id_categoria='" + libroObj.Categoria + "',id_idioma='" + libroObj.Idioma + "',pagina='" + libroObj.Pagina + "',id_estado='" + libroObj.Estado + "',notas='" + libroObj.Notas + "',stock='" + libroObj.Stock + "',condicionLibro='" + libroObj.CondicionLib + "' where idLibros='" + libroObj.Id + "';";
-                MySqlConnection con = new MySqlConnection(cadena);
-                con.Open();
-                MySqlCommand comando = new MySqlCommand(sql, con);
-                comando.ExecuteNonQuery();
-                //MessageBox.Show("Los datos se actualizaron exitosamente");
-                con.Close();
                 limpiar();
 
 
@@ -331,9 +350,7 @@ namespace Video_Club
                 btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
                 btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
                 txtTitulo.Focus();
-
-                Dialogo FormDialog = new Dialogo();
-                FormDialog.ShowDialog();
+               
             }
            
         }
