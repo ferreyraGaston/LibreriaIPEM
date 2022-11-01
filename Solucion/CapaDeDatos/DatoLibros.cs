@@ -80,7 +80,7 @@ namespace CapaDeDatos
                 }
 
 
-            MySqlCommand cmd = new MySqlCommand(orden, conexion);
+                MySqlCommand cmd = new MySqlCommand(orden, conexion);
                 DataSet ds = new DataSet();
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 
@@ -100,8 +100,7 @@ namespace CapaDeDatos
                     Cerrarconexion();
                     cmd.Dispose();
                 }
-                return ds;
-            
+                return ds;    
         }
 
     }

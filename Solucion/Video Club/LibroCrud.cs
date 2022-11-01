@@ -206,11 +206,9 @@ namespace Video_Club
                     Dialogo FormDialog = new Dialogo();
                     FormDialog.ShowDialog();
                 }
-
-                limpiar();
-        
+                limpiar();     
             }
-            
+     
         }
 
         void limpiar()
