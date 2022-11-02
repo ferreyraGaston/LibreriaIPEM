@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutorClass.cs" />
+    <Compile Include="CategoriaClass.cs" />
+    <Compile Include="EditorialClass.cs" />
+    <Compile Include="EstadoClass.cs" />
+    <Compile Include="IdiomaClass.cs" />
     <Compile Include="LibroClass.cs" />
     <Compile Include="PrestamoClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

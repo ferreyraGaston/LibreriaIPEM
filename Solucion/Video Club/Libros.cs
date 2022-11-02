@@ -42,7 +42,7 @@ namespace Video_Club
             {
                 foreach(DataRow dr in ds.Tables[0].Rows)
                 {
-                    dgv_detalle.Rows.Add(dr[0].ToString(), dr[1], dr[2], dr[3], dr[4], dr[5].ToString(), dr[6], dr[7], dr[8], dr[9].ToString(), dr[10], dr[11].ToString(), dr[12].ToString());
+                    dgv_detalle.Rows.Add(dr[0].ToString(), dr[1], dr[2], dr[3], Convert.ToDateTime(dr[4]).ToShortDateString(), dr[5].ToString(), dr[6], dr[7], dr[8], dr[9].ToString(), dr[10], dr[11].ToString(), dr[12].ToString());
                 }
             }
             else
@@ -59,25 +59,22 @@ namespace Video_Club
 
         private void CargarTablaLibroBuscar(string cual)
         {
-            try { 
-            dgv_detalle.Columns.Clear();
-            cargarColumnas();
-            NegocioLibro objetoLibro = new NegocioLibro();
+            try
+            {
+                dgv_detalle.Columns.Clear();
+                cargarColumnas();
+                NegocioLibro objetoLibro = new NegocioLibro();
 
-            dgv_detalle.Rows.Clear();
-            DataSet ds = new DataSet();
-            ds = objetoLibro.listadoLibro(cual);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    dgv_detalle.Rows.Add(dr[0].ToString(), dr[1], dr[2], dr[3], dr[4], dr[5].ToString(), dr[6], dr[7], dr[8], dr[9].ToString(), dr[10], dr[11].ToString(), dr[12].ToString());
-                }
-            }
-            else
-            {
-               // MessageBox.Show("no hay datos cargado en la base de datos Libros");
-            }
+                dgv_detalle.Rows.Clear();
+                DataSet ds = new DataSet();
+                ds = objetoLibro.listadoLibro(cual);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            dgv_detalle.Rows.Add(dr[0].ToString(), dr[1], dr[2], dr[3], Convert.ToDateTime(dr[4]).ToShortDateString(), dr[5].ToString(), dr[6], dr[7], dr[8], dr[9].ToString(), dr[10], dr[11].ToString(), dr[12].ToString());
+                        }
+                    }
             }
             catch
             {

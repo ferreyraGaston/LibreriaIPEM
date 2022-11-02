@@ -24,5 +24,30 @@ namespace CapaDeNegocios
             return datosLibros.listadoLibro(cual);
         }
 
+        public List<CategoriaClass> llenarcomboCategoria()
+        {
+            return datosLibros.llenarcomboCategoria();
+        }
+
+        public List<AutorClass> llenarcomboAutor()
+        {
+            return datosLibros.llenarcomboAutor();  
+        }
+
+        public List<EstadoClass> llenarcomboEstado()
+        {
+            return datosLibros.llenarcomboEstado();
+        }
+
+        public List<IdiomaClass> llenarcomboIdioma()
+        {
+            return datosLibros.llenarcomboIdioma();
+        }
+
+        public List<EditorialClass> llenarcomboEditorial()
+        {
+            return datosLibros.llenarcomboEditorial();
+        }
+
     }
 }

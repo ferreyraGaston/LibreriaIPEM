@@ -22,6 +22,7 @@ namespace Video_Club
             InitializeComponent();        
             estadoUsuario();
             CargarTextbox();
+
         }
         void CargarTextbox()
         {
@@ -89,85 +90,46 @@ namespace Video_Club
         }
        private void listarCategoria()
         {
-            //Conexion conexion = new Conexion();
-
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from categoria order by idCategoria asc";
-            MySqlCommand da = new MySqlCommand(sql, con);
-            MySqlDataReader dr =da.ExecuteReader();
-            while(dr.Read())
-            {
-                cboCategoria.Items.Add(dr[1].ToString());
-            }
-            con.Close();           
+            NegocioLibro obtjetoCategoria = new NegocioLibro();
+            this.cboCategoria.DataSource = obtjetoCategoria.llenarcomboCategoria();
+            this.cboCategoria.DisplayMember = "NombCategoria";
+            this.cboCategoria.ValueMember = "IdCategoria";
+            this.cboCategoria.SelectedIndex = -1;
         }
         private void listarAutor()
         {
-           // Conexion conexion = new Conexion();
-
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from autor order by idAutor asc";
-            MySqlCommand da = new MySqlCommand(sql, con);
-            MySqlDataReader dr = da.ExecuteReader();
-            while (dr.Read())
-            {
-                cboAutor.Items.Add(dr[1].ToString());
-            }
-            con.Close();
+            NegocioLibro obtjetoAutor = new NegocioLibro();
+            this.cboAutor.DataSource = obtjetoAutor.llenarcomboAutor();
+            this.cboAutor.DisplayMember = "NombAutor";
+            this.cboAutor.ValueMember = "IdAutor";
+            this.cboAutor.SelectedIndex = -1;
         }
 
         private void listarEstado()
         {
-            // Conexion conexion = new Conexion();
-
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from estado order by idEstado asc";
-            MySqlCommand da = new MySqlCommand(sql, con);
-            MySqlDataReader dr = da.ExecuteReader();
-            while (dr.Read())
-            {
-                cboEstado.Items.Add(dr[1].ToString());
-            }
-            con.Close();
+            NegocioLibro obtjetoEstado = new NegocioLibro();
+            this.cboEstado.DataSource = obtjetoEstado.llenarcomboEstado();
+            this.cboEstado.DisplayMember = "NombEstado";
+            this.cboEstado.ValueMember = "IdEstado";
+            this.cboEstado.SelectedIndex = -1;
         }
 
         private void listarIdioma()
         {
-            //Conexion conexion = new Conexion();
-
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from idioma order by idIdioma asc";
-            MySqlCommand da = new MySqlCommand(sql, con);
-            MySqlDataReader dr = da.ExecuteReader();
-            while (dr.Read())
-            {
-                cboIdioma.Items.Add(dr[1].ToString());
-            }
-            con.Close();
+            NegocioLibro obtjetoIdiomar = new NegocioLibro();
+            this.cboIdioma.DataSource = obtjetoIdiomar.llenarcomboIdioma();
+            this.cboIdioma.DisplayMember = "NombIdioma";
+            this.cboIdioma.ValueMember = "IdIdioma";
+            this.cboIdioma.SelectedIndex = -1;
         }
+            
         private void listarEditorial()
         {
-           // Conexion conexion = new Conexion();
-
-            string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-            MySqlConnection con = new MySqlConnection(cadena);
-            con.Open();
-            string sql = "select * from editorial order by idEditorial asc";
-            MySqlCommand da = new MySqlCommand(sql, con);
-            MySqlDataReader dr = da.ExecuteReader();
-            while (dr.Read())
-            {
-                cboEditor.Items.Add(dr[1].ToString());
-            }
-            con.Close();
+            NegocioLibro obtjetoEditor = new NegocioLibro();
+            this.cboEditor.DataSource = obtjetoEditor.llenarcomboEditorial();
+            this.cboEditor.DisplayMember = "NombEditorial";
+            this.cboEditor.ValueMember = "IdEditorial";
+            this.cboEditor.SelectedIndex = -1;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
