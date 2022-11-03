@@ -104,7 +104,7 @@ namespace CapaDeDatos
         public List<CategoriaClass> llenarcomboCategoria()
         {       
             string orden = string.Empty;
-            CategoriaClass categoria = new CategoriaClass();
+            
             orden = "select * from categoria order by idCategoria asc";
             List<CategoriaClass> lista = new List<CategoriaClass>();
             MySqlCommand da = new MySqlCommand(orden, conexion);
@@ -114,6 +114,7 @@ namespace CapaDeDatos
                 MySqlDataReader dr = da.ExecuteReader();
                 while (dr.Read())
                     {
+                        CategoriaClass categoria = new CategoriaClass();
                         categoria.IdCategoria = dr.GetInt32(0);
                         categoria.NombCategoria = dr.GetString(1);
                         lista.Add(categoria);
@@ -133,8 +134,7 @@ namespace CapaDeDatos
 
         public List<AutorClass> llenarcomboAutor()
         {
-            string orden = string.Empty;
-            AutorClass autor = new AutorClass();
+            string orden = string.Empty;    
             orden = "select * from autor order by idAutor asc";
             List<AutorClass> lista = new List<AutorClass>();
             MySqlCommand da = new MySqlCommand(orden, conexion);
@@ -144,6 +144,7 @@ namespace CapaDeDatos
                 MySqlDataReader dr = da.ExecuteReader();
                 while (dr.Read())
                 {
+                    AutorClass autor = new AutorClass();
                     autor.IdAutor = dr.GetInt32(0);
                     autor.NombAutor = dr.GetString(1);
                     lista.Add(autor);
@@ -163,8 +164,7 @@ namespace CapaDeDatos
 
         public List<EstadoClass> llenarcomboEstado()
         {
-            string orden = string.Empty;
-            EstadoClass estado = new EstadoClass();
+            string orden = string.Empty;     
             orden = "select * from estado order by idEstado asc";
             List<EstadoClass> lista = new List<EstadoClass>();
             MySqlCommand da = new MySqlCommand(orden, conexion);
@@ -174,6 +174,7 @@ namespace CapaDeDatos
                 MySqlDataReader dr = da.ExecuteReader();
                 while (dr.Read())
                 {
+                    EstadoClass estado = new EstadoClass();
                     estado.IdEstado = dr.GetInt32(0);
                     estado.NombEstado = dr.GetString(1);
                     lista.Add(estado);
@@ -193,8 +194,7 @@ namespace CapaDeDatos
 
         public List<IdiomaClass> llenarcomboIdioma()
         {
-            string orden = string.Empty;
-            IdiomaClass idioma = new IdiomaClass();
+            string orden = string.Empty;    
             orden = "select * from idioma order by idIdioma asc";
             List<IdiomaClass> lista = new List<IdiomaClass>();
             MySqlCommand da = new MySqlCommand(orden, conexion);
@@ -204,6 +204,7 @@ namespace CapaDeDatos
                 MySqlDataReader dr = da.ExecuteReader();
                 while (dr.Read())
                 {
+                    IdiomaClass idioma = new IdiomaClass();
                     idioma.IdIdioma = dr.GetInt32(0);
                     idioma.NombIdioma = dr.GetString(1);
                     lista.Add(idioma);
@@ -222,8 +223,7 @@ namespace CapaDeDatos
         }
 
         public List<EditorialClass> llenarcomboEditorial()
-        {
-            EditorialClass editorial = new EditorialClass();
+        {  
             string orden = string.Empty;
             orden = "select idEditorial,Editorial from editorial order by idEditorial asc";    
             MySqlCommand da = new MySqlCommand(orden, conexion);
@@ -234,6 +234,7 @@ namespace CapaDeDatos
                 MySqlDataReader dr = da.ExecuteReader();
                 while (dr.Read())
                 {
+                    EditorialClass editorial = new EditorialClass();
                     editorial.IdEditorial = dr.GetInt32(0);
                     editorial.NombEditorial = (dr.GetString(1)).ToUpper();
                     lista.Add(editorial);
