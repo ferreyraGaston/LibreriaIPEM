@@ -77,21 +77,13 @@ namespace Video_Club
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
             limpiar();
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+            limpiarButton();
             txtTitulo.Focus();
         }
        private void listarCategoria()
         {
             NegocioLibro obtjetoCategoria = new NegocioLibro();
-            this.cboCategoria.DataSource = obtjetoCategoria.llenarcomboCategoria();
+            this.cboCategoria.DataSource = obtjetoCategoria.llenarcomboCategoriaNegocio();
             this.cboCategoria.DisplayMember = "NombCategoria";
             this.cboCategoria.ValueMember = "IdCategoria";
             this.cboCategoria.SelectedIndex = -1;
@@ -99,7 +91,7 @@ namespace Video_Club
         private void listarAutor()
         {
             NegocioLibro obtjetoAutor = new NegocioLibro();
-            this.cboAutor.DataSource = obtjetoAutor.llenarcomboAutor();
+            this.cboAutor.DataSource = obtjetoAutor.llenarcomboAutorNegocio();
             this.cboAutor.DisplayMember = "NombAutor";
             this.cboAutor.ValueMember = "IdAutor";
             this.cboAutor.SelectedIndex = -1;
@@ -108,7 +100,7 @@ namespace Video_Club
         private void listarEstado()
         {
             NegocioLibro obtjetoEstado = new NegocioLibro();
-            this.cboEstado.DataSource = obtjetoEstado.llenarcomboEstado();
+            this.cboEstado.DataSource = obtjetoEstado.llenarcomboEstadoNegocio();
             this.cboEstado.DisplayMember = "NombEstado";
             this.cboEstado.ValueMember = "IdEstado";
             this.cboEstado.SelectedIndex = -1;
@@ -117,7 +109,7 @@ namespace Video_Club
         private void listarIdioma()
         {
             NegocioLibro obtjetoIdiomar = new NegocioLibro();
-            this.cboIdioma.DataSource = obtjetoIdiomar.llenarcomboIdioma();
+            this.cboIdioma.DataSource = obtjetoIdiomar.llenarcomboIdiomaNegocio();
             this.cboIdioma.DisplayMember = "NombIdioma";
             this.cboIdioma.ValueMember = "IdIdioma";
             this.cboIdioma.SelectedIndex = -1;
@@ -126,7 +118,7 @@ namespace Video_Club
         private void listarEditorial()
         {
             NegocioLibro obtjetoEditor = new NegocioLibro();
-            this.cboEditor.DataSource = obtjetoEditor.llenarcomboEditorial();
+            this.cboEditor.DataSource = obtjetoEditor.llenarcomboEditorialNegocio();
             this.cboEditor.DisplayMember = "NombEditorial";
             this.cboEditor.ValueMember = "IdEditorial";
             this.cboEditor.SelectedIndex = -1;
@@ -155,7 +147,7 @@ namespace Video_Club
                 //llamo al método que carga los datos del objeto
                 NegocioLibro objetoLibro = new NegocioLibro();
                 LibroClass objEntProf=new LibroClass(); 
-                nGrabados = objetoLibro.abmLibros("Alta", objEntProf); //invoco a la capa de negocio
+                nGrabados = objetoLibro.abmLibrosNegocio("Alta", objEntProf); //invoco a la capa de negocio
                 if (nGrabados == -1)
                 {
                     //lblMensaje.Text = " No pudo grabar profesionales en el sistema";
@@ -168,7 +160,8 @@ namespace Video_Club
                     Dialogo FormDialog = new Dialogo();
                     FormDialog.ShowDialog();
                 }
-                limpiar();     
+                limpiar();
+                limpiarButton();
             }
      
         }
@@ -188,6 +181,18 @@ namespace Video_Club
             cboEstado.Text = "";
         }
 
+        void limpiarButton()
+        {
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
+            btn_agregar.Enabled = true;
+            btn_nuevo.Enabled = true;
+
+            btn_eliminar.BackColor = Color.FromArgb(0, 46, 148);
+            btn_modificar.BackColor = Color.FromArgb(0, 46, 148);
+            btn_agregar.BackColor = Color.FromArgb(8, 58, 169);
+            btn_nuevo.BackColor = Color.FromArgb(8, 58, 169);
+        }
         void estadoUsuario()
         {
             LibroClass libroObj = new LibroClass();
@@ -198,10 +203,6 @@ namespace Video_Club
                 btn_modificar.Enabled = true;
                 btn_agregar.Enabled = false;
                 btn_nuevo.Enabled = false;
-                //btn_eliminar.BackColor = Color.FromArgb(169, 16, 121);
-                //btn_modificar.BackColor = Color.FromArgb(169, 16, 121);
-                //btn_agregar.BackColor = Color.FromArgb(87, 10, 87);
-                //btn_nuevo.BackColor = Color.FromArgb(87, 10, 87);
                 txtTitulo.Focus();
             }
             else
@@ -210,11 +211,6 @@ namespace Video_Club
                 btn_modificar.Enabled = false;
                 btn_agregar.Enabled = true;
                 btn_nuevo.Enabled = true;
-                //btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-                //btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-                //btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-                //btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
-
                 txtTitulo.Focus();
             }
         }
@@ -227,7 +223,7 @@ namespace Video_Club
                 //llamo al método que carga los datos del objeto
                 NegocioLibro objetoLibro = new NegocioLibro();
                 LibroClass objEntProf = new LibroClass();
-                nGrabados = objetoLibro.abmLibros("Eliminar", objEntProf); //invoco a la capa de negocio
+                nGrabados = objetoLibro.abmLibrosNegocio("Eliminar", objEntProf); //invoco a la capa de negocio
                 if (nGrabados == -1)
                 {
                     //lblMensaje.Text = " No pudo grabar profesionales en el sistema";
@@ -243,16 +239,7 @@ namespace Video_Club
             }
 
             limpiar();
-
-            btn_eliminar.Enabled = false;
-            btn_modificar.Enabled = false;
-            btn_agregar.Enabled = true;
-            btn_nuevo.Enabled = true;
-
-            btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-            btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-            btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+            limpiarButton();
             txtTitulo.Focus();
         }
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -278,7 +265,7 @@ namespace Video_Club
                 //llamo al método que carga los datos del objeto
                 NegocioLibro objetoLibro = new NegocioLibro();
                 LibroClass objEntProf = new LibroClass();
-                nGrabados = objetoLibro.abmLibros("Modificar", objEntProf); //invoco a la capa de negocio
+                nGrabados = objetoLibro.abmLibrosNegocio("Modificar", objEntProf); //invoco a la capa de negocio
                 if (nGrabados == -1)
                 {
                     //lblMensaje.Text = " No pudo grabar profesionales en el sistema";
@@ -293,14 +280,7 @@ namespace Video_Club
                 }
 
                 limpiar();
-                btn_eliminar.Enabled = false;
-                btn_modificar.Enabled = false;
-                btn_agregar.Enabled = true;
-                btn_nuevo.Enabled = true;
-                btn_eliminar.BackColor = Color.FromArgb(87, 10, 87);
-                btn_modificar.BackColor = Color.FromArgb(87, 10, 87);
-                btn_agregar.BackColor = Color.FromArgb(169, 16, 121);
-                btn_nuevo.BackColor = Color.FromArgb(169, 16, 121);
+                limpiarButton();
                 txtTitulo.Focus();               
             }     
         }

@@ -14,37 +14,37 @@ namespace CapaDeNegocios
     {
         DatoLibros datosLibros= new DatoLibros();
 
-        public int abmLibros(string accion, LibroClass libroObj)
+        public int abmLibrosNegocio(string accion, LibroClass libroObj)
         {
             return datosLibros.abmLibros(accion, libroObj); 
         }
 
-        public DataSet listadoLibro(string cual)
+        public DataSet listadoLibroNegocio(string cual)
         {
             return datosLibros.listadoLibro(cual);
         }
 
-        public List<CategoriaClass> llenarcomboCategoria()
+        public List<CategoriaClass> llenarcomboCategoriaNegocio()
         {
             return datosLibros.llenarcomboCategoria();
         }
 
-        public List<AutorClass> llenarcomboAutor()
+        public List<AutorClass> llenarcomboAutorNegocio()
         {
             return datosLibros.llenarcomboAutor();  
         }
 
-        public List<EstadoClass> llenarcomboEstado()
+        public List<EstadoClass> llenarcomboEstadoNegocio()
         {
             return datosLibros.llenarcomboEstado();
         }
 
-        public List<IdiomaClass> llenarcomboIdioma()
+        public List<IdiomaClass> llenarcomboIdiomaNegocio()
         {
             return datosLibros.llenarcomboIdioma();
         }
 
-        public List<EditorialClass> llenarcomboEditorial()
+        public List<EditorialClass> llenarcomboEditorialNegocio()
         {
             return datosLibros.llenarcomboEditorial();
         }

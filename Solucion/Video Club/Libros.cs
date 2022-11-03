@@ -37,7 +37,7 @@ namespace Video_Club
 
             dgv_detalle.Rows.Clear();
             DataSet ds = new DataSet();
-            ds = objetoLibro.listadoLibro("Todos");
+            ds = objetoLibro.listadoLibroNegocio("Todos");
             if(ds.Tables[0].Rows.Count > 0)
             {
                 foreach(DataRow dr in ds.Tables[0].Rows)
@@ -67,7 +67,7 @@ namespace Video_Club
 
                 dgv_detalle.Rows.Clear();
                 DataSet ds = new DataSet();
-                ds = objetoLibro.listadoLibro(cual);
+                ds = objetoLibro.listadoLibroNegocio(cual);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         foreach (DataRow dr in ds.Tables[0].Rows)
