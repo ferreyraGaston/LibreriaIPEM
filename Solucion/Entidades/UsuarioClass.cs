@@ -20,6 +20,12 @@ namespace Entidades
         static private int estadoUsuario;
         static private bool estado;
 
+        public UsuarioClass()
+        {
+        }
+
+      
+
         public int EstadoUsuario { get => estadoUsuario; set => estadoUsuario = value; }
         public bool Estado { get => estado; set => estado = value; }
         public string Nombre1 { get => Nombre; set => Nombre = value; }

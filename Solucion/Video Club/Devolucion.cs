@@ -33,7 +33,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where condicion=0;";
+            string sql = "select idPrestamo as COD,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where condicion=0;";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -49,7 +49,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.condicion=0 AND prestamo.idPrestamo ='" + txtDevolver.Text + "' || prestamo.condicion=0 AND usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || prestamo.condicion=0 AND usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || prestamo.condicion=0 AND libros.titulo LIKE '%" + txtDevolver.Text + "%';";
+            string sql = "select idPrestamo as COD,idUsuario as ID_Usu,NombreUsuario as Nombre,ApellidoUsuario as Apellido,idLibro as ID_Lib,titulo as Titulo,fechaSalida as Salida,fechaEntrega as Entrega, mora as Mora_$,stock as Stock from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros where prestamo.condicion=0 AND prestamo.idPrestamo ='" + txtDevolver.Text + "' || prestamo.condicion=0 AND usuario.NombreUsuario LIKE '%" + txtDevolver.Text + "%' || prestamo.condicion=0 AND usuario.ApellidoUsuario LIKE '%" + txtDevolver.Text + "%' || prestamo.condicion=0 AND libros.titulo LIKE '%" + txtDevolver.Text + "%';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();

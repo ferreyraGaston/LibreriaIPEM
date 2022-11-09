@@ -257,9 +257,9 @@
             this.txtNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
             this.txtNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.txtNotas.Location = new System.Drawing.Point(621, 442);
+            this.txtNotas.Location = new System.Drawing.Point(27, 513);
             this.txtNotas.Name = "txtNotas";
-            this.txtNotas.Size = new System.Drawing.Size(100, 29);
+            this.txtNotas.Size = new System.Drawing.Size(744, 29);
             this.txtNotas.TabIndex = 17;
             // 
             // label4
@@ -267,7 +267,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Broadway", 15.75F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(58)))), ((int)(((byte)(169)))));
-            this.label4.Location = new System.Drawing.Point(617, 416);
+            this.label4.Location = new System.Drawing.Point(26, 486);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 24);
             this.label4.TabIndex = 15;

@@ -86,7 +86,7 @@ namespace Video_Club
 
         private void cargarColumnas()
         {
-            dgv_detalle.Columns.Add("0","ID");
+            dgv_detalle.Columns.Add("0","COD");
             dgv_detalle.Columns.Add("1", "TITULO");
             dgv_detalle.Columns.Add("2", "AUTOR");
             dgv_detalle.Columns.Add("3", "EDITORIAL");

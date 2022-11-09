@@ -29,6 +29,12 @@ namespace Entidades
         static private string idiomaCo;
         static private string estadoCo;
 
+        public LibroClass()
+        {
+        }
+
+       
+
         public DateTime FechaPublic1 { get => fechaPublic; set => fechaPublic = value; }
         public string AutorCo { get => autorCo; set => autorCo = value; }
         public string EditorCo { get => editorCo; set => editorCo = value; }
