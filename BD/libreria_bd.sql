@@ -1,148 +1,86 @@
--- MySQL Workbench Forward Engineering
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+use grupo5;
+desc product;
 
--- -----------------------------------------------------
--- Schema Libreria_bd
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema Libreria_bd
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Libreria_bd` DEFAULT CHARACTER SET utf8 ;
-USE `Libreria_bd` ;
-
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Usuario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Usuario` (
-  `id_usuario` INT NOT NULL AUTO_INCREMENT,
-  `NombreUsuario` VARCHAR(45) NULL,
-  `ApellidoUsuario` VARCHAR(45) NULL,
-  `DniUsuario` INT NULL,
-  `TipoUsuario` INT NULL,
-  `email` VARCHAR(200) NULL,
-  `direccion` VARCHAR(200) NULL,
-  `telefono` VARCHAR(45) NULL,
-  `estadoUsuario` TINYINT NULL,
-  PRIMARY KEY (`id_usuario`))
-ENGINE = InnoDB;
+create database grupoIspc
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Editorial`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Editorial` (
-  `idEditorial` INT NOT NULL AUTO_INCREMENT,
-  `Editorial` VARCHAR(45) NULL,
-  PRIMARY KEY (`idEditorial`))
-ENGINE = InnoDB;
+select * from order_detail;order_detail
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Idioma`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Idioma` (
-  `idIdioma` INT NOT NULL AUTO_INCREMENT,
-  `Idioma` VARCHAR(45) NULL,
-  PRIMARY KEY (`idIdioma`))
-ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Categoria`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Categoria` (
-  `idCategoria` INT NOT NULL AUTO_INCREMENT,
-  `Categoria` VARCHAR(45) NULL,
-  PRIMARY KEY (`idCategoria`))
-ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Estado`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Estado` (
-  `idEstado` INT NOT NULL AUTO_INCREMENT,
-  `Estado` VARCHAR(45) NULL,
-  PRIMARY KEY (`idEstado`))
-ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Autor`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Autor` (
-  `idAutor` INT NOT NULL AUTO_INCREMENT,
-  `nombreAutor` VARCHAR(45) NULL,
-  `apellidoAutor` VARCHAR(45) NULL,
-  PRIMARY KEY (`idAutor`))
-ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Libros`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Libros` (
-  `idLibros` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(70) NULL,
-  `id_autor` INT NULL,
-  `id_editor` INT NULL,
-  `fechaPublic` DATE NULL,
-  `edicion` VARCHAR(45) NULL,
-  `id_categoria` INT NULL,
-  `id_idioma` INT NULL,
-  `pagina` INT NULL,
-  `id_estado` INT NULL,
-  `notas` VARCHAR(200) NULL,
-  `stock` INT NULL,
-  `condicionLibro` INT NULL,
-  PRIMARY KEY (`idLibros`))
-ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Prestamo`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Prestamo` (
-  `idPrestamo` INT NOT NULL AUTO_INCREMENT,
-  `idUsuario` INT NULL,
-  `idLibro` INT NULL,
-  `fechaSalida` DATE NULL,
-  `fechaEntrega` DATE NULL,
-  `fechaDevolucion` DATE NULL,
-  `idEstadoLibro` INT NULL,
-  `mora` FLOAT NULL,
-  `condicion` TINYINT NULL,
-  PRIMARY KEY (`idPrestamo`))
-ENGINE = InnoDB;
+
+SELECT COUNT(28115617) FROM usuario;
+SELECT COUNT('22')  FROM prestamo;
+select * from usuario;
+update usuario set estadoUsuario='0' where id_usuario='6';
+
+select COUNT(DniUsuario) as cont from prestamo INNER JOIN usuario On prestamo.idUsuario=usuario.id_usuario where estadoUsuario=1 and prestamo.mora>0 and DniUsuario=28115617;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`EstadoReserva`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`EstadoReserva` (
-  `idEstadoReserva` INT NOT NULL AUTO_INCREMENT,
-  `EstadoReserva` VARCHAR(45) NULL,
-  PRIMARY KEY (`idEstadoReserva`))
-ENGINE = InnoDB;
+select * from prestamo;
+
+INSERT INTO `libreria_bd`.`editorial` (`Editorial`) 
+VALUES 
+('Franz Kafka');
+select * from editorial;
+
+select idEditorial,Editorial from editorial order by idEditorial asc
+INSERT INTO `libreria_bd`.`autor` (`nombreAutor`) 
+VALUES 
+('Franz Kafka');
+select * from autor;
+
+INSERT INTO `libreria_bd`.`idioma` (`Idioma`) 
+VALUES 
+('Español');
+select * from idioma;
 
 
--- -----------------------------------------------------
--- Table `Libreria_bd`.`Reserva`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Libreria_bd`.`Reserva` (
-  `idReserva` INT NOT NULL AUTO_INCREMENT,
-  `idUsuario` INT NULL,
-  `idLibro` INT NULL,
-  `fechaReserva` DATE NULL,
-  `estadoReserva` INT NULL,
-  PRIMARY KEY (`idReserva`))
-ENGINE = InnoDB;
+INSERT INTO `libreria_bd`.`categoria` (`Categoria`) 
+VALUES 
+('Biología');
+select * from categoria;
+
+INSERT INTO `libreria_bd`.`estado` (`Estado`) 
+VALUES 
+('Disponible');
+select * from estado;
+
+INSERT INTO `libreria_bd`.`libros` (`titulo`, `id_autor`,`id_editor`, `fechaPublic`, `edicion`, `id_categoria`, `id_idioma`, `pagina`, `id_estado`, `notas`, `stock`, `condicionLibro`) 
+VALUES 
+('Historia Argentina', '1', '1', '1990/05/01', 'blanda', '2', '1', '288', '1', 'no', '1', '1');
+select * from usuario;
+
+select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros 
+INNER JOIN categoria On libros.id_categoria = categoria.idCategoria
+INNER JOIN autor On libros.id_autor = autor.idAutor
+INNER JOIN editorial On libros.id_editor = editorial.idEditorial
+INNER JOIN idioma On libros.id_idioma = idioma.idIdioma
+INNER JOIN estado On libros.id_estado = estado.idEstado
 
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+where libros.idLibros =0 || libros.titulo="Gabrddiel" || autor.nombreAutor="Gabrddiel" || idioma.Idioma="Espssañol" || categoria.Categoria="Religion" || editorial.Editorial="Religion";
+
+
+select idPrestamo,NombreUsuario,ApellidoUsuario,titulo,fechaSalida,fechaEntrega from prestamo 
+INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario
+INNER JOIN libros On prestamo.idLibro = alibros.idLibros;
+
+update libros set stock='11' where idLibros=2;
+
+select * from libros where titulo like '%la%';
+
+
+select * from libros;
+
+show global variables like 'PORT';
