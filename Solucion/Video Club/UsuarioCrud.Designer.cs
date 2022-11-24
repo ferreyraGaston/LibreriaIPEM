@@ -39,6 +39,8 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.textTipoUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textDni = new System.Windows.Forms.TextBox();
@@ -54,12 +56,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnl_opciones.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_opciones
@@ -211,6 +211,28 @@
             this.panel2.Size = new System.Drawing.Size(800, 450);
             this.panel2.TabIndex = 11;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 46);
+            this.panel1.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 24);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Ingreso de Usuario";
+            // 
             // textTipoUsuario
             // 
             this.textTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
@@ -239,7 +261,7 @@
             this.textDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
             this.textDni.Location = new System.Drawing.Point(271, 170);
             this.textDni.Name = "textDni";
-            this.textDni.Size = new System.Drawing.Size(224, 29);
+            this.textDni.Size = new System.Drawing.Size(308, 29);
             this.textDni.TabIndex = 39;
             this.textDni.Validating += new System.ComponentModel.CancelEventHandler(this.textDni_Validating);
             // 
@@ -283,7 +305,7 @@
             this.textEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
             this.textEmail.Location = new System.Drawing.Point(21, 327);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(474, 29);
+            this.textEmail.Size = new System.Drawing.Size(558, 29);
             this.textEmail.TabIndex = 32;
             // 
             // textDireccion
@@ -314,7 +336,7 @@
             this.textApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
             this.textApellido.Location = new System.Drawing.Point(271, 97);
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(224, 29);
+            this.textApellido.Size = new System.Drawing.Size(308, 29);
             this.textApellido.TabIndex = 34;
             this.textApellido.Validating += new System.ComponentModel.CancelEventHandler(this.textApellido_Validating);
             // 
@@ -367,28 +389,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 46);
-            this.panel1.TabIndex = 42;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Broadway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 24);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Ingreso de Usuario";
-            // 
             // UsuarioCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,9 +402,9 @@
             this.pnl_opciones.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
