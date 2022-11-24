@@ -144,7 +144,7 @@
             // dtFecha
             // 
             this.dtFecha.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.dtFecha.CustomFormat = "yyyy/MM/dd";
+            this.dtFecha.CustomFormat = "dd/MM/yyyy";
             this.dtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFecha.Location = new System.Drawing.Point(315, 173);

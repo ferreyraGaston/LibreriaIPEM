@@ -280,7 +280,7 @@ namespace Video_Club
             // 
             // dtFechaEntrega
             // 
-            this.dtFechaEntrega.CustomFormat = "yyyy/MM/dd";
+            this.dtFechaEntrega.CustomFormat = "dd/MM/yyyy";
             this.dtFechaEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaEntrega.Location = new System.Drawing.Point(737, 46);
@@ -290,7 +290,7 @@ namespace Video_Club
             // 
             // dtFechaSalida
             // 
-            this.dtFechaSalida.CustomFormat = "yyyy/MM/dd";
+            this.dtFechaSalida.CustomFormat = "dd/MM/yyyy";
             this.dtFechaSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaSalida.Location = new System.Drawing.Point(448, 45);

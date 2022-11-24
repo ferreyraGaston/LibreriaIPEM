@@ -75,17 +75,17 @@ namespace CapaDeDatos
                 {
                     orden = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where  estado.idEstado ='3' ;";
                 }
-               /* else if (int.Parse(cual) >= 0 || int.Parse(cual) <= 999)
+               /* 
+                else if (int.Parse(cual) >= 0 || int.Parse(cual) <= 999)
                 {
-
                     orden = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where libros.idLibros ='" + int.Parse(cual) + "';";
-                }*/
+                }
+               */
                 else
                 {
-
                     orden = "select idLibros,titulo,nombreAutor,Editorial,fechaPublic,edicion,Categoria,Idioma,pagina,Estado,notas,stock,condicionLibro from libros INNER JOIN categoria On libros.id_categoria = categoria.idCategoria INNER JOIN autor On libros.id_autor = autor.idAutor INNER JOIN editorial On libros.id_editor = editorial.idEditorial INNER JOIN idioma On libros.id_idioma = idioma.idIdioma INNER JOIN estado On libros.id_estado = estado.idEstado where libros.titulo LIKE '%" + cual + "%'|| autor.nombreAutor LIKE '%" + cual + "%' || idioma.Idioma LIKE '%" + cual + "%' || categoria.Categoria LIKE '%" + cual + "%' || editorial.Editorial LIKE '%" + cual + "%';";
                 }
-            MySqlCommand cmd = new MySqlCommand(orden, conexion);
+                MySqlCommand cmd = new MySqlCommand(orden, conexion);
                 DataSet ds = new DataSet();
                 MySqlDataAdapter da = new MySqlDataAdapter();             
                 try
