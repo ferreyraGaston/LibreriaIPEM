@@ -63,7 +63,7 @@ namespace Video_Club
             PrestamoClass prestamoObj = new PrestamoClass();
             prestamoObj.FechaDevolucion = dtFechaDevolucion.Value;
 
-            MessageBox.Show("resultado " + (prestamoObj.FechaDevolucion).ToString("yyyy,MM,dd"));
+            //MessageBox.Show("resultado " + (prestamoObj.FechaDevolucion).ToString("yyyy,MM,dd"));
 
             DateTime fEntrega= Convert.ToDateTime(prestamoObj.FechaEntrega);
             DateTime fDevolucion = Convert.ToDateTime(prestamoObj.FechaDevolucion);
@@ -103,9 +103,6 @@ namespace Video_Club
             } 
             else {
 
-                //prestamoObj.Condicion = Convert.ToBoolean(0);
-               // Conexion conexion = new Conexion();
-
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
                 string sql = "update libros set stock='" + prestamoObj.Stock + "', id_estado=1  where idLibros='" + prestamoObj.IdLibro + "';";
             MySqlConnection con = new MySqlConnection(cadena);
@@ -114,12 +111,12 @@ namespace Video_Club
             comando.ExecuteNonQuery();
             con.Close();
 
-            string sql2 = "update prestamo set mora='" + difDias + "',fechaDevolucion='" + prestamoObj.FechaDevolucion + "', condicion=1  where idPrestamo='" + prestamoObj.IdPrestamo + "';";
+            string sql2 = "update prestamo set mora='" + difDias + "',fechaDevolucion='" + (prestamoObj.FechaDevolucion).ToString("yyyy,MM,dd") + "', condicion=1  where idPrestamo='" + prestamoObj.IdPrestamo + "';";
             MySqlConnection con2 = new MySqlConnection(cadena);
             con2.Open();
             MySqlCommand comando2 = new MySqlCommand(sql2, con2);
             comando2.ExecuteNonQuery();
-                MessageBox.Show("Los dias " + difDias);
+               // MessageBox.Show("Los dias " + difDias);
                 con2.Close();
             Dialogo FormDialog = new Dialogo();
             FormDialog.ShowDialog();
