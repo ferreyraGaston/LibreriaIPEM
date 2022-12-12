@@ -61,7 +61,10 @@ namespace Video_Club
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             PrestamoClass prestamoObj = new PrestamoClass();
-            prestamoObj.FechaDevolucion = dtFechaDevolucion.Text;
+            prestamoObj.FechaDevolucion = dtFechaDevolucion.Value;
+
+            MessageBox.Show("resultado " + (prestamoObj.FechaDevolucion).ToString("yyyy,MM,dd"));
+
             DateTime fEntrega= Convert.ToDateTime(prestamoObj.FechaEntrega);
             DateTime fDevolucion = Convert.ToDateTime(prestamoObj.FechaDevolucion);
             TimeSpan tspan = fDevolucion - fEntrega;
@@ -78,7 +81,7 @@ namespace Video_Club
                 comando.ExecuteNonQuery();
                 con.Close();
 
-                string sql2 = "update prestamo set mora='" + difDias + "',fechaDevolucion='" + prestamoObj.FechaDevolucion + "', condicion=1  where idPrestamo='" + prestamoObj.IdPrestamo + "';";
+                string sql2 = "update prestamo set mora='" + difDias + "',fechaDevolucion='" + (prestamoObj.FechaDevolucion).ToString("yyyy,MM,dd") + "', condicion=1  where idPrestamo='" + prestamoObj.IdPrestamo + "';";
                 MySqlConnection con2 = new MySqlConnection(cadena);
                 con2.Open();
                 MySqlCommand comando2 = new MySqlCommand(sql2, con2);
@@ -136,7 +139,7 @@ namespace Video_Club
             usuarioObj.Apellido1 = dgDevolucion[3, posicion].Value.ToString();
             prestamoObj.IdLibro = int.Parse(dgDevolucion[4, posicion].Value.ToString());
             libroObj.Titulo = dgDevolucion[5, posicion].Value.ToString();
-            prestamoObj.FechaEntrega = dgDevolucion[7, posicion].Value.ToString();
+            prestamoObj.FechaEntrega = DateTime.Parse(dgDevolucion[7, posicion].Value.ToString());
             prestamoObj.Stock = int.Parse(dgDevolucion[9, posicion].Value.ToString()) + 1;
 
             textNombre.Text = usuarioObj.Nombre1;

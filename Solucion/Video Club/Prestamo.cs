@@ -139,12 +139,11 @@ namespace Video_Club
             if (ValidarCampos())
             {
                 PrestamoClass prestamoObj = new PrestamoClass();
-                prestamoObj.FechaSalida= dtFechaSalida.Text;
-                prestamoObj.FechaEntrega= dtFechaEntrega.Text;
-                //prestamoObj.Condicion = Convert.ToBoolean(0);
-                //Conexion conexion = new Conexion();
+                prestamoObj.FechaSalida= dtFechaSalida.Value;
+                prestamoObj.FechaEntrega= dtFechaEntrega.Value;
+
                 string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
-                string sql = "INSERT INTO prestamo(idUsuario,idLibro,fechaSalida,fechaEntrega,condicion) VALUES('" + prestamoObj.IdUsuario + "','" + prestamoObj.IdLibro + "','" + prestamoObj.FechaSalida + "','" + prestamoObj.FechaEntrega + "',0)";
+                string sql = "INSERT INTO prestamo(idUsuario,idLibro,fechaSalida,fechaEntrega,condicion) VALUES('" + prestamoObj.IdUsuario + "','" + prestamoObj.IdLibro + "','" + (prestamoObj.FechaSalida).ToString("yyyy,MM,dd") + "','" + (prestamoObj.FechaEntrega).ToString("yyyy,MM,dd") + "',0)";
                 MySqlConnection con = new MySqlConnection(cadena);
                 con.Open();
                 MySqlCommand comando = new MySqlCommand(sql, con);

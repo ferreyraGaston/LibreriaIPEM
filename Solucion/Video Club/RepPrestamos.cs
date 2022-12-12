@@ -79,7 +79,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaSalida BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
+            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaSalida BETWEEN '" + (dtFechaDesde.Value).ToString("yyyy,MM,dd") + "' AND '" + (dtFechaHasta.Value).ToString("yyyy,MM,dd") + "';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -94,7 +94,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaEntrega BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
+            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaEntrega BETWEEN '" + (dtFechaDesde.Value).ToString("yyyy,MM,dd") + "' AND '" + (dtFechaHasta.Value).ToString("yyyy,MM,dd") + "';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
@@ -109,7 +109,7 @@ namespace Video_Club
             string cadena = "Server=localhost;Database=libreria_bd;Uid=root;Pwd=13231414";
             MySqlConnection con = new MySqlConnection(cadena);
             con.Open();
-            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaDevolucion BETWEEN '" + dtFechaDesde.Text + "' AND '" + dtFechaHasta.Text + "';";
+            string sql = "select idPrestamo as ID,idUsuario as ID_Usu,NombreUsuario as NOMBRE,ApellidoUsuario as APELLIDO,idLibro as ID_Lib,titulo as TITULO,fechaSalida as SALIDA,fechaEntrega as ENTREGA,fechaDevolucion as DEVOLUCIÓN, mora as MORA,stock as STOCK,condicion as CONDICIÓN from prestamo INNER JOIN usuario On prestamo.idUsuario = usuario.id_usuario INNER JOIN libros On prestamo.idLibro = libros.idLibros WHERE fechaDevolucion BETWEEN '" + (dtFechaDesde.Value).ToString("yyyy,MM,dd") + "' AND '" + (dtFechaHasta.Value).ToString("yyyy,MM,dd") + "';";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, cadena);
             DataTable dt = new DataTable();
             con.Close();
