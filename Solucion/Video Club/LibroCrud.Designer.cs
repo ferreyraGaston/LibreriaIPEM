@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNotas = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.cboAutor = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnl_opciones = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtNotas = new System.Windows.Forms.RichTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnl_opciones.SuspendLayout();
@@ -107,6 +107,17 @@
             this.panel2.Size = new System.Drawing.Size(884, 567);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtNotas
+            // 
+            this.txtNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
+            this.txtNotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
+            this.txtNotas.Location = new System.Drawing.Point(32, 424);
+            this.txtNotas.Name = "txtNotas";
+            this.txtNotas.Size = new System.Drawing.Size(540, 96);
+            this.txtNotas.TabIndex = 44;
+            this.txtNotas.Text = "";
+            this.txtNotas.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // panel1
             // 
@@ -511,17 +522,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // txtNotas
-            // 
-            this.txtNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(206)))), ((int)(((byte)(181)))));
-            this.txtNotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
-            this.txtNotas.Location = new System.Drawing.Point(32, 424);
-            this.txtNotas.Name = "txtNotas";
-            this.txtNotas.Size = new System.Drawing.Size(540, 96);
-            this.txtNotas.TabIndex = 44;
-            this.txtNotas.Text = "";
-            this.txtNotas.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // LibroCrud
             // 
